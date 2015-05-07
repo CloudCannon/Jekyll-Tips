@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/css/jquery.bxslider.css"  />
+
+<section>
+  <!-- Sharing setup -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0&appId=425428800940841";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <section>
+    <div class="container text-container">
+      <ul class="theme-slider">
+        {% for screenshot in page.screenshots %}
+          <li><img src="{{screenshot}}" alt="Jekyll Theme screenshot"></li>
+        {% endfor %}
+      </ul>
+
+      <div class="share-options">
+        <div class="fb-share-button share-button push-right" data-href="http://cloudcannon.com{{ page.url }}" data-layout="button_count"></div>
+
+        <div class="share-button tweak"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://cloudcannon.com{{ page.url }}" data-via="CloudCannonApp">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+
+        <div class="share-button tweak  push-right"><script src="//platform.linkedin.com/in.js" type="text/javascript">
+        lang: en_US
+        </script>
+        <script type="IN/Share" data-url="http://cloudcannon.com{{ page.url }}" data-counter="right"></script></div>
+
+        <div class="share-button tweak">
+          <!-- Place this tag in your head or just before your close body tag. -->
+          <script src="https://apis.google.com/js/platform.js" async defer></script>
+          <!-- Place this tag where you want the +1 button to render. -->
+          <div class="g-plusone" data-href="http://cloudcannon.com{{ page.url }}"></div></div>
+        </div>
+
+      <div class="theme-description">
+        {{content}}
+      </div>
+
+      <div class="theme-buttons">
+        <div class="thirds"><a class="btn theme-demo" target="_blank" title="{{page.name}}" href="{{page.demo_url}}"><img src="/img/jekyll_themes/demo.png" alt="Demo"/> Demo</a></div>
+        <div class="thirds"><a class="btn theme-download" title="{{page.name}}" href="{{page.github_url}}/archive/master.zip"><img src="/img/jekyll_themes/download.png" alt="Download"/> Download</a></div>
+        <div class="thirds"><a class="btn theme-fork" target="_blank" title="{{page.name}}" href="{{page.github_url}}"><img src="/img/jekyll_themes/fork.png" alt="Fork"/> Fork</a></div>
+      </div>
+
+    </div>
+  </section>
+</section>
+<script src="/js/jquery.bxslider.min.js" ></script>
+<script>
+  $(document).ready(function(){
+    $('.theme-slider').bxSlider();
+
+
+  });
+</script>

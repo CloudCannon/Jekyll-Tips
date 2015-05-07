@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h2>{{page.name}}</h2>
+<p class="center-text"> by <a target="_blank" href="{{page.author.link}}">{{page.author.name}}</a>
+<section>
+  <div class="snippet">
+    <script src="http://gist-it.appspot.com/github/{{page.github_url | remove_first: "https://github.com/" }}"></script>
+  </div>
+</section>

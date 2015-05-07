@@ -1,0 +1,14 @@
+collections:
+  themes:
+  snippets:
+    output: true
+  static_site_services:
+main_links:
+  - title: Themes
+    link: /index.html
+  - title: Tutorials
+    link: /tutorials
+  - title: Snippets
+    link: /snippets.html
+  - title: Services for Static Sites
+    link: /services-for-static-sites.html

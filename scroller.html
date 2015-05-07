@@ -1,0 +1,18 @@
+                {% for customer in page.customers %}
+                    {% assign mod = forloop.index0 | modulo:4 %}
+                    {% if mod == 0  %}
+                        {% unless forloop.first %}
+                            </div>
+                        {% endunless %}
+
+                        {% unless forloop.last %}
+                            <div class="slide first center">
+                        {% endunless %}
+                    {% endif %}
+
+                        <a href="examples.html"><img src="{{customer.image_path}}" alt="Vend POS software customer {{customer.name}}" /></a>
+
+                    {% if forloop.last and mod != 0 %}
+                        </div>
+                    {% endif %}
+                {% endfor %}

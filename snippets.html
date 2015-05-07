@@ -1,0 +1,25 @@
+---
+layout: default
+title : Jekyll Snippets
+---
+<section>
+  <h2> Jekyll Snippets </h2>
+
+	<ul>
+    {% assign categories = site.snippets | group_by:"category" %}
+
+    {% for current_category in categories %}
+      <h4>{{current_category.name}}</h4>
+      {% for snippet in site.snippets %}
+        {% if snippet.category == current_category.name %}
+    			<li>
+    				<a href="{{snippet.url}}">
+              {{snippet.name}}
+    				</a>
+    			</li>
+        {% endif %}
+  		{% endfor %}
+    {% endfor %}
+
+	</ul>
+</section>

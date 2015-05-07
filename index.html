@@ -1,0 +1,20 @@
+---
+layout: default
+title : Jekyll Themes
+---
+<h2> Jekyll Themes </h2>
+<p class="center-text"> Open source Jekyll Themes to help you get started on your Jekyll website </p>
+<section>
+	<div class="jekyll-themes group">
+		{% for theme in site.themes %}
+			<div class="column">
+				<a class="column-inner" href="{{theme.github_url}}" target="_blank">
+					<img src="/img/jekyll_themes/{{theme.name | downcase | replace:' ', '_'}}.jpg" alt="{{theme.name}}">
+					<div class="overlay">
+            <span>{{theme.name}}</span>
+          </div>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</section>
