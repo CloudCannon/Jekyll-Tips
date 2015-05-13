@@ -11,5 +11,5 @@ main_links:
     link: /tutorials/
   - title: Snippets
     link: /snippets/
-  - title: Services for Static Sites
-    link: /services-for-static-sites/
+  - title: Services
+    link: /services/

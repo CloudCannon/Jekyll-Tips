@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Services for Static Sites
+title: Services
 category_descriptions:
+  cms: Have non-technical people update Jekyll websites
   newsletters: Capture email addresses and send periodic newsletters.
   community: Build communities by allowing your visitors to post comments on your website.
   e-commerce: Simple e-commerce is possible on static websites.
-  contact_forms: Add contact forms without having to do any backend coding.
+  contact_forms: Add contact forms without any backend coding.
   live_chat: Chat directly with visitors.
   surveys: Get feedback by adding a survey to your site.
   search: Full search capability for static websites.
@@ -15,9 +16,9 @@ category_descriptions:
   frontend_error_trackers: As you add more javascript to your website it's worth tracking any errors that arise.
 ---
 <section class="services-for-static">
-  <h2> Services for Static Sites </h2>
+  <h2> Services </h2>
 
-    <p class="center-text"><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can drop into static websites. </p>
+    <p class="center-text"><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can use with static websites. </p>
     {% assign categories = site.static_site_services | group_by:"category" %}
 
     {% for current_category in categories %}

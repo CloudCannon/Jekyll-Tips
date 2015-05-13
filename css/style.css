@@ -214,6 +214,14 @@ footer img {
   margin: 8px 0 0 0;
 }
 
+footer p.contribute {
+  margin: 10px 0 0 0;
+}
+
+footer a, footer a:hover {
+  color: #fff;
+}
+
 .group:after, .services-for-static:after {
   content: "";
   display: table;
@@ -255,18 +263,18 @@ footer img {
   float: left;
 }
 
-.snippets {
+.snippets, .tutorials {
   text-align: center;
 }
 
-.snippets ul {
+.tutorials ul, .snippets ul {
   padding: 0;
   margin: 0;
   list-style: none;
   margin: 0 0 40px 0;
 }
 
-.snippets .video {
+.tutorials .video {
   background: #1EAEDB;
   color: #fff;
   font-size: 0.6em;
