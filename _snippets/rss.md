@@ -3,7 +3,7 @@ github_url: https://github.com/snaptortoise/jekyll-rss-feeds/blob/master/feed.ar
 author:
   name: snaptortoise
   link: https://github.com/snaptortoise
-title : RSS Feed in Jekyll
+title : RSS Feed
 layout: snippet
 category: Posts
 ---
