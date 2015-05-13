@@ -77,6 +77,10 @@ body {
   font-size: 1.4em;
 }
 
+.nav-bar a {
+  border-bottom: 3px solid #26abe2;
+}
+
 
 .nav-bar a.current {
   border-bottom: 3px solid #fff;
@@ -150,9 +154,20 @@ hr {
   transition: height 0s 500ms, opacity 300ms ease-in-out
 }
 
-.jekyll-themes .overlay span {
-  position: relative;
-  top: 45%;
+.jekyll-themes .overlay h3 {
+  margin-top: 30%;
+}
+
+.jekyll-themes .overlay h3 a {
+  color: #fff;
+}
+
+.jekyll-themes .sharing a {
+  margin: 0 10px;
+}
+
+.jekyll-themes .download {
+  margin: 20px 0 0 0;
 }
 
 .jekyll-themes .column .column-inner:hover .overlay {
@@ -188,6 +203,7 @@ footer {
   padding: 12px 0;
   text-align: center;
   color: #fff;
+  margin: 35px 0 0 0;
 }
 
 footer p {
@@ -198,8 +214,64 @@ footer img {
   margin: 8px 0 0 0;
 }
 
-.group:after {
+.group:after, .services-for-static:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.services-for-static h3 {
+  clear: left;
+  padding: 40px 0 0 0;
+}
+
+.services-for-static ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 800px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.services-for-static li {
+  width: 190px;
+  height: 200px;
+  float: left;
+}
+
+.services-for-static img {
+  width: 120px;
+  height: 120px;
+  opacity: .8;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 20px auto;
+}
+
+.three-col .col {
+  width: 33%;
+  float: left;
+}
+
+.snippets {
+  text-align: center;
+}
+
+.snippets ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin: 0 0 40px 0;
+}
+
+.snippets .video {
+  background: #1EAEDB;
+  color: #fff;
+  font-size: 0.6em;
+  padding: 1px 3px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 2px;
 }

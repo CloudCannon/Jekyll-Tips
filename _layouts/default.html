@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{page.title}}</title>
+  <title>{{page.title}} | JekyllHub</title>
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -18,7 +18,8 @@
         {% assign current = page.url %}
         {% for main_link in site.main_links %}
           <a href="{{main_link.link}}"
-            {% if current == main_link.link %}
+            {% assign link = main_link.link | append:'index.html' %}
+            {% if current == link %}
               class="current"
             {% endif %}
             > {{ main_link.title }} </a>

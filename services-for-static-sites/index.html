@@ -1,0 +1,41 @@
+---
+layout: default
+title: Services for Static Sites
+category_descriptions:
+  newsletters: Capture email addresses and send periodic newsletters.
+  community: Build communities by allowing your visitors to post comments on your website.
+  e-commerce: Simple e-commerce is possible on static websites.
+  contact_forms: Add contact forms without having to do any backend coding.
+  live_chat: Chat directly with visitors.
+  surveys: Get feedback by adding a survey to your site.
+  search: Full search capability for static websites.
+  backends: Even full backends with authentication are available for static websites.
+  analytics: Analyse what visitors are doing on your website.
+  embeddable_content: Content you can drop into your static websites.
+  frontend_error_trackers: As you add more javascript to your website it's worth tracking any errors that arise.
+---
+<section class="services-for-static">
+  <h2> Services for Static Sites </h2>
+
+    <p class="center-text"><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can drop into static websites. </p>
+    {% assign categories = site.static_site_services | group_by:"category" %}
+
+    {% for current_category in categories %}
+      <h3>{{current_category.name}}</h3>
+      {% assign category_name = current_category.name | downcase | replace:' ', '_' %}
+      <p class="center-text"> {{page.category_descriptions[category_name]}}</p>
+      <ul>
+      {% for service in site.static_site_services %}
+
+        {% if service.category == current_category.name %}
+    			<li>
+    				<a href="{{service.link}}">
+              <img src="{{service.image_path}}" alt="{{service.name}}" />
+              {{service.name}}
+    				</a>
+    			</li>
+        {% endif %}
+  		{% endfor %}
+      </ul>
+    {% endfor %}
+</section>

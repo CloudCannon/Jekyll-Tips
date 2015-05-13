@@ -1,5 +1,4 @@
 ---
-name: Atom Feed
 github_url: https://github.com/mdo/jekyll-snippets/blob/master/atom.xml
 author:
   name: MDO

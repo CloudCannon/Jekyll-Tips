@@ -3,17 +3,23 @@ layout: default
 title : Jekyll Themes
 ---
 <h2> Jekyll Themes </h2>
-<p class="center-text"> Open source Jekyll Themes to help you get started on your Jekyll website </p>
+<p class="center-text"> Open source Jekyll Themes to help you get started on your Jekyll website. Download or fork a theme and run <code>jekyll serve</code>.</p>
 <section>
 	<div class="jekyll-themes group">
 		{% for theme in site.themes %}
-			<div class="column">
-				<a class="column-inner" href="{{theme.github_url}}" target="_blank">
+			{% assign theme_id = theme.name | downcase | replace:' ', '_' | prepend:'t_' %}
+			<div id="{{theme_id}}" class="column">
+				<div class="column-inner" target="_blank">
 					<img src="/img/jekyll_themes/{{theme.name | downcase | replace:' ', '_'}}.jpg" alt="{{theme.name}}">
 					<div class="overlay">
-            <span>{{theme.name}}</span>
+            <h3><a target="_blank" href="{{theme.github_url}}">{{theme.name}}</a></h3>
+						<div class="sharing">
+							<a target="_blank" href="https://twitter.com/intent/tweet?url=jekyllhub.com%23{{theme_id}}&text={{theme.name | url_param_escape }}%20-%20A%20free%20%23jekyllrb%20theme%20on%20jekyllhub.com%23{{theme_id}}"><img width="40px" src="/img/twitter-share.png" alt="share on Twitter" /></a>
+							<a target="_blank" href="http://www.facebook.com/sharer.php?u=jekyllhub.com%23{{theme_id}}&t={{theme.name}}"><img width="40px" src="/img/facebook-share.png" alt="share on Facebook" /></a>
+						</div>
+						<p class="download"><a href="{{theme.github_url}}/archive/master.zip">Download</a>
           </div>
-				</a>
+				</div>
 			</div>
 		{% endfor %}
 	</div>

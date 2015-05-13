@@ -3,12 +3,13 @@ collections:
   snippets:
     output: true
   static_site_services:
+  tutorials:
 main_links:
   - title: Themes
-    link: /index.html
+    link: /
   - title: Tutorials
-    link: /tutorials
+    link: /tutorials/
   - title: Snippets
-    link: /snippets.html
+    link: /snippets/
   - title: Services for Static Sites
-    link: /services-for-static-sites.html
+    link: /services-for-static-sites/

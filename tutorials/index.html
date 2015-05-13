@@ -1,0 +1,32 @@
+---
+layout: default
+title: Jekyll Tutorials
+category_order:
+  - Setup
+  - Getting Started
+  - Advanced
+---
+<section>
+  <h2> Jekyll Tutorials </h2>
+    <p class="center-text"> Ready-to-go snippets which can be dropped into your Jekyll website. </p>
+    <div class="snippets">
+    {% for current_category in page.category_order %}
+        <h4>{{current_category}}</h4>
+        <ul>
+        {% for tutorial in site.tutorials %}
+          {% if tutorial.category == current_category %}
+      			<li>
+      				<a target="_blank" href="{{tutorial.link}}">
+                {{tutorial.name}}
+                {% if tutorial.video %}
+                  <span class="video">video</span>
+                {% endif %}
+      				</a>
+      			</li>
+          {% endif %}
+    		{% endfor %}
+        </ul>
+    {% endfor %}
+
+	</div>
+</section>
