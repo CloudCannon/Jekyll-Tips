@@ -45,6 +45,10 @@ html {
   color: #474a54;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
@@ -282,4 +286,18 @@ footer a, footer a:hover {
   border-radius: 5px;
   position: relative;
   bottom: 2px;
+}
+
+.guide {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.guide img {
+  display: block;
+  margin: 0 auto;
+}
+
+pre {
+  border-radius: 5px;
 }

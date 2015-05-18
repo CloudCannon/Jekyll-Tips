@@ -4,6 +4,8 @@ collections:
     output: true
   static_site_services:
   tutorials:
+  guide:
+    output: true
 main_links:
   - title: Themes
     link: /

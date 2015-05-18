@@ -9,7 +9,7 @@ category_order:
 <section>
   <h2> Jekyll Tutorials </h2>
     <div class="tutorials">
-    {% for current_category in page.category_order %}
+    <!--{% for current_category in page.category_order %}
         <h4>{{current_category}}</h4>
         <ul>
         {% for tutorial in site.tutorials %}
@@ -25,7 +25,14 @@ category_order:
           {% endif %}
     		{% endfor %}
         </ul>
+    {% endfor %}-->
+
+    <ul>
+    {% assign guide_items = site.guide | sort: 'order' %}
+    {% for guide_item in guide_items %}
+      <li><a href="{{guide_item.url}}">{{forloop.index}}. {{guide_item.title}}</a></li>
     {% endfor %}
+    </ul>
 
 	</div>
 </section>
