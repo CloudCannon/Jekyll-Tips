@@ -24,12 +24,12 @@ Windows is not officially supported but [there is a workaround](http://jekyllrb.
 
 We'll be using one of the thousands of free html template for this guide. Of course, you can easily build your website from scratch using any css or javascript framework you desire. One of the big advantages of using Jekyll is you have complete control over all the source code.
 
-Download and unzip the [Crafty Template](/crafty.zip).
+Download and unzip the [Creative Template](/creative.zip).
 
 ### Running Jekyll
 Now let's run Jekyll on the website.
 
-<pre>cd ~/Downloads/crafty # or wherever you've unzipped the template
+<pre>cd ~/Downloads/creative # or wherever you've unzipped the template
 jekyll serve</pre>
 
 Open your browser and go to [http://localhost:4000](http://localhost:4000). If all has gone well it'll show the website! This may not seem particularly exciting but let me explain what's actually going on here.

@@ -32,25 +32,21 @@ Now we have the files on CloudCannon, it's time to add updatable regions. Click 
 
 ![Preview](/img/guide/cms/preview.png)
 
-We set the updatable regions by adding a class of **editable** to elements in the HTML. Let's make the **&lt;p&gt;**'s inside the billboard section and the info details section editable like so:
+We set the updatable regions by adding a class of **editable** to elements in the HTML. Let's make the headings on the index page editable:
 
-<pre>&lt;section class=&quot;billboard&quot;&gt;
-    &lt;div class=&quot;wrapper&quot;&gt;
-      &lt;div class=&quot;caption&quot;&gt;
-        &lt;p class=&quot;editable&quot;&gt;Excepteu roccaecat&lt;/p&gt;
-        &lt;p class=&quot;editable&quot;&gt;sunt culpa officia deserunt&lt;/p&gt;
-      &lt;/div&gt;
+<pre>&lt;header&gt;
+  &lt;div class=&quot;header-content&quot;&gt;
+    &lt;div class=&quot;header-content-inner&quot;&gt;
+      &lt;h1 class=&quot;editable&quot;&gt;Your Favorite Source of Free Bootstrap Themes&lt;/h1&gt;
+      &lt;hr&gt;
+      &lt;p class=&quot;editable&quot;&gt;Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!&lt;/p&gt;
+      &lt;a href=&quot;#about&quot; class=&quot;btn btn-primary btn-xl page-scroll&quot;&gt;Find Out More&lt;/a&gt;
     &lt;/div&gt;
-&lt;/section&gt;&lt;!--  End Billboard  --&gt;</pre>
-
-<pre>&lt;div class=&quot;info_details editable&quot;&gt;</pre>
-
-As you can see you have complete control over which elements you want to make updatable. In **billboard** we've ensured there's always two paragraphs. For info_detail the client can add update everything.
+  &lt;/div&gt;
+&lt;/header&gt;</pre>
 
 Go to the visual editor view. The elements with the editable class have a yellow box around them indicating they're updatable. Try clicking on an editable region and making an update directly inline.
 
 ![Visual Editor](/img/guide/cms/visual.png)
 
-One thing you might notice is when you delete most of the text in the **billboard** section the 2nd paragraph jumps up beside the first one. This is due to how the CSS on this particular template behaves. The visual editor is simply running all your CSS and Javascript so there's no way for it to know this isn't the desired effect. To fix this you'd need to add some CSS to your stylesheet to ensure the paragraphs never jump up like that.
-
-CloudCannon pushes your website live to a testing domain of *.cloudvent.net. To view this on the free plan you'll need to set a password on the website. On paid plans you can add your own domain.
+CloudCannon pushes your website live to a testing domain of **\*.cloudvent.net**. To view this on the free plan you'll need to set a password on the website. On paid plans you can add your own domain.

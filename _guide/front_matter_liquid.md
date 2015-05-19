@@ -3,7 +3,7 @@ layout: guide
 title : Front Matter and Liquid
 order: 4
 ---
-Front Matter allows us to set metadata for a file. We'll use it to tell index.html to use the default template. The format is YAML between two sets of triple dashes (**\-\-\-**) which sits at the beginning of a file. Add the following to the top of index.html:
+Front Matter allows us to set metadata for a file. We'll use it to tell index.html to use the default template. The format is YAML between two sets of triple dashes (**\-\-\-**) which sits at the beginning of a file. Add the following to the top of **index.html**:
 
 <pre>---
 layout: default
@@ -11,7 +11,7 @@ layout: default
 
 If you refresh the browser the site should look exactly the same as it did before. The difference is now we have a layout we can use on multiple pages.
 
-There's a problem though, we don't want the same **&lt;title&gt;** tag on every page, it needs to be on each page. We can fix this with Front Matter and Liquid. Liquid is the templating language used by Jekyll. We used it previously to set the **{% raw %}{{content}}{% endraw %}** section in the layout.
+There's a problem though, we don't want the same **&lt;title&gt;** tag on every page, it needs to be different on each page. We can fix this with Front Matter and Liquid. Liquid is the templating language used by Jekyll. We used it previously to set the **{% raw %}{{content}}{% endraw %}** section in the layout.
 
 There are two types of markup in Liquid:
 
@@ -25,7 +25,7 @@ There are two types of markup in Liquid:
   Hello
 {% endif %}{% endraw %}</pre>
 
-Let's add more Front Matter to our **index.html** page to configure a title variable. So now the Front Matter will look like this:
+Let's add another line to our Front Matter in **index.html** to configure a title variable. So now the Front Matter will look like this:
 
 <pre>---
 layout: default
@@ -35,12 +35,13 @@ title: Home Page
 Go to **default.html** and replace the **&lt;title&gt;** tag with this:
 
 <pre>&lt;title&gt;
-  {% raw %}{% if page.title %}{% endraw %}
-    {% raw %}{{page.title}}{% endraw %} |
-  {% raw %}{% endif %}{% endraw %}
-  Crafty
+  {% raw %}{% if page.title %}
+    {{page.title}}
+  {% else %}
+    Default Page Title
+  {% endif %}{% endraw %}
 &lt;/title&gt;</pre>
 
-Using **page** we can reference variables set in the Front Matter. Here we're checking if the title is set and printing it if it does.
+Using **page** we can reference variables set in the Front Matter. Here we're checking if the title is set and printing it if it does, otherwise it falls back to a default.
 
-Refresh the page and the page title will show **Home Page \| Crafty**.
+Refresh the page and the page title will show **Home Page**.
