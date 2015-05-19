@@ -51,6 +51,6 @@ Go to the visual editor view. The elements with the editable class have a yellow
 
 ![Visual Editor](/img/guide/cms/visual.png)
 
-One thing you might notice is when you delete most of the text in the **billboard** section the 2nd paragraph jumps up beside the first one. This is due to how the CSS on this particular template behaves. The visual editor is simply running all your CSS and Javascript so there's no way for it to know this isn't the desired effect. To fix this you'd need to add some CSS to your stylesheet to ensure the paragraphs don't jump up like that.
+One thing you might notice is when you delete most of the text in the **billboard** section the 2nd paragraph jumps up beside the first one. This is due to how the CSS on this particular template behaves. The visual editor is simply running all your CSS and Javascript so there's no way for it to know this isn't the desired effect. To fix this you'd need to add some CSS to your stylesheet to ensure the paragraphs never jump up like that.
 
-CloudCannon pushes your website live to a testing domain of *.cloudvent.net. To view this on the free plan you'll need to set a password on the website. On paid plans you can add your own domain. 
+CloudCannon pushes your website live to a testing domain of *.cloudvent.net. To view this on the free plan you'll need to set a password on the website. On paid plans you can add your own domain.
