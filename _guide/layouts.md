@@ -7,15 +7,15 @@ There's a lot of duplication of HTML in the website as it stands now. Every page
 
 To remove this duplication we're going to use a Jekyll Layout. Layouts allow us to have our header and footer code in one file and have it wrap around the content on other pages.
 
-First create a **_layouts** folder in the root of your website and inside it, create an empty file called default.html.
+First create a **_layouts** folder in the root of your website and inside it, create an empty file called **default.html**.
 
-Now we need to work out which HTML will repeat on each page. This template has comments which make it easy. Open up index.html, and look for the **<!-\-  End Header  -\->** comment. Cut everything above and including this comment and paste it into default.html. Go back to index.html and cut everything below and including the **<footer>** tag and paste it below the other content in default.html.
+Now we need to work out which HTML will repeat on each page. This template has comments which make it easy. Open up **index.html**, and look for the **<!-\-  End Header  -\->** comment. Cut everything above and including this comment and paste it into **default.html**. Go back to **index.html** and cut everything below and including the **<footer>** tag and paste it below the other content in **default.html**.
 
-We also need to tweak the path to assets. At the moment the paths are relative to /index.html, we need to make them relative to the root of the website so they work for all pages. This is easier than it sounds, just go through the assets in default.html and add a **/** to the beginning of the path. For example change **css/reset.css** to **/css/reset.css**.
+We also need to tweak the path to assets. At the moment the paths are relative to **/index.html**, we need to make them relative to the root of the website so they work for all pages. This is easier than it sounds, just go through the assets in **default.html** and add a **/** to the beginning of the path. For example change **css/reset.css** to **/css/reset.css**.
 
-Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in {% raw %}{{content}}{% endraw %} between the header and footer in default.html. We'll go over what this is actually doing in the next section.
+Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in **{% raw %}{{content}}{% endraw %}** between the header and footer in **default.html**. We'll go over what this is actually doing in the next section.
 
-default.html should now look like this:
+**default.html** should now look like this:
 
 <pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -62,7 +62,7 @@ default.html should now look like this:
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-And index.html like this:
+And **index.html** like this:
 
 <pre>
    &lt;section class=&quot;billboard&quot;&gt;
@@ -185,47 +185,3 @@ And index.html like this:
     &lt;a href=&quot;#&quot; class=&quot;cta_btn&quot;&gt;Sign up now!&lt;/a&gt;
     &lt;span class=&quot;cta_sep&quot;&gt;&lt;/span&gt;
   &lt;/section&gt;&lt;!--  End cta  --&gt;</pre>
-
-### Front Matter and Liquid
-
-Front Matter allows us to set metadata for a file. We'll use it to tell index.html to use the default template. The format is YAML between two sets of triple dashes (**\-\-\-**) which sits at the beginning of a file. Add the following to the top of index.html:
-
-<pre>---
-layout: default
----</pre>
-
-If you refresh the browser the site should look exactly the same as it did before. The difference is now we have a layout we can use on multiple pages.
-
-There's a problem though, we don't want the same **&lt;title&gt;** tag on every page, it needs to be on each page. We can fix this with Front Matter and Liquid. Liquid is the templating language used by Jekyll. We used it previously to set the **{% raw %}{{content}}{% endraw %}** section in the layout.
-
-There are two types of markup in Liquid:
-
-**Output Markup** - To output something use two curly braces.
-
-<pre>{% raw %}{{variable}}{% endraw %}</pre>
-
-**Tag Markup** - Tag markup is used to perform some sort of logic. To initiate tag markup use a curly brace and percentage sign.
-
-<pre>{% raw %}{% if page.variable %}
-  Hello
-{% endif %}{% endraw %}</pre>
-
-Let's add more Front Matter to our **index.html** page to configure a title variable. So now the Front Matter will look like this:
-
-<pre>---
-layout: default
-title: Home Page
----</pre>
-
-Go to **default.html** and replace the **&lt;title&gt;** tag with this:
-
-<pre>&lt;title&gt;
-  {% raw %}{% if page.title %}{% endraw %}
-    {% raw %}{{page.title}}{% endraw %} |
-  {% raw %}{% endif %}{% endraw %}
-  Crafty
-&lt;/title&gt;</pre>
-
-Using **page** we can reference variables set in the Front Matter. Here we're checking if the title is set and printing it if it does.
-
-Refresh the page and the page title will show **Home Page \| Crafty**.
