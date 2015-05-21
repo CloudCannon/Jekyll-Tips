@@ -1,5 +1,4 @@
 ---
-layout: guide
 title: Blog
-order: 7
+order: 8
 ---

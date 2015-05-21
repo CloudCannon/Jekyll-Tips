@@ -1,0 +1,14 @@
+{% assign items = include.items %}
+
+<ul>
+{% for item in items %}
+  {% if item.url == page.url %}
+    {% assign c = "current" %}
+  {% else %}
+    {% assign c = "" %}
+  {% endif %}
+
+  <li class="{{ c }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+
+{% endfor %}
+</ul>

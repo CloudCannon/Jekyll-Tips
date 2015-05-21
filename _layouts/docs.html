@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<section class="docs">
+    <div class="grid">
+        <div class="unit four-fifths">
+            <article>
+                <div class="improve right hide-on-mobiles">
+                    <a href="https://github.com/jekyll/jekyll/edit/master/site/{{ page.path }}"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                </div>
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+                {% include section_nav.html %}
+
+                {% assign guide_items = site.guide | sort: 'order' %}
+
+                <div class="section-nav">
+                {% for guide_item in guide_items %}
+                  {% if guide_item.title == page.title %}
+                    {% assign current_index = forloop.index0 %}
+
+                    <div class="left align-right">
+                        {% if forloop.first %}
+                            <span class="prev disabled">Back</span>
+                        {% else %}
+                            {% assign prev_index = forloop.index0 | minus: 1 %}
+                            {% assign prev_guide = guide_items[prev_index] %}
+                            <a href="{{ prev_guide.url }}" class="prev">Back</a>
+                        {% endif %}
+                    </div>
+
+                    <div class="right align-left">
+                        {% if forloop.last %}
+                            <span class="next disabled">Next</span>
+                        {% else %}
+                            {% assign next_index = forloop.index0 | plus: 1 %}
+                            {% assign next_guide = guide_items[next_index] %}
+                            <a href="{{ next_guide.url }}" class="next">Next</a>
+                        {% endif %}
+                    </div>
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                </div>
+                <div class="clear"></div>
+            </article>
+        </div>
+
+        {% include docs_contents.html %}
+
+        <div class="clear"></div>
+    </div>
+</section>

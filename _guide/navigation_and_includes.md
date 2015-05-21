@@ -1,7 +1,6 @@
 ---
-layout: guide
-title : Navigation and Includes
-order: 4
+title: Navigation and Includes
+order: 5
 ---
 Let's build out the rest of the website. Create an HTML page for each link in the navigation. You'll end up with **our_story.html**, **price.html**, **journal.html** and **contact.html** in the root of your website.
 

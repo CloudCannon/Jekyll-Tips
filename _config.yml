@@ -1,18 +1,38 @@
+markdown: kramdown
+highlighter: pygments
+permalink: /news/:year/:month/:day/:title/
+excerpt_separator: ""
+
+gauges_id:
+google_analytics_id:
+
+repository: https://github.com/jekyll/jekyll
+help_url: https://github.com/jekyll/jekyll-help
+
 collections:
-  themes:
+  templates:
+    name: Jekyll Themes
   snippets:
+    name: Jekyll Snippets
     output: true
-  static_site_services:
+  services:
+    name: Services for Static Sites
   tutorials:
+    name: Jekyll Tutorials
   guide:
+    name: Get Started Guide
     output: true
-main_links:
-  - title: Themes
-    link: /
-  - title: Tutorials
-    link: /tutorials/
-  - title: Snippets
-    link: /snippets/
-  - title: Services
-    link: /services/
-domain: jekyll.tips
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: snippets
+    values:
+      layout: snippet
+  -
+    scope:
+      path: ""
+      type: guide
+    values:
+      layout: docs

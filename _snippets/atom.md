@@ -4,6 +4,5 @@ author:
   name: MDO
   link: https://github.com/mdo
 title : Atom Feed
-layout: snippet
 category: Posts
 ---

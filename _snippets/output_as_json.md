@@ -4,6 +4,5 @@ author:
   name: CloudCannon
   link: https://github.com/cloudcannon
 title : Output JSON
-layout: snippet
 category: Other
 ---

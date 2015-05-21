@@ -4,6 +4,5 @@ author:
   name: MDO
   link: https://github.com/mdo
 title : List Blog Posts
-layout: snippet
 category: Posts
 ---

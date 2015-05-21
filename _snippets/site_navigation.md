@@ -4,6 +4,5 @@ author:
   name: mdo
   link: https://github.com/mdo
 title : Site Navigation
-layout: snippet
 category: Pages
 ---

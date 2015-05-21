@@ -4,6 +4,5 @@ author:
   name: MDO
   link: https://github.com/mdo
 title : Series of full blog posts
-layout: snippet
 category: Posts
 ---

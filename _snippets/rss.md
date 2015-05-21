@@ -4,6 +4,5 @@ author:
   name: snaptortoise
   link: https://github.com/snaptortoise
 title : RSS Feed
-layout: snippet
 category: Posts
 ---

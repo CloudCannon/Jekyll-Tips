@@ -1,15 +1,13 @@
 ---
-layout: guide
-title : Introduction
+title: Introduction
 order: 1
+permalink: /guide/home/
 ---
 This guide will give you a step-by-step introduction to Jekyll. We'll download a free HTML 5 template, convert it into a Jekyll website, add a blog and make it updatable for clients or non-technical users. Let's get started!
 
 ### What is Jekyll?
 
 Jekyll is a static site generator. It takes source files and generates an entirely static website. This is different from how a typical CMS such as Wordpress works. With Wordpress when a visitor goes to a page, that page is generated on the fly. With Jekyll, the entire website is generated upfront so visitors are simply served static files.
-
-![Jekyll Logo](/img/guide/jekyll-logo.png)
 
 ### Why is Jekyll awesome?
 

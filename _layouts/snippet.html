@@ -1,15 +1,13 @@
 ---
-layout: default
+layout: docs
 ---
-<h2>{{page.title}}</h2>
-<p class="center-text"> by <a target="_blank" href="{{page.author.link}}">{{page.author.name}}</a></p>
-<p class="center-text"><a href="/snippets/">Back to Snippets</a></p>
-<section>
-  <div class="snippet">
+
+<div class="snippet">
     {% if page.github_url %}
-      <script src="http://gist-it.appspot.com/github/{{page.github_url | remove_first: "https://github.com/" }}"></script>
+        <script src="http://gist-it.appspot.com/github/{{page.github_url | remove_first: "https://github.com/" }}"></script>
     {% else %}
-      <script src="https://gist.github.com/mneumegen/{{page.gist_id}}.js"></script>
+        <script src="https://gist.github.com/mneumegen/{{page.gist_id}}.js"></script>
     {% endif %}
-  </div>
-</section>
+</div>
+
+<p>By <a target="_blank" href="{{page.author.link}}">{{page.author.name}}</a></p>

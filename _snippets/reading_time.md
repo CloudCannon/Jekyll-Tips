@@ -4,6 +4,5 @@ author:
   name: mdo
   link: https://github.com/mdo
 title : Reading Time
-layout: snippet
 category: Posts
 ---

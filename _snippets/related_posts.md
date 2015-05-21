@@ -4,6 +4,5 @@ author:
   name: mdo
   link: https://github.com/mdo
 title : Related Posts
-layout: snippet
 category: Posts
 ---

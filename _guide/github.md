@@ -1,7 +1,6 @@
 ---
-layout: guide
-title : GitHub
-order: 5
+title: GitHub
+order: 6
 ---
 
 I'll assume you know how Git and GitHub work for this section. If you're unfamilar with these tools GitHub has a great [Getting Started Guide](https://try.github.io/) which only takes 15 minutes.

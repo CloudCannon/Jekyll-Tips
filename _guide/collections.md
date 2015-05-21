@@ -1,5 +1,4 @@
 ---
-layout: guide
-title : Collections
-order: 8
+title: Collections
+order: 9
 ---
