@@ -1,13 +1,5 @@
-markdown: kramdown
-highlighter: pygments
-permalink: /news/:year/:month/:day/:title/
-excerpt_separator: ""
-
 gauges_id:
 google_analytics_id:
-
-repository: https://github.com/jekyll/jekyll
-help_url: https://github.com/jekyll/jekyll-help
 
 collections:
   templates:

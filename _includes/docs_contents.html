@@ -2,9 +2,9 @@
   <aside>
     <h4>Guide</h4>
     {% assign ordered = site.guide | sort: 'order' %}
-    {% include docs_ul.html items=ordered %}
+    {% include secondary-nav-items.html items=ordered %}
 
     <h4>Snippets</h4>
-    {% include docs_ul.html items=site.snippets %}
+    {% include secondary-nav-items.html items=site.snippets %}
   </aside>
 </div>

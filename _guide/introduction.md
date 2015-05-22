@@ -1,7 +1,7 @@
 ---
 title: Introduction
 order: 1
-permalink: /guide/home/
+permalink: /
 ---
 This guide will give you a step-by-step introduction to Jekyll. We'll download a free HTML 5 template, convert it into a Jekyll website, add a blog and make it updatable for clients or non-technical users. Let's get started!
 

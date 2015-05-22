@@ -1,8 +1,172 @@
 ---
 ---
 
+$body-background-color: #3a3a3a;
+$body-color-secondary: #4d4d4d;
+
+$content-color: #dcdcdc;
+$content-background-color: #4d4d4d;
+
+$nav-background-color: #262626;
+$nav-color-secondary: #4d4d4d;
+$nav-width: 300px;
+
+$brand-color: #ffd200;
+
+$space: 20px;
+$border-radius: 5px;
+
 @import "mixins";
 @import "normalize";
-@import "gridism";
 @import "pygments";
 @import "style";
+@import "set";
+
+
+html,
+body,
+header {
+	height: 100%;
+}
+
+body {
+	background-color: $body-background-color;
+	padding: 0 0 0 $nav-width;
+	position: relative;
+}
+
+header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: $nav-width;
+	padding: $space ($space * 2);
+	text-align: right;
+	background-color: $nav-background-color;
+	overflow-y: scroll;
+
+	> img {
+		width: 270px;
+		margin: 0 (-$space);
+	}
+
+	ul {
+		padding: 0;
+	}
+}
+
+.main {
+	height: 100%;
+	overflow: scroll;
+
+	h1 {
+		color: $body-color-secondary;
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: none;
+		margin: $space $space ($space * 1.5) $space;
+		font-size: 3rem;
+	}
+
+	&.fullscreen h1 {
+		margin: $space;
+	}
+}
+
+.content-box {
+	padding: ($space / 2) ($space / 2) $space ($space / 2);
+	margin: 0 auto;
+	max-width: 900px;
+	position: relative;
+
+	.fullscreen & {
+		margin: 0;
+		max-width: none;
+	}
+}
+
+.content {
+	background-color: $content-background-color;
+	color: $content-color;
+	padding: $space;
+	border-radius: $border-radius;
+
+	.fullscreen & {
+		background-color: transparent;
+		padding: 0;
+		box-shadow: none;
+	}
+}
+
+.nav-item {
+	display: block;
+	text-transform: uppercase;
+	padding: 7px 0;
+	font-size: 0.8rem;
+
+	> ul {
+		display: none;
+	}
+
+	&.current {
+		> a {
+			color: $nav-color-secondary;
+			text-shadow: none;
+		}
+
+		> ul {
+			display: block;
+		}
+	}
+
+	&.top-level {
+		padding: 0 0 25px 0;
+
+		> ul {
+			margin-top: 7px;
+		}
+
+		> a {
+			font-weight: bold;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+
+// TODO rename this back and remove competing styles
+.asection-nav {
+	position: absolute;
+	top: 30px;
+	left: $space * 1.5;
+	right: $space * 1.5;
+
+	.prev,
+	.next {
+		background-size: 60px;
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 60px;
+		display: inline-block;
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.disabled {
+			display: none;
+		}
+	}
+
+	.prev {
+		float: left;
+		background-image: url(/img/icons/arrow-back.svg);
+	}
+
+	.next {
+		float: right;
+		background-image: url(/img/icons/arrow-forward.svg);
+	}
+}

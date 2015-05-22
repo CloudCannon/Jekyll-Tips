@@ -1,35 +1,33 @@
 ---
-layout: default
-title: Jekyll &bull; Simple, blog-aware, static sites
+layout: page
+title: Templates
 permalink: /templates/
 ---
 
-<section>
-    <div class="grid">
-        <div class="unit whole center-on-mobiles">
-            <article>
-            	<h2>Jekyll Themes </h2>
-            	<p>Open source Jekyll Themes to help you get started on your Jekyll website. Download or fork a theme and run <code>jekyll serve</code>.</p>
-            </article>
+<div class="set">
+	{% for template in site.templates %}
+		<div class="set-item">
+			<div class="set-item-image-container">
+				<img src="/img/templates/{{template.name | downcase | replace:' ', '_'}}.jpg" alt="{{template.name}}">
+			</div>
 
-        	<div>
-        		{% for theme in site.templates %}
-        			{% assign theme_id = theme.name | downcase | replace:' ', '_' | prepend:'t_' %}
-        			<div id="{{theme_id}}" class="column">
-        				<div class="column-inner" target="_blank">
-        					<img src="/img/templates/{{theme.name | downcase | replace:' ', '_'}}.jpg" alt="{{theme.name}}">
-        					<div class="overlay">
-                    <h3><a target="_blank" href="{{theme.github_url}}">{{theme.name}}</a></h3>
-        						<div class="sharing">
-        							<a target="_blank" href="https://twitter.com/intent/tweet?url={{site.domain}}%23{{theme_id}}&text={{theme.name | url_param_escape }}%20-%20A%20free%20%23jekyllrb%20theme%20on%20{{site.domain}}%23{{theme_id}}"><img width="40px" src="/img/twitter-share.png" alt="share on Twitter" /></a>
-        							<a target="_blank" href="http://www.facebook.com/sharer.php?u=jekyllhub.com%23{{theme_id}}&t={{theme.name}}"><img width="40px" src="/img/facebook-share.png" alt="share on Facebook" /></a>
-        						</div>
-        						<p class="download"><a href="{{theme.github_url}}/archive/master.zip">Download</a>
-                  </div>
-        				</div>
-        			</div>
-        		{% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
+			<div class="set-item-details">
+				<a class="download-link" href="{{template.github_url}}/archive/master.zip"></a>
+				<h3><a target="_blank" href="{{template.github_url}}">{{template.name}}</a></h3>
+				<!-- <div class="sharing">
+					<a target="_blank" href="https://twitter.com/intent/tweet?url={{site.domain}}%23{{id}}&text={{template.name | url_param_escape }}%20-%20A%20free%20%23jekyllrb%20theme%20on%20{{site.domain}}%23{{id}}"><img width="40px" src="/img/twitter-share.png" alt="share on Twitter" /></a>
+					<a target="_blank" href="http://www.facebook.com/sharer.php?u=jekyllhub.com%23{{id}}&t={{template.name}}"><img width="40px" src="/img/facebook-share.png" alt="share on Facebook" /></a>
+				</div> -->
+			</div>
+		</div>
+	{% endfor %}
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+</div>
