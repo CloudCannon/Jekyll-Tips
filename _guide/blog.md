@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Blog
+title: Blogging
 order: 8
 ---
 
@@ -12,7 +12,7 @@ Create a **_posts** folder in the root of the website. Jekyll expects the file n
 
 <pre>YEAR-MONTH-DAY-title.md</pre>
 
-Create a new file in **_posts** called **2015-06-06-my-first-post.md** with the following content:
+Create a new file in **_posts** called **2015-03-06-my-first-post.md** with the following content:
 
 <pre>---
 layout: post
@@ -32,28 +32,78 @@ As you can see we're using a layout called **post** which we need to create now.
 
 Insert the following into **post.html**:
 
-<pre>---
+<pre>{% raw %}---
 layout: default
 ---
 
-&lt;section class=&quot;blog_post&quot;&gt;
-    &lt;h2&gt; {% raw %}{{page.title}}{% endraw %} &lt;/h2&gt;
-    {% raw %}{{content}}{% endraw %}
-&lt;/section&gt;</pre>
+&lt;section class=&quot;bg-dark&quot;&gt;
+  &lt;div class=&quot;text-center&quot;&gt;
+    &lt;h1&gt;{{page.title}}&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
 
-Let's add a little bit of styling to the bottom of **/css/main_responsive.css** aswell:
-<pre>.blog_post {
-  font-family: arial, sans-serif;
-  line-height: 1.4em;
-  width: 800px;
-  margin: 0 auto;
-  padding: 70px 0;
-}
+&lt;section id=&quot;contact&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;
+      {{content}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;{% endraw %}</pre>
 
-.blog_post h2 {
-  font-size: 2em;
-}
+Now we need a page which lists all the blog posts. Create a file in the root of the website called **blog.html** with the following contents:
 
-.blog_post p {
-  margin: 20px 0 0 0;
-}</pre>
+<pre>{% raw %}---
+layout: default
+title: Blog
+---
+&lt;section class=&quot;bg-dark&quot;&gt;
+  &lt;div class=&quot;text-center&quot;&gt;
+    &lt;h1&gt;Blog&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;text-center&quot;&gt;
+        &lt;ul style=&quot;list-style-position: inside&quot;&gt;
+           {% for post in site.posts %}
+             &lt;li&gt;
+               &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; - {{ post.date| date: &quot;%d %B %Y&quot; }}
+             &lt;/li&gt;
+           {% endfor %}
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;{% endraw %}</pre>
+
+**site.posts** is a Jekyll variable which has all the blog posts. We simply iterate over all the posts and output the url, title and date.
+
+The last step is to add a link to the blog in **nav.html**:
+
+<pre>{% raw %}&lt;li {% if page.url == &#39;/blog.html&#39; %} class=&quot;active&quot; {% endif %}&gt;
+  &lt;a href=&quot;/blog.html&quot;&gt;Blog&lt;/a&gt;
+&lt;/li&gt;{% endraw %}</pre>
+
+Head over to the browser and check out your first Jekyll blog post.
+
+![Blog](/img/guide/blog/blog.png)
+
+Let's see how we can have our client update the blog.
+
+Go to the Collections tab in CloudCannon. This bring up two tabs, Draft Posts and Published Posts.
+
+Draft posts are **not** published to the live website and live in the **_drafts** directory.
+
+![Collections](/img/guide/blog/collections.png)
+
+If you go to Published Posts you will see our first blog post there. Click on you'll be able to update it using our visual editor.
+
+Create a new post by clicking **Start a new Draft** and adding some content. When you're finished press **Publish Post** which moves it from **_drafts** to **_posts**
+
+![New Post](/img/guide/blog/new_post.png)
+
+Go to your cloudvent domain and browse to the **blog.html** page. There's now two blogs posts!
+
+![Blog Index](/img/guide/blog/blog_index.png)

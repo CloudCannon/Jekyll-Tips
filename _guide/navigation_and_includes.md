@@ -5,9 +5,11 @@ order: 5
 ---
 <!--class="page-scroll"-->
 
-Let's build out the rest of the website. At the moment this template is a single page website, let's turn it into a multipage. Create an HTML page for each link in the navigation. You'll end up with **about.html**, **services.html**, **portfolio.html** and **contact.html** in the root of your website.
+Let's build out the rest of the website. At the moment this template is a single page website, let's turn it into multiple pages. Create an HTML page for each link in the navigation. You'll end up with **about.html**, **services.html**, **portfolio.html** and **contact.html** in the root of your website.
 
-These new pages are looking a bit empty so let's add some content. Cut this section from **index.html** and paste it in **about.html**
+These new pages are looking a bit empty so let's add some content.
+
+Cut this section from **index.html** and paste it into **about.html**.
 
 <pre>&lt;section class=&quot;bg-primary&quot; id=&quot;about&quot;&gt;
   &lt;div class=&quot;container&quot;&gt;
@@ -49,19 +51,19 @@ title: About
 
 Do this for the other pages too.
 
-Now we need to get the navigation working. We want to link to the correct pages and highlight the current page in the navigation. This is going to get a little complex so let's put the navigation in its own file. First create a **_includes** folder in the root of your website and inside it create an empty file called **nav.html**.
+Now we need to get the navigation working. We want to link to the correct pages and highlight the current page in the navigation. This is going to get a little complex so let's put the navigation into its own file. First create an **_includes** folder in the root of your website. Inside it create a file called **nav.html**.
 
-Find the **&lt;nav&gt;** element in **default.html** and copy it to **nav.html**. Let's also fix up the hrefs so they point to the correct pages and remove the **page-scroll** class. I also made a logo link to the homepage. Now **nav.html** will look like this:
+Find the **&lt;nav&gt;** element in **default.html** and copy it to **nav.html**. Let's also fix up the hrefs so they point to the correct pages and remove the **page-scroll** class. I also made the logo link to the homepage. Now **nav.html** will look like this:
 
 <pre>&lt;nav id=&quot;mainNav&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
   &lt;div class=&quot;container-fluid&quot;&gt;
     &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
     &lt;div class=&quot;navbar-header&quot;&gt;
       &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot;&gt;
-      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
-      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
       &lt;/button&gt;
       &lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;Start Bootstrap&lt;/a&gt;
     &lt;/div&gt;
@@ -131,6 +133,6 @@ Jekyll has a variable which has the path to the current page you can reference u
 
 This template already has CSS for styling the active link so that's all we need to do.
 
-Go to your browser and navigate around the site, the current page will be red. At this point we just need to add content and we have a basic working website we can hand off to a client.
+Go to your browser and navigate around the site, the current page will be red. At this point we have a basic working website we can hand off to a client.
 
 Let's look at hosting and adding a CMS so non-technical users can update the website.

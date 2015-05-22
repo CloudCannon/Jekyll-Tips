@@ -12,11 +12,11 @@ Head over to [CloudCannon](http://cloudcannon.com), sign up for a free account a
 
 ![Create Site](/img/guide/cms/create_site.png)
 
-This bring up the file browser for the site. There's no files at the moment so let's add some! Click the connect storage provider button.
+This brings up the file browser for the site. There's no files at the moment so let's add some! Click the connect storage provider button.
 
 ![Dashboard](/img/guide/cms/dashboard.png)
 
-We want to sync files from our repository so click next to GitHub and allow CloudCannon access to your account.
+We want to sync files from our repository so click Connect next to GitHub and allow CloudCannon access to your account.
 
 ![Connect](/img/guide/cms/connect.png)
 
@@ -32,7 +32,7 @@ Now we have the files on CloudCannon, it's time to add updatable regions. Click 
 
 ![Preview](/img/guide/cms/preview.png)
 
-We set the updatable regions by adding a class of **editable** to elements in the HTML. Let's make the headings on the index page editable:
+We set the editable regions by adding a class of **editable** to elements in the HTML. Let's make the headings on the index page editable:
 
 <pre>&lt;header&gt;
   &lt;div class=&quot;header-content&quot;&gt;
@@ -45,8 +45,16 @@ We set the updatable regions by adding a class of **editable** to elements in th
   &lt;/div&gt;
 &lt;/header&gt;</pre>
 
-Go to the visual editor view. The elements with the editable class have a yellow box around them indicating they're updatable. Try clicking on an editable region and making an update directly inline.
+The context you put the editable class is important. If you wanted to give more control to the client you could add the class to the div. Then they'd be able to add more headings, lists, images etc.
+
+Go to the visual editor view. The elements with the editable class have a yellow box around them indicating they're editable. Try clicking on an editable region and making an update directly inline.
 
 ![Visual Editor](/img/guide/cms/visual.png)
 
-CloudCannon pushes your website live to a testing domain of **\*.cloudvent.net**. To view this on the free plan you'll need to set a password on the website. On paid plans you can add your own domain.
+CloudCannon pushes your website live to a testing domain of **\*.cloudvent.net**. On the free plan the website isn't public, we need to add a password before we can view it. Go to Site Settings, then Site Password and type in a password for your website.
+
+![Password](/img/guide/cms/password.png)
+
+Click on the cloudvent domain at the top of the page, enter your password. Our site is now live on the internet!
+
+![Cloudvent](/img/guide/cms/cloudvent.png)
