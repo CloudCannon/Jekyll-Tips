@@ -30,7 +30,7 @@ Head over to the Collections tab in CloudCannon, you'll see it's detected the Se
 
 ![Collections](/img/guide/collections/collections.png)
 
-Open up our Web Design item. You can easily manage this service using the visual editor. Let's add an image to Web Design. I'm going to use a free flat icon set you can [download here](http://tympanus.net/Freebies/FlatIcons_SquidInk.zip).
+Open up our Web Design item. You can easily manage this service using the visual editor. Let's add an image to Web Design. I'm going to use a free flat icon set you can [download here](/flaticons_squidink.zip).
 
 Click **Add Image Path** and upload an appropriate icon.
 
@@ -38,7 +38,9 @@ Click **Add Image Path** and upload an appropriate icon.
 
 Go ahead and add three more services. I added **Content Writing**, **SEO** and **Social Media Marketing**.
 
-Now we just need to display the services in **services.html**. Jekyll makes the services collection available to us using the variable **site.services**. Let's replace the existing static services HTML with some Liquid which iterates over all the services and outputs their details. Here's how you do that:
+Now we just need to display the services in **services.html**. Jekyll makes the services collection available to us using the variable **site.services**.
+
+Let's replace the existing static services HTML with some Liquid which iterates over all the services and outputs the details. Here's how you do that:
 
 <pre>{% raw %}---
 layout: default

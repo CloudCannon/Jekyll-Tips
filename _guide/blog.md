@@ -4,11 +4,13 @@ title: Blogging
 order: 8
 ---
 
-We're going to be working with CloudCannon for the rest of the guide. All changes from now should either be pushed to GitHub (which then pushes to CloudCannon) or be done directly in CloudCannon.
+We're going to be working with CloudCannon for the rest of the guide. When you're working now, you should either push each change GitHub (which then pushes to CloudCannon) or make changes directly in CloudCannon.
 
-It's time to add a blog to our website. Blog posts live in the **_posts** folder and are written in [Markdown](https://help.github.com/articles/markdown-basics/).
+It's time to add a blog to our website. Blog posts are [Markdown](https://help.github.com/articles/markdown-basics/) files which live in the **_posts** folder.
 
-Create a **_posts** folder in the root of the website. Jekyll expects the file name to be in a particular format for blog posts. The format is:
+Create a **_posts** folder in the root of the website. To create a folder in CloudCannon create a file in the root then in the context menu click "Move to a new folder".
+
+Jekyll expects the file name to be in a particular format for blog posts. The format is:
 
 <pre>YEAR-MONTH-DAY-title.md</pre>
 
@@ -78,7 +80,7 @@ title: Blog
   &lt;/div&gt;
 &lt;/section&gt;{% endraw %}</pre>
 
-**site.posts** is a Jekyll variable which has all the blog posts. We simply iterate over all the posts and output the url, title and date.
+**site.posts** is a Jekyll variable which has all the blog posts. We iterate over all the posts and output the url, title and date.
 
 The last step is to add a link to the blog in **nav.html**:
 
@@ -100,7 +102,7 @@ Draft posts are **not** published to the live website and live in the **_drafts*
 
 If you go to Published Posts you will see our first blog post there. Click on you'll be able to update it using our visual editor.
 
-Create a new post by clicking **Start a new Draft** and adding some content. When you're finished press **Publish Post** which moves it from **_drafts** to **_posts**
+Go back to the Collections view and create a new post by clicking **Start a new Draft**, then adding content. When you're finished press **Publish Post** which moves it from **_drafts** to **_posts** and prefixes the file name with today's date.
 
 ![New Post](/img/guide/blog/new_post.png)
 

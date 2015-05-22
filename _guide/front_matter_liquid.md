@@ -21,7 +21,7 @@ There are two types of markup in Liquid:
 
 <pre>{% raw %}{{ variable }}{% endraw %}</pre>
 
-**Tag Markup** - Tag markup is used to perform some sort of logic. To initiate tag markup use a curly brace and percentage sign.
+**Tag Markup** - Doesn't output and is usually used to perform logic. Tag markup uses a curly brace and percentage sign.
 
 <pre>{% raw %}{% if page.variable %}
   Hello

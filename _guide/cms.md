@@ -6,7 +6,7 @@ order: 7
 
 [CloudCannon](http://cloudcannon.com) is a service which provides a CMS for Jekyll websites, they also provide hosting. We're going to use CloudCannon to allow our client to update the website.
 
-**Important**: CloudCannon detects that it's a Jekyll website by looking for a **_config.yml** file in the website root. Add **_config.yml** to your website root (it can be empty for now) and push it to GitHub.
+**Important**: CloudCannon detects that it's a Jekyll website by looking for a **_config.yml** file. Create **_config.yml** in the website root (it can be empty for now) and push it to GitHub.
 
 Head over to [CloudCannon](http://cloudcannon.com), sign up for a free account and create a website.
 
@@ -24,7 +24,7 @@ Connect the repository for the website.
 
 ![Repo](/img/guide/cms/repo.png)
 
-CloudCannon will pull in your files and display them in the file browser. Any updates you make in CloudCannon are synced back to GitHub and any changes you push to GitHub are synced to CloudCannon.
+CloudCannon will pull in your files and display them in the file browser. Any updates you make in CloudCannon sync back to GitHub and any changes you push to GitHub sync to CloudCannon.
 
 ![Files](/img/guide/cms/files.png)
 
@@ -47,7 +47,7 @@ We set the editable regions by adding a class of **editable** to elements in the
 
 The context you put the editable class is important. If you wanted to give more control to the client you could add the class to the div. Then they'd be able to add more headings, lists, images etc.
 
-Go to the visual editor view. The elements with the editable class have a yellow box around them indicating they're editable. Try clicking on an editable region and making an update directly inline.
+Go to the visual editor view. The elements with the editable class have a yellow box around them indicating they're editable. Try clicking on an editable region and making an update inline.
 
 ![Visual Editor](/img/guide/cms/visual.png)
 

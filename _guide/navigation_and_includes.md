@@ -9,7 +9,7 @@ Let's build out the rest of the website. At the moment this template is a single
 
 These new pages are looking a bit empty so let's add some content.
 
-Cut this section from **index.html** and paste it into **about.html**.
+Cut the about section from **index.html** and paste it into **about.html**.
 
 <pre>&lt;section class=&quot;bg-primary&quot; id=&quot;about&quot;&gt;
   &lt;div class=&quot;container&quot;&gt;
@@ -24,7 +24,7 @@ Cut this section from **index.html** and paste it into **about.html**.
   &lt;/div&gt;
 &lt;/section&gt;</pre>
 
-We'll also add a heading and Front Matter. Now **about.html** should look like this:
+We'll also add a heading and Front Matter. Now **about.html** looks like this:
 
 <pre>---
 layout: default
@@ -133,6 +133,6 @@ Jekyll has a variable which has the path to the current page you can reference u
 
 This template already has CSS for styling the active link so that's all we need to do.
 
-Go to your browser and navigate around the site, the current page will be red. At this point we have a basic working website we can hand off to a client.
+Go to your browser and navigate around the site, the current page had a red font. At this point we have a basic working website we can hand off to a client.
 
 Let's look at hosting and adding a CMS so non-technical users can update the website.

@@ -3,15 +3,15 @@ layout: guide
 title: Advanced Topics
 order: 12
 ---
-In the effort to make this guide as easy as possible we've glossed over some topics. This advanced section is a chance to dive into some deeper topics.
+In the effort to make this guide as easy as possible we've glossed over some topics. This advanced section is a chance to take a deeper dive on these topics.
 
 #### Collections vs Front Matter vs Data Files
 
-There's so many ways of adding a set of data to Jekyll you might be wondering when to I use each one? It's not always clear but we have a few rules to help us to decide:
+There's so many ways of adding a set of data to Jekyll you might be wondering when do I use each one? It's not always clear but we have a few rules to help us to decide:
 
-* If the data is already in a CSV, YML, JSON or you would usually store that information in one of those file types, use a Data File.
-* If you need to order the information in a non-sortable way and that information only needs to be used on a single page, use an array in Front Matter.
-* Otherwise use a Collection. Collections are the most flexible method out of these formats and is usually the correct choice.
+* If the data is already in a CSV, YML, JSON or you would usually store that information in one of those file formats, use a Data File.
+* If you need to order data in a non-sortable way and that data only needs to be used on a single page, use an array in Front Matter.
+* Otherwise use a Collection. Collections are the most flexible method and is usually the best choice.
 
 #### RSS Feed
 
@@ -47,62 +47,23 @@ Create a file in the root of the site called **feed.xml** with the following con
   &lt;/channel&gt;
 &lt;/rss&gt;{% endraw %}</pre>
 
-The empty Front Matter is important here because it tells Jekyll we're using liquid. This script goes through all the blog posts and outputs them in the RSS XML format.
+The empty Front Matter is important here because it tells Jekyll we're using Liquid. This script goes through all the blog posts and outputs them in the RSS XML format.
 
-There's a few variables we need to define like **site.name**. Open up **_config.yml** and add these variables so it looks like this:
+There's a few variables we need to define like **site.name**. Open up **_config.yml** and add this YAML:
 
-<pre>collections:
-  services:
-name: Creative Agency
+<pre>name: Creative Agency
 description: We are a creative agency who provides web design, SEO, content and social services.
 url: http://creative.com</pre>
 
-Now we just need to add a link to the RSS feed in &lt;head&gt; in **_layouts/default.html**:
+We just need to add a link to the RSS feed to &lt;head&gt; in **_layouts/default.html**:
 
 <pre>&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;My Site RSS&quot; href=&quot;/feed.xml&quot; /&gt;</pre>
 
-Now I can link to the generated page in **services.html** like this:
-
-<pre><pre>{% raw %}---
-layout: default
-title: Services
----
-&lt;section class=&quot;bg-dark&quot;&gt;
-  &lt;div class=&quot;text-center&quot;&gt;
-    &lt;h1&gt;Services&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/section&gt;
-
-&lt;section id=&quot;services&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col-lg-12 text-center&quot;&gt;
-                &lt;h2 class=&quot;section-heading&quot;&gt;At Your Service&lt;/h2&gt;
-                &lt;hr class=&quot;primary&quot;&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            {% for service in site.services %}
-                &lt;div class=&quot;col-lg-3 col-md-6 text-center&quot;&gt;
-                    &lt;div class=&quot;service-box&quot;&gt;
-                        &lt;img src=&quot;{{ service.image_path }}&quot; alt=&quot;{{ service.title }}&quot;/&gt;
-                        &lt;h3&gt;{{ service.title }}&lt;/h3&gt;
-                        &lt;p class=&quot;text-muted&quot;&gt;{{ service.content }}&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            {% endfor %}
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;{% endraw %}</pre>
-
-</pre>
-
 #### Generate a page for Collections
 
-In the services example earlier in the guide, you might want to generate a separate page for each service. Jekyll makes this easy, just change **_config.yml** to:
+In the services example earlier in the guide, you might want to generate a separate page for each service. Jekyll makes this easy.
+
+Change **_config.yml** to:
 <pre>collections:
   services:
     output: true
@@ -117,7 +78,7 @@ defaults:
 
 We would also need to add a layout to each collection item. Instead of doing this I've set a default layout for the Services collection.
 
-Now we just need to link to the generated page in **services.html**:
+We just need to link to the generated page in **services.html**:
 <pre>{% raw %}---
 layout: default
 title: Services
@@ -153,13 +114,13 @@ title: Services
     &lt;/div&gt;
 &lt;/section&gt;{% endraw %}</pre>
 
-I've also limited the content on the page to 10 words on this page using a filter - **{% raw %}{{ service.content \| truncatewords: 10 }}{% endraw %}**. Filters allow you to manipulate content as it's being output. You can find more details [here](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers).
+I've also limited the content on the page to 10 words on this page using a filter - **{% raw %}{{ service.content \| truncatewords: 10 }}{% endraw %}**. Filters allow you to manipulate content as it's output. You can find more filters [here](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers).
 
 #### Pagination
 
-As a blog grows the list of posts can get unwieldy. Jekyll allows us to spit the list of blog posts into multiple pages using pagination.
+As a blog grows the list of posts can get unwieldy. Jekyll allows us to split the list of blog posts into multiple pages using pagination.
 
-To enable pagination open **_config.yml** and set the paginate variable:
+To enable pagination open **_config.yml** and set the paginate variable. This is how many items you want on each page:
 
 <pre>paginate: 5
 paginate_path: "/blog/page:num"</pre>

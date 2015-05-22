@@ -13,7 +13,7 @@ Now we need to work out which HTML will repeat on each page. Open up **index.htm
 
 We also need to tweak the path to assets. At the moment the paths are relative to **/index.html**, we need to make them relative to the root of the website so they work for all pages. This is easier than it sounds, just go through the assets in **default.html** and add a **/** to the beginning of the path. For example change **css/bootstrap.min.css** to **/css/bootstrap.min.css**.
 
-Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in **{% raw %}{{ content }}{% endraw %}** between the header and footer in **default.html**. We'll go over what this is actually doing in the next section.
+Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in **{% raw %}{{ content }}{% endraw %}** between the header and footer in **default.html**. We'll go over what this is doing in the next section.
 
 **default.html** should now look like this:
 

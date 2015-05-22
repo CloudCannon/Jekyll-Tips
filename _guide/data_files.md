@@ -4,33 +4,33 @@ title : Data Files
 order: 11
 ---
 
-Data Files in Jekyll make it easy to read from YAML, JSON and CSV files. You can sort of treat it like reading data from a database.
+Data Files in Jekyll make it easy to read from YAML, JSON and CSV files. You can treat it like reading data from a database.
 
 The way we're going to use Data Files on our site is by adding a map to the contact page with our global offices.
 
-First we need to create a **_data** directory. Now we'll create a CSV file with the latitudes and longitudes of our offices. Inside **_data** add a file called **office_locations.csv** with the following contents:
+First we need to create a **_data** directory. Now we'll create a CSV file with the latitudes and longitudes of our offices. Then create **_data/office_locations.csv** with the following contents:
 
 <pre>latitude,longitude,name
 -45.878760,170.502798,Dunedin Office
 -41.286460,174.776236,Wellington Office
 -46.098799,168.945819,Gore Office
 -46.413187,168.353773,Invercargill Office
--35.117330, 173.267559, Kaitai Office</pre>
+-35.117330, 173.267559,Kaitai Office</pre>
 
 Now to add the map and markers to **contact.html**. We can access data in the CSV by using **site.data.office_locations**.
 
 Google Maps has a Javascript API so we need to get this data into a Javascript variable. It's actually pretty easy to output JSON with Jekyll:
 
 <pre>{% raw %}&lt;script&gt;
-    var markers = [
-        {% for location in site.data.office_locations %}
-            ['{{ location.name }}', {{ location.latitude }}, {{ location.longitude }}]
-            {% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    ];
+  var markers = [
+    {% for location in site.data.office_locations %}
+      ['{{ location.name }}', {{ location.latitude }}, {{ location.longitude }}]
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
 &lt;/script&gt;{% endraw %}</pre>
 
-One thing we haven't talked about before is the **forloop** variable. You can use this inside for loops to get the current index, length or check if it's the first or last item. Here we're checking if it's _not_ the last item and adding a comma.
+You can use the **forloop** variable inside for loops to get the current index, length or check if it's the first or last item. Here we're checking if it's _not_ the last item and adding a comma.
 
 Finally we need to add a placeholder for the map, initialize the map and add markers. I'm not going to go into depth on this code. However, it's worth mentioning I used [SnazzyMaps](https://snazzymaps.com) to add a nice style to the map.
 

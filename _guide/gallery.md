@@ -10,7 +10,7 @@ One option would be to have an order or weight variable in the Front Matter of y
 
 The Portfolio page seems like a good place to try this out. We want our client to manage items in the portfolio and manage the order.
 
-Open up **portfolio.html** and you'll see a block of HTML repeating for each item in the portfolio. As you might of noticed we're trying to remove all repetition on this website to make it easier to manage.
+Open up **portfolio.html** and you'll see a block of HTML repeating for each item in the portfolio. As you might of noticed we're trying to remove all repetition on this website to make it easier to maintain.
 
 First we'll add the portfolio data to the Front Matter:
 
