@@ -1,5 +1,6 @@
 ---
 layout: page
+extra_class: fullscreen
 title: Templates
 permalink: /templates/
 ---
@@ -7,20 +8,17 @@ permalink: /templates/
 <div class="set">
 	{% for template in site.templates %}
 		<div class="set-item">
-			<div class="set-item-image-container">
-				<img src="/img/templates/{{template.name | downcase | replace:' ', '_'}}.jpg" alt="{{template.name}}">
+			<div class="image-container">
+				<img src="/img/templates/{{ template.name | downcase | replace:' ','_' }}.jpg" alt="{{ template.name }}">
 			</div>
 
 			<div class="set-item-details">
-				<a class="download-link" href="{{template.github_url}}/archive/master.zip"></a>
-				<h3><a target="_blank" href="{{template.github_url}}">{{template.name}}</a></h3>
-				<!-- <div class="sharing">
-					<a target="_blank" href="https://twitter.com/intent/tweet?url={{site.domain}}%23{{id}}&text={{template.name | url_param_escape }}%20-%20A%20free%20%23jekyllrb%20theme%20on%20{{site.domain}}%23{{id}}"><img width="40px" src="/img/twitter-share.png" alt="share on Twitter" /></a>
-					<a target="_blank" href="http://www.facebook.com/sharer.php?u=jekyllhub.com%23{{id}}&t={{template.name}}"><img width="40px" src="/img/facebook-share.png" alt="share on Facebook" /></a>
-				</div> -->
+				<a class="download-link" href="{{ template.github_url }}/archive/master.zip"></a>
+				<h3><a target="_blank" href="{{ template.github_url }}">{{ template.name }}</a></h3>
 			</div>
 		</div>
 	{% endfor %}
+
 	<div class="set-item set-item-filler"></div>
 	<div class="set-item set-item-filler"></div>
 	<div class="set-item set-item-filler"></div>

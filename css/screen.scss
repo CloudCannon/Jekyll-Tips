@@ -170,3 +170,11 @@ header {
 		background-image: url(/img/icons/arrow-forward.svg);
 	}
 }
+
+.section-heading {
+	margin-bottom: 15px;
+
+	+ p {
+		margin-top: 0;
+	}
+}

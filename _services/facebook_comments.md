@@ -1,6 +1,7 @@
 ---
- link: https://developers.facebook.com/docs/plugins/comments 
- image_path: /img/static-site-services/facebook.png 
- name: Facebook Comments 
- category: Community 
+link: https://developers.facebook.com/docs/plugins/comments
+image_path: /img/static-site-services/facebook.png
+name: Facebook Comments
+category: Community
+image_has_background: true
 ---

@@ -1,27 +1,16 @@
-
-// Flexbox
-
-@mixin display-flex() {
-
-}
-
-@mixin flex($values) {
-	-webkit-flex: $values;
-	-ms-flex: $values;
-	flex: $values;
-}
-
-
-
 .set {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+	margin: -($space / 2);
+	padding: 0;
 }
 
 .set-item {
-	@include flex(1 0 0%);
+	-webkit-flex: 1 0 0%;
+	-ms-flex: 1 0 0%;
+	flex: 1 0 0%;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 	border-radius: $border-radius;
 	background-color: $content-background-color;
@@ -40,12 +29,44 @@
 		border-top-width: 0;
 		border-bottom-width: 0;
 	}
+
+	.image-container {
+		max-height: 300px;
+	}
 }
 
-.set-item-image-container {
-	max-height: 300px;
+.set-item-small {
+	min-width: 140px;
+	text-align: center;
+	box-shadow: none;
+	padding: $space / 2;
+
+	.image-container {
+		min-height: 175px;
+		margin: (-$space) (-$space) 0 (-$space);
+	}
+}
+
+.image-container {
 	overflow: hidden;
 	margin: (-$space) (-$space) $space (-$space);
+
+	&.centered {
+		border-radius: $border-radius;
+		padding: $space;
+
+		img {
+			max-height: 100%;
+			max-width: 100%;
+			border-radius: $border-radius;
+		}
+	}
+
+	&.with-background img {
+		background-color: #fff;
+		padding: 10px;
+		border-radius: $border-radius;
+	}
 
 	img {
 		width: 100%;
