@@ -1,0 +1,50 @@
+---
+layout: page
+title: Services
+permalink: /services/
+category_descriptions:
+  cms: Have non-technical people update Jekyll websites
+  newsletters: Capture email addresses and send periodic newsletters.
+  community: Build communities by allowing your visitors to post comments on your website.
+  e-commerce: Simple e-commerce is possible on static websites.
+  contact_forms: Add contact forms without any backend coding.
+  live_chat: Chat directly with visitors.
+  surveys: Get feedback by adding a survey to your site.
+  search: Full search capability for static websites.
+  backends: Even full backends with authentication are available for static websites.
+  analytics: Analyse what visitors are doing on your website.
+  embeddable_content: Content you can drop into your static websites.
+  frontend_error_trackers: As you add more javascript to your website it's worth tracking any errors that arise.
+---
+
+<!-- <p><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can use with static websites.</p> -->
+{% assign categories = site.services | group_by:"category" %}
+
+{% for current_category in categories %}
+	{% assign category_name = current_category.name | downcase | replace:' ','_' %}
+
+	<h2 class="section-heading">{{ current_category.name }}</h2>
+	<p>{{ page.category_descriptions[category_name] }}</p>
+
+	<ul class="set">
+		{% for service in site.services %}
+			{% if service.category == current_category.name %}
+			<li class="set-item set-item-small">
+				<div class="image-container centered {% unless service.image_has_background %}with-background{% endunless %}">
+					<img src="{{ service.image_path }}" alt="{{ service.name }}" />
+				</div>
+
+				<a href="{{ service.link }}">
+					{{ service.name }}
+				</a>
+			</li>
+			{% endif %}
+		{% endfor %}
+
+		<li class="set-item set-item-small set-item-filler"></li>
+		<li class="set-item set-item-small set-item-filler"></li>
+		<li class="set-item set-item-small set-item-filler"></li>
+		<li class="set-item set-item-small set-item-filler"></li>
+		<li class="set-item set-item-small set-item-filler"></li>
+	</ul>
+{% endfor %}

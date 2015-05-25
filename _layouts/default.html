@@ -1,44 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{page.title}} | Jekyll Tips</title>
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" type="image/ico" href="/favicon.ico">
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-</head>
-<body class="fixed-width no-sidebar">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ page.title }} - Jekyll Tips</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
-  <nav class="nav-bar">
-    <div class="wrap">
-      <h1><img src="/img/jekyll-hub.svg" alt="Jekyll Hub" width="400px"/></h1>
-      <div class="nav-items">
-        {% assign current = page.url %}
-        {% for main_link in site.main_links %}
-          <a href="{{main_link.link}}"
-            {% assign link = main_link.link | append:'index.html' %}
-            {% if current == link %}
-              class="current"
-            {% endif %}
-            > {{ main_link.title }} </a>
-        {% endfor %}
-      </nav>
-    </div>
-  </nav>
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/screen.css">
 
-  <div class="wrap">
-    <div class="main">
-      {{content}}
-    </div>
-  </div>
+		<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-  <footer>
-    <div class="wrap">
-      <p> Proudly maintained by <br/> <a href="http://cloudcannon.com"><img src="/img/logo.png" width="80px" alt="CloudCannon"></a></p>
-      <p class="contribute"><a target="_blank" href="https://github.com/CloudCannon/Jekyll-Tips">Contribute on Github</a></p>
-    </div>
-  </footer>
-</body>
+		<!--[if lt IE 9]>
+		<script src="/js/html5shiv.min.js"></script>
+		<script src="/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="wrap">
+		{% include primary-nav.html %}
+
+		{{ content }}
+
+		{% include analytics.html %}
+	</body>
 </html>

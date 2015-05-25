@@ -1,0 +1,31 @@
+---
+layout: page
+extra_class: fullscreen
+title: Templates
+permalink: /templates/
+---
+
+<div class="set">
+	{% for template in site.templates %}
+		<div class="set-item">
+			<div class="image-container">
+				<img src="/img/templates/{{ template.name | downcase | replace:' ','_' }}.jpg" alt="{{ template.name }}">
+			</div>
+
+			<div class="set-item-details">
+				<a class="download-link" href="{{ template.github_url }}/archive/master.zip"></a>
+				<h3><a target="_blank" href="{{ template.github_url }}">{{ template.name }}</a></h3>
+			</div>
+		</div>
+	{% endfor %}
+
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+</div>

@@ -1,0 +1,23 @@
+<div class="asection-nav">
+	{% for item in include.items %}
+		{% if item.title == page.title %}
+			{% assign current_index = forloop.index0 %}
+
+			{% if forloop.first %}
+				<span class="prev disabled"></span>
+			{% else %}
+				{% assign prev_index = forloop.index0 | minus: 1 %}
+				<a href="{{ include.items[prev_index].url }}" class="prev"></a>
+			{% endif %}
+
+			{% if forloop.last %}
+				<span class="next disabled"></span>
+			{% else %}
+				{% assign next_index = forloop.index0 | plus: 1 %}
+				<a href="{{ include.items[next_index].url }}" class="next"></a>
+			{% endif %}
+
+			{% break %}
+		{% endif %}
+	{% endfor %}
+</div>
