@@ -2,12 +2,15 @@
 layout: docs
 ---
 
-<div class="snippet">
-    {% if page.github_url %}
-        <script src="http://gist-it.appspot.com/github/{{page.github_url | remove_first: "https://github.com/" }}"></script>
-    {% else %}
-        <script src="https://gist.github.com/mneumegen/{{page.gist_id}}.js"></script>
-    {% endif %}
-</div>
+{{ content }}
 
-<p>By <a target="_blank" href="{{page.author.link}}">{{page.author.name}}</a></p>
+{% if page.source or page.author %}
+	<p>
+		{% if page.source %}
+			<a target="_blank" href="{{ page.source }}">Source</a>
+		{% endif %}
+		{% if page.author %}
+			by <a target="_blank" href="{{ page.author.link }}">{{ page.author.name }}</a>
+		{% endif %}
+	</p>
+{% endif %}
