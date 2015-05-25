@@ -91,40 +91,17 @@ We just need to link to the generated page in `services.html`:
 
 {% highlight html %}
 {% raw %}
----
-layout: default
-title: Services
----
-<section class="bg-dark">
-  <div class="text-center">
-    <h1>Services</h1>
-  </div>
-</section>
-
-<section id="services">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">At Your Service</h2>
-        <hr class="primary">
-      </div>
+...
+{% for service in site.services %}
+  <div class="col-lg-3 col-md-6 text-center">
+    <div class="service-box">
+      <img src="{{ service.image_path }}" alt="{{ service.title }}"/>
+      <h3><a href="{{ service.url }}">{{ service.title }}</a></h3>
+      <p class="text-muted">{{ service.content | truncatewords: 10 }}</p>
     </div>
   </div>
-
-  <div class="container">
-    <div class="row">
-      {% for service in site.services %}
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box">
-            <img src="{{ service.image_path }}" alt="{{ service.title }}"/>
-            <h3><a href="{{ service.url }}">{{ service.title }}</a></h3>
-            <p class="text-muted">{{ service.content | truncatewords: 10 }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% endfor %}
+...
 {% endraw %}
 {% endhighlight %}
 
@@ -137,8 +114,10 @@ As a blog grows the list of posts can get unwieldy. Jekyll allows us to split th
 To enable pagination open **_config.yml** and set the paginate variable. This is how many items you want on each page:
 
 {% highlight yaml %}
+...
 paginate: 5
 paginate_path: "/blog/page:num"
+...
 {% endhighlight %}
 
 We also need to move and rename `blog.html` to `/blog/index.html`. We need to do this because of how the pagination urls are going to work. They'll be named something like `/blog/page2`.
@@ -147,13 +126,15 @@ Now that we've moved the file we'll also need to update the link in `_includes/n
 
 {% highlight html %}
 {% raw %}
+...
 <li {% if page.url == "/blog/index.html" %} class="active" {% endif %}>
   <a href="/blog/">Blog</a>
 </li>
+...
 {% endraw %}
 {% endhighlight %}
 
-Finally, we need to update `/blog/index.html` to use the pagination:
+Finally, we need to update `/blog/index.html` to use pagination:
 
 {% highlight html %}
 {% raw %}
@@ -218,30 +199,14 @@ Now we just need to iterate over this CSV in `_includes/nav.html`:
 
 {% highlight html %}
 {% raw %}
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Start Bootstrap</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        {% for nav_item in site.data.nav %}
-          <li {% if page.url == nav_item.link %} class="active" {% endif %}>
-            <a href="{{ nav_item.link }}">{{ nav_item.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
+...
+<ul class="nav navbar-nav navbar-right">
+  {% for nav_item in site.data.nav %}
+    <li {% if page.url == nav_item.link %} class="active" {% endif %}>
+      <a href="{{ nav_item.link }}">{{ nav_item.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+...
 {% endraw %}
 {% endhighlight %}

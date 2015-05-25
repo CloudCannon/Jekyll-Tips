@@ -3,7 +3,7 @@ title: Blogging
 order: 8
 ---
 
-We're going to be working with [CloudCannon](http://cloudcannon.com) for the rest of the guide. When you're working now, you should either push each change GitHub (which then pushes to CloudCannon) or make changes directly in CloudCannon.
+We're going to be working with [CloudCannon](http://cloudcannon.com) for the rest of the guide. When you're working now, you should either push each change to GitHub (which then pushes to CloudCannon) or make changes directly in CloudCannon.
 
 It's time to add a blog to our website. Blog posts are [Markdown](https://help.github.com/articles/markdown-basics/) files which live in the `_posts` folder.
 
@@ -31,7 +31,7 @@ Take a look at the source for this post to get an idea about how it works.
 
 As you can see we're using a layout called `post` which we need to create now. Create `_layouts/post.html`. We don't want build another layout from scratch so we're going to use layout inheritance. In the Front Matter of a layout we can specify _another_ layout as a parent.
 
-Insert the following into `post.html`:
+Insert the following into `/_layouts/post.html`:
 
 {% highlight html %}
 {% raw %}
@@ -54,7 +54,9 @@ layout: default
 {% endraw %}
 {% endhighlight %}
 
-Now we need a page which lists all the blog posts. Create a file in the root of the website called `blog.html` with the following contents:
+Now we need a page which lists all the blog posts.
+
+Create `blog.html` in the root of the website and add the following contents:
 
 {% highlight html %}
 {% raw %}
@@ -93,9 +95,11 @@ The last step is to add a link to the blog in `nav.html`:
 
 {% highlight html %}
 {% raw %}
+...
 <li {% if page.url == "/blog.html" %} class="active" {% endif %}>
   <a href="/blog.html">Blog</a>
 </li>
+...
 {% endraw %}
 {% endhighlight %}
 
@@ -103,7 +107,7 @@ Head over to the browser and check out your first Jekyll blog post.
 
 ![Blog](/img/guide/blog/blog.png)
 
-Let's see how we can have our client update the blog.
+Let's see how our client updates the blog.
 
 Go to the Collections tab in [CloudCannon](http://cloudcannon.com). This bring up two tabs, Draft Posts and Published Posts.
 
@@ -111,7 +115,7 @@ Draft posts are **not** published to the live website and live in the `_drafts` 
 
 ![Collections](/img/guide/blog/collections.png)
 
-If you go to Published Posts you will see our first blog post there. Click on you'll be able to update it using our visual editor.
+If you go to Published Posts you will see our first blog post there. Click the post and you'll be able to update it using our visual editor.
 
 Go back to the Collections view and create a new post by clicking **Start a new Draft**, then adding content. When you're finished press **Publish Post** which moves it from `_drafts` to `_posts` and prefixes the file name with today's date.
 

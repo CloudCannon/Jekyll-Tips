@@ -24,6 +24,7 @@ Google Maps has a Javascript API so we need to get this data into a Javascript v
 
 {% highlight html %}
 {% raw %}
+...
 <script>
   var markers = [
     {% for location in site.data.office_locations %}
@@ -32,6 +33,7 @@ Google Maps has a Javascript API so we need to get this data into a Javascript v
     {% endfor %}
   ];
 </script>
+...
 {% endraw %}
 {% endhighlight %}
 

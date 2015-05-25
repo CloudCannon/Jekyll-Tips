@@ -46,7 +46,7 @@ title: Home Page
 ---
 {% endhighlight %}
 
-Go to `default.html` and replace the `&lt;title&gt;` tag with this:
+Go to `default.html` and replace the `<title>` tag with this:
 
 {% highlight liquid %}
 {% raw %}

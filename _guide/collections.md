@@ -15,7 +15,9 @@ collections:
   - services
 {% endhighlight %}
 
-Now create a folder in the root of the website called `_services`. Inside add a file called `web_design.md` with the following content:
+Now create a folder in the root of the website called `_services` (Remember if you're working on CloudCannon you need to create a file first, then move it to the folder).
+
+Inside add a file called `web_design.md` with the following content:
 
 {% highlight text %}
 ---
@@ -42,8 +44,27 @@ Go ahead and add three more services. I added **Content Writing**, **SEO** and *
 
 Now we just need to display the services in `services.html`. Jekyll makes the services collection available to us using the variable `site.services`.
 
-Let's replace the existing static services HTML with some Liquid which iterates over all the services and outputs the details. Here's how you do that:
+Let's replace the existing static services HTML with some Liquid which iterates over all the services and outputs the details:
 
+{% highlight html %}
+{% raw %}
+...
+{% for service in site.services %}
+  <div class="col-lg-3 col-md-6 text-center">
+    <div class="service-box">
+      <img src="{{ service.image_path }}" alt="{{ service.title }}"/>
+      <h3>{{ service.title }}</h3>
+      <p class="text-muted">{{ service.content }}</p>
+    </div>
+  </div>
+{% endfor %}
+...
+{% endraw %}
+{% endhighlight %}
+
+It's really simple, we just have a for loops which iterates over `site.services`. Then we can output the Front Matter variables we set before.
+
+The whole `services.html` file looks like this now:
 {% highlight html %}
 {% raw %}
 ---
