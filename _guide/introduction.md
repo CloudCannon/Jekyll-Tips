@@ -9,9 +9,9 @@ This guide will give you a step-by-step introduction to Jekyll. We'll download a
 
 Jekyll is a static site generator. It takes source files and generates an entirely static website. This is different from how a typical CMS such as Wordpress works. With Wordpress when a visitor goes to a page, that page is generated on the fly. With Jekyll, the entire website is generated upfront so visitors are simply served static files.
 
-### Why is Jekyll awesome?
+### Why use Jekyll?
 
-There's been huge trend towards static technologies mostly due to the complexity of current systems. Jekyll is awesome because it's:
+There's been huge trend towards static technologies mostly to the complexity of current systems. Jekyll is:
 
 * **Simple** - There's far less moving parts required for a Jekyll website. This makes Jekyll websites extremely fast and simple to build.
 
