@@ -1,6 +1,6 @@
 ---
 title: Layouts
-order: 3
+order: 4
 ---
 There's a lot of duplication of HTML in the website as it stands now. Every page has a header and footer which are essentially the same. If we wanted to update the header we'd have to do it on every single page.
 

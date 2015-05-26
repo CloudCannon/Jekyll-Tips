@@ -1,6 +1,6 @@
 ---
 title: Collections
-order: 9
+order: 10
 ---
 Next up we're looking at [Collections](http://jekyllrb.com/docs/collections/). Collections are a great way of organizing related content. They behave in a similar way to Posts but don't require a date.
 

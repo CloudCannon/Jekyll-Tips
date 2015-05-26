@@ -1,6 +1,6 @@
 ---
 title: GitHub
-order: 6
+order: 7
 ---
 I'll assume you know how to use Git and GitHub for this section. If you're unfamiliar with these tools, GitHub has a great [Getting Started Guide](https://try.github.io/) which only takes 15 minutes.
 

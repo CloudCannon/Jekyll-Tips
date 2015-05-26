@@ -1,6 +1,6 @@
 ---
 title: Photo Gallery
-order: 10
+order: 11
 ---
 Displaying content in a particular order isn't always easy with Collections. Sure, if you want to sort alphabetically it's simple but what if we want to define the ordering?
 

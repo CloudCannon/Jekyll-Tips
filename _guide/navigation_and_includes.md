@@ -1,6 +1,6 @@
 ---
 title: Navigation and Includes
-order: 5
+order: 6
 ---
 
 Let's build out the rest of the website. This template is a single page website, let's turn it into multiple pages. Create an HTML page for each link in the navigation. You'll end up with `about.html`, `services.html`, `portfolio.html` and `contact.html` in the root of your website.

@@ -1,6 +1,6 @@
 ---
 title: Advanced Topics
-order: 12
+order: 13
 ---
 In the effort to make this guide as easy as possible we've glossed over some topics. This advanced section is a chance to take a deeper dive on these topics.
 

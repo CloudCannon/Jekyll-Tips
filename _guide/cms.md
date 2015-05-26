@@ -1,6 +1,6 @@
 ---
 title : CMS and Hosting
-order: 7
+order: 8
 ---
 
 [CloudCannon](http://cloudcannon.com) is a service which provides a CMS for Jekyll websites, they also provide hosting. We're going to use CloudCannon to allow our client to update the website.

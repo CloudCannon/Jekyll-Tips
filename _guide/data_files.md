@@ -1,6 +1,6 @@
 ---
 title: Data Files
-order: 11
+order: 12
 ---
 
 Data Files in Jekyll make it easy to read from YAML, JSON and CSV files. You can treat it like reading data from a database.

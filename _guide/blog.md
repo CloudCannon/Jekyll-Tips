@@ -1,6 +1,6 @@
 ---
 title: Blogging
-order: 8
+order: 9
 ---
 
 We're going to be working with [CloudCannon](http://cloudcannon.com) for the rest of the guide. When you're working now, you should either push each change to GitHub (which then pushes to CloudCannon) or make changes directly in CloudCannon.
