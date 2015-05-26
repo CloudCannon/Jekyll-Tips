@@ -7,14 +7,15 @@ permalink: /templates/
 
 <div class="set">
 	{% for template in site.templates %}
+
 		<div class="set-item">
 			<div class="image-container">
 				<img src="/img/templates/{{ template.name | downcase | replace:' ','_' }}.jpg" alt="{{ template.name }}">
 			</div>
 
 			<div class="set-item-details">
-				<a class="download-link" href="{{ template.github_url }}/archive/master.zip"></a>
-				<h3><a target="_blank" href="{{ template.github_url }}">{{ template.name }}</a></h3>
+				<a data-theme-name="{{ template.name }}" class="download-link" href="{{ template.github_url }}/archive/{% if template.branch %}{{ template.branch }}{% else %}master{% endif %}.zip"></a>
+				<h3><a data-theme-name="{{ template.name }}" target="_blank" class="github-link" href="{{ template.github_url }}">{{ template.name }}</a></h3>
 			</div>
 		</div>
 	{% endfor %}
@@ -29,3 +30,5 @@ permalink: /templates/
 	<div class="set-item set-item-filler"></div>
 	<div class="set-item set-item-filler"></div>
 </div>
+
+<script src="/js/page.js"></script>

@@ -34,7 +34,7 @@ category_descriptions:
 					<img src="{{ service.image_path }}" alt="{{ service.name }}" />
 				</div>
 
-				<a href="{{ service.link }}">
+				<a class="service-link" data-service-name="{{ service.name }}" href="{{ service.link }}">
 					{{ service.name }}
 				</a>
 			</li>
@@ -48,3 +48,5 @@ category_descriptions:
 		<li class="set-item set-item-small set-item-filler"></li>
 	</ul>
 {% endfor %}
+
+<script src="/js/page.js"></script>
