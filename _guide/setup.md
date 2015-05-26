@@ -5,7 +5,7 @@ order: 2
 
 ### Installation
 
-Jekyll has a few dependencies including Ruby and Node. Follow the instructions for your OS.
+Jekyll has a few dependencies including Ruby and Node.js. Follow the instructions for your OS.
 
 #### OSX
 {% highlight bash %}

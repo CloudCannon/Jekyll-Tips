@@ -63,7 +63,9 @@ url: http://creative.com
 We just need to add a link to the RSS feed to `<head>` in `_layouts/default.html`:
 
 {% highlight html %}
+...
 <link rel="alternate" type="application/rss+xml" title="My Site RSS" href="/feed.xml" />
+...
 {% endhighlight %}
 
 ### Generate a page for Collections
@@ -210,3 +212,11 @@ Now we just need to iterate over this CSV in `_includes/nav.html`:
 ...
 {% endraw %}
 {% endhighlight %}
+
+### Conclusion
+
+Hopefully this guide has given you a good foundation. Now you can go out and populate the internet with beautiful Jekyll websites.
+
+If you get stuck and need help the offical Jekyll website has excellent [documentation](http://jekyllrb.com/docs/home/). The community at [talk.jekyllrb.com](http://talk.jekyllrb.com) is also a great resource.
+
+Happy Jekylling!

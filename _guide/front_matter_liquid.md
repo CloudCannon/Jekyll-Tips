@@ -2,7 +2,9 @@
 title: Front Matter and Liquid
 order: 4
 ---
-Front Matter allows us to set metadata for a file. We'll use it to tell `index.html` to use the default layout. The format is YAML between two sets of triple dashes: `---`, which sits at the beginning of a file. Add the following to the top of `index.html`:
+Front Matter allows us to set metadata for a file. We'll use it to tell `index.html` to use the default layout. The format is YAML between two sets of triple dashes: `---`, which sits at the beginning of a file.
+
+Add the following to the top of `index.html`:
 
 {% highlight yaml %}
 ---

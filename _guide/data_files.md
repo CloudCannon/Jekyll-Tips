@@ -7,7 +7,7 @@ Data Files in Jekyll make it easy to read from YAML, JSON and CSV files. You can
 
 The way we're going to use Data Files on our site is by adding a map to the contact page with our global offices.
 
-First we need to create a `_data` directory. Now we'll create a CSV file with the latitudes and longitudes of our offices. Then create `_data/office_locations.csv` with the following contents:
+First we need a CSV file with the latitudes and longitudes of our offices. Create `_data/office_locations.csv` with the following contents:
 
 {% highlight text %}
 latitude,longitude,name

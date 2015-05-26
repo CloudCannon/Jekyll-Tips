@@ -8,11 +8,13 @@ To remove this duplication we're going to use a Layout. Layouts allow us to have
 
 First create a `_layouts` folder in the root of your website and inside it, create an empty file called `default.html`.
 
-Now we need to work out which HTML will repeat on each page. Open up `index.html`, and look for the `</nav>` end tag. Cut everything above and including this end tag and paste it into `default.html`. Go back to `index.html` and cut everything below and including the `<!-- jQuery -->` comment and paste it below the other content in `default.html`.
+Now we need to work out which sections of HTML repeat on each page.
+
+Open up `index.html`, and look for the `</nav>` end tag. Cut everything above and including this end tag and paste it into `default.html`. Go back to `index.html` and cut everything below and including the `<!-- jQuery -->` comment and paste it below the other content in `default.html`.
 
 We also need to tweak the path to assets. At the moment the paths are relative to `/index.html`, we need to make them relative to the root of the website so they work for all pages. This is easier than it sounds, just go through the assets in `default.html` and add a `/` to the beginning of the path. For example change `css/bootstrap.min.css` to `/css/bootstrap.min.css`.
 
-Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in `{% raw %}{{ content }}{% endraw %}` between the header and footer in `default.html`. We'll go over what this is doing in the next section.
+Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in `{% raw %}{{ content }}{% endraw %}` between the header and footer in `default.html`. We'll go over what this is doing in the next section of the guide.
 
 `default.html` should now look like this:
 

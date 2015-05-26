@@ -13,13 +13,15 @@ Download and unzip the [Creative Template](/creative.zip).
 
 ### Running Jekyll
 
-Now let's run Jekyll on the website.
+Now let's run Jekyll on the website. Open your terminal and run the following commands:
 
 {% highlight bash %}
-$ cd ~/Downloads/crafty # or wherever you've unzipped the template
+$ cd ~/Downloads/creative # or wherever you've unzipped the template
 $ jekyll serve
 {% endhighlight %}
 
 Open your browser and go to [http://localhost:4000](http://localhost:4000). If all has gone well it'll show the website! This may not seem particularly exciting but let me explain what's actually going on here.
 
-Jekyll is monitoring changes on your website. Anytime a file is updated it rebuilds the site, puts the resulting static website in the `_site` directory, then serves it live on port 4000. We can leave this running and get on with adding some cool Jekyll features.
+Jekyll is monitoring changes on your website. Anytime a file is updated it rebuilds the site, puts the resulting static website in the `_site` directory, then serves it live on port 4000.
+
+We can leave this running and get on with adding some cool Jekyll features.
