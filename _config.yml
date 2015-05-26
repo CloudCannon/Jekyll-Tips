@@ -22,9 +22,11 @@ defaults:
       type: snippets
     values:
       layout: snippet
+      permalink: :collection/:title/
   -
     scope:
       path: ""
       type: guide
     values:
       layout: docs
+      permalink: :collection/:title/
