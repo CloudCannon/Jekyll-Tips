@@ -18,11 +18,18 @@
 		<![endif]-->
 	</head>
 
-	<body class="wrap">
+	<body>
+		{% include mobile-nav.html %}
 		{% include primary-nav.html %}
 
 		{{ content }}
 
 		{% include analytics.html %}
+
+		<script>
+			document.getElementById("open-nav").onclick = function () {
+				document.body.classList.toggle("nav-open");
+			};
+		</script>
 	</body>
 </html>

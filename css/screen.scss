@@ -11,6 +11,9 @@ $nav-background-color: #262626;
 $nav-color-secondary: #4d4d4d;
 $nav-width: 300px;
 
+$mobile-nav-height: 60px;
+$mobile-nav-padding: 10px;
+
 $brand-color: #ffd200;
 
 $space: 20px;
@@ -22,61 +25,28 @@ $border-radius: 5px;
 @import "style";
 @import "set";
 
-
-html,
-body,
-header {
-	height: 100%;
-}
-
-article img {
-	max-width: 100%;
-	height: auto;
-}
-
-pre, code {
-	font-size: 16px;
-	font-family: Inconsolata, Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
-	line-height: 1.4;
-	font-weight: 400;
-}
-
-.highlight, p > pre, p > code, p > nobr > code, li > code, h5 > code, .note > code {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.highlight {
-	padding: 10px 0 5px 0;
-
-	code {
-		line-height: 1.4;
-	}
-}
-
-p > code {
-	position: relative;
-	top: -2px;
-}
-
 body {
 	background-color: $body-background-color;
-	padding: 0 0 0 $nav-width;
-	position: relative;
+	padding: 0;
+	border-top: 0;
 }
 
 header {
+	display: none;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: $mobile-nav-height;
 	bottom: 0;
-	width: $nav-width;
-	padding: $space ($space * 2);
+	right: 0;
+	padding: 0 $space;
 	text-align: right;
 	background-color: $nav-background-color;
-	overflow-y: scroll;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 1;
 
 	> img {
+		display: none;
 		width: 270px;
 		margin: 0 (-$space);
 	}
@@ -86,9 +56,52 @@ header {
 	}
 }
 
+.nav-open header {
+	display: block;
+}
+
+.mobile-nav {
+	padding: $mobile-nav-padding;
+	height: $mobile-nav-height;
+	background-color: $nav-background-color;
+
+	> img {
+		height: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.open-nav {
+		background-image: url(/img/icons/menu.svg);
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: $mobile-nav-height - ($mobile-nav-padding * 2);
+		height: $mobile-nav-height - ($mobile-nav-padding * 2);
+		border: 0;
+		opacity: 0.6;
+		position: absolute;
+		top: $mobile-nav-padding;
+		right: $mobile-nav-padding;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus,
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
 .main {
-	height: 100%;
-	overflow: scroll;
+	overflow: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: $mobile-nav-height;
+	bottom: 0;
 
 	h1 {
 		color: $body-color-secondary;
@@ -98,14 +111,10 @@ header {
 		margin: $space $space ($space * 1.5) $space;
 		font-size: 3rem;
 	}
-
-	&.fullscreen h1 {
-		margin: $space;
-	}
 }
 
 .content-box {
-	padding: ($space / 2) ($space / 2) $space ($space / 2);
+	padding: ($space / 2) $space $space $space;
 	margin: 0 auto;
 	max-width: 900px;
 	position: relative;
@@ -119,7 +128,8 @@ header {
 .content {
 	background-color: $content-background-color;
 	color: $content-color;
-	padding: $space;
+	padding: $space $space 0.01em $space;
+	margin: 0;
 	border-radius: $border-radius;
 
 	.fullscreen & {
@@ -206,5 +216,71 @@ header {
 
 	+ p {
 		margin-top: 0;
+	}
+}
+
+article img {
+	max-width: 100%;
+	height: auto;
+}
+
+pre, code {
+	font-size: 16px;
+	font-family: Inconsolata, Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+	line-height: 1.4;
+	font-weight: 400;
+}
+
+.highlight, p > pre, p > code, p > nobr > code, li > code, h5 > code, .note > code {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.highlight {
+	padding: 10px 0 5px 0;
+
+	code {
+		line-height: 1.4;
+	}
+}
+
+p > code {
+	position: relative;
+	top: -2px;
+}
+
+
+@media (min-width: 700px) {
+	.mobile-nav {
+		display: none;
+	}
+
+	body {
+		padding: 0 0 0 $nav-width;
+
+		&::after {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			border-top: 5px solid #FC0;
+		}
+	}
+
+	header {
+		display: block;
+		width: $nav-width;
+		top: 5px;
+		padding: $space ($space * 2);
+
+		> img {
+			display: block;
+		}
+	}
+
+	.main {
+		top: 0;
+		left: $nav-width;
 	}
 }
