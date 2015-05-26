@@ -7,6 +7,7 @@ collections:
   snippets:
     name: Jekyll Snippets
     output: true
+    permalink: /:collection/:title/
   services:
     name: Services for Static Sites
   tutorials:
@@ -14,6 +15,7 @@ collections:
   guide:
     name: Get Started Guide
     output: true
+    permalink: /:collection/:title/
 
 defaults:
   -
@@ -22,11 +24,9 @@ defaults:
       type: snippets
     values:
       layout: snippet
-      permalink: :collection/:title/
   -
     scope:
       path: ""
       type: guide
     values:
       layout: docs
-      permalink: :collection/:title/
