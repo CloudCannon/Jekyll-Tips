@@ -565,6 +565,7 @@ h5 > code,
 	padding: 10px 0;
 	width: 100%;
 	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* HTML Elements */
@@ -862,6 +863,7 @@ code.output {
 @media (max-width: 768px) {
 	.mobile-side-scroller {
 		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
 		margin: 0 -40px;
 		padding: 0 10px;
 	}

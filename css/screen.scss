@@ -43,6 +43,7 @@ header {
 	background-color: $nav-background-color;
 	overflow-y: auto;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 	z-index: 1;
 
 	> img {
@@ -97,6 +98,7 @@ header {
 
 .main {
 	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 	position: absolute;
 	left: 0;
 	right: 0;
