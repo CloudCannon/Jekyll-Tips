@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Services
+title: Jekyll Services
+heading: Services
 permalink: /services/
 category_descriptions:
   cms: Have non-technical people update Jekyll websites
@@ -19,6 +20,8 @@ category_descriptions:
 
 <!-- <p><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can use with static websites.</p> -->
 {% assign categories = site.services | group_by:"category" %}
+
+<p class="center-text">Third-party services you can drop into your Jekyll website.</p>
 
 {% for current_category in categories %}
 	{% assign category_name = current_category.name | downcase | replace:' ','_' %}
