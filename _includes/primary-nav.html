@@ -4,16 +4,16 @@
 	<nav>
 		<ul>
 			<li class="nav-item top-level {% if page.url == '/' or page.url contains '/guide/' %}current{% endif %}">
-				<a href="/">Guide</a>
+				<a href="/">Get Started Guide</a>
 				{% assign guide_items = site.guide | sort: 'order' %}
 				{% include secondary-nav-items.html items=guide_items %}
 			</li>
+			<li class="nav-item top-level {% if page.url contains '/tutorials/' %}current{% endif %}">
+				<a href="{{ site.tutorials.first.url}}">Tutorials</a>
+				{% include secondary-nav-items.html items=site.tutorials %}
+			</li>
 			<li class="nav-item top-level {% if page.url contains '/templates/' %}current{% endif %}">
 				<a href="/templates/">Templates</a>
-			</li>
-			<li class="nav-item top-level {% if page.url contains '/snippets/' %}current{% endif %}">
-				<a href="{{ site.snippets.first.url}}">Snippets</a>
-				{% include secondary-nav-items.html items=site.snippets %}
 			</li>
 			<li class="nav-item top-level {% if page.url contains '/services/' %}current{% endif %}">
 				<a href="/services/">Services</a>

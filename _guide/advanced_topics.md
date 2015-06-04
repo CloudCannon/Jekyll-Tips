@@ -12,62 +12,6 @@ There're many ways of adding data to Jekyll you might be wondering when do I use
 * If you need to order data in a non-sortable way and that data only needs to be used on a single page, use an array in Front Matter.
 * Otherwise use a Collection. Collections are the most flexible method and is usually the best choice.
 
-### RSS Feed
-
-Blogs usually have an RSS feed to push content out to their readers. Adding one to a Jekyll Blog is super simple.
-
-Create a file in the root of the site called `feed.xml` with the following contents:
-
-{% highlight xml %}
-{% raw %}
----
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      </item>
-      {% endunless %}
-    {% endfor %}
-  </channel>
-</rss>
-{% endraw %}
-{% endhighlight %}
-
-The empty Front Matter is important here because it tells Jekyll we're using Liquid. This script goes through all the blog posts and outputs them in the RSS XML format.
-
-There are a few variables we need to define, like `site.name`. Open up `_config.yml` and add this YAML:
-
-{% highlight yaml %}
-name: Creative Agency
-description: We are a creative agency who provides web design, SEO, content and social services.
-url: http://creative.com
-{% endhighlight %}
-
-We just need to add a link to the RSS feed to `<head>` in `_layouts/default.html`:
-
-{% highlight html %}
-...
-<link rel="alternate" type="application/rss+xml" title="My Site RSS" href="/feed.xml" />
-...
-{% endhighlight %}
-
 ### Generate a page for Collections
 
 In the services example earlier in the guide, you might want to generate a separate page for each service. Jekyll makes this easy.

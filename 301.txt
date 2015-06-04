@@ -1,0 +1,13 @@
+/snippets/atom-feed/ /tutorials/atom-feed/
+/snippets/formatting-dates/ /tutorials/snippets/
+/snippets/next-post/ /tutorials/snippets/
+/snippets/output-json/ /tutorials/output-as-json/
+/snippets/post-list/ /tutorials/snippets/
+/snippets/post-list-by-year/ /tutorials/snippets/
+/snippets/post-list-pagination/ /tutorials/snippets/
+/snippets/post-list-with-content/ /tutorials/snippets/
+/snippets/posts-in-category/ /tutorials/snippets/
+/snippets/reading-time/ /tutorials/snippets/
+/snippets/related-posts/ /tutorials/snippets/
+/snippets/rss-feed/ /tutorials/rss-feed/
+/snippets/site-navigation/ /tutorials/navigation/

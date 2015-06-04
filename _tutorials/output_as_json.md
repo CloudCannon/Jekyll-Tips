@@ -1,17 +1,13 @@
 ---
-author:
-  name: CloudCannon
-  link: https://github.com/cloudcannon
-title: Output JSON
-category: Other
+title: Output as JSON
 ---
+Sometimes you'll need to output items from a Data File or Collection as JSON.
+
+Here's how you output JSON in Jekyll:
 
 {% highlight liquid %}
 {% raw %}
----
-layout: null
----
-
+...
 [
   {% for item in products %}
     {
@@ -22,5 +18,6 @@ layout: null
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
+...
 {% endraw %}
 {% endhighlight %}
