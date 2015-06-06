@@ -1,5 +1,6 @@
 ---
 title: Snippets
+heading: Jekyll Snippets
 ---
 
 Handy snippets of Jekyll code:

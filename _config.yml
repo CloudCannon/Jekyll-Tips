@@ -17,7 +17,7 @@ defaults:
       path: ""
       type: tutorials
     values:
-      layout: snippet
+      layout: docs
   - scope:
       path: ""
       type: guide

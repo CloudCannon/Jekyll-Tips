@@ -1,5 +1,6 @@
 ---
 title: Output as JSON
+heading: Output JSON in Jekyll
 ---
 Sometimes you'll need to output items from a Data File or Collection as JSON.
 

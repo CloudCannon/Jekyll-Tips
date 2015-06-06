@@ -4,6 +4,7 @@ author:
   name: snaptortoise
   link: https://github.com/snaptortoise
 title: RSS Feed
+heading: RSS Feed in Jekyll
 ---
 
 Blogs usually have an RSS feed to push content out to their readers. Adding a RSS Feed to a Jekyll Blog is super simple.

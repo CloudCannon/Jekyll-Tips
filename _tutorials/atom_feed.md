@@ -4,6 +4,7 @@ author:
   name: MDO
   link: https://github.com/mdo
 title: Atom Feed
+heading: Atom Feed in Jekyll
 ---
 
 An Atom feed allows readers to subscribe to the latest posts on your blog. Adding an Atom Feed to a Jekyll website is simple.

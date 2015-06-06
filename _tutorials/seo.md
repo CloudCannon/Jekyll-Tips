@@ -184,4 +184,13 @@ This is more of a best practice. Custom 404 Pages in Jekyll can help users navig
 
 [GitHub Pages](https://pages.github.com), [CloudCannon](http://cloudcannon.com) and the Jekyll Server will show 404.html when they can't find a page. Any other services may require configuration to get custom 404 pages working.
 
-The other principles of SEO are about having good, well formatted content and making sure your website loads fast (static websites are great at this)
+
+### Tips for Content
+
+Good content is the key to SEO. With a few simple rules you can ensure all your content is working towards a high ranking in search enginges:
+
+* Search Engines love fresh content
+* Search Engines don't like duplicate content
+* Images should always have an [alt attribute](http://www.w3schools.com/tags/att_img_alt.asp)
+* Use descriptive text when linking: _Bad_: [click here](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf) for the Google SEO Starter Guide. _Good_: Download the [Google SEO Starter Guide](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf).
+* If you delete a page, make it redirect somewhere else relevant. You can do this on [CloudCannon](http://cloudcannon) using [301 redirects](http://docs.cloudcannon.com/#common_tasks6_301_redirectshtml).

@@ -1,5 +1,6 @@
 ---
 title: Navigation
+heading: Navigation in Jekyll
 ---
 One way to make the navigation code in Jekyll less repetitive is to pull in the links from another source. Let's try using a CSV files.
 
