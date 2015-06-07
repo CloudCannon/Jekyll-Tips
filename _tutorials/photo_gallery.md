@@ -156,7 +156,7 @@ And replace `<div class="carousel-inner">` with the following:
 {% endraw %}
 {% endhighlight %}
 
-This iterates over the array we set in the front matter and outputting the data into the same format as before.
+This iterates over the array we set in the front matter and outputs the data in the same HTML structure as before.
 
 One tricky part is we need to set an active class on the first slide which is done using the forloop variable:
 

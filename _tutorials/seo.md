@@ -73,7 +73,7 @@ permalink: /cups/red/
 {% endraw %}
 {% endhighlight %}
 
-You could also just place the rename the file from `/red.html` to `/cups/red/index.html`, Jekyll gives you the power to organise your site however you'd like.
+You could also just place the rename the file from `/red.html` to `/cups/red/index.html`, Jekyll gives you the power to organize your site however you'd like.
 
 A more useful example is changing the permalink for blog posts. Just add this line to `_config.yml`:
 
@@ -138,10 +138,14 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
+
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" %}
+    {% assign split_path = page.path | split: "." %}
+    {% assign extension = split_path | last %}
+
+    {% if page.sitemap.exclude != "yes" and extension == "html" %}
     <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+      <loc>{{ site.url }}{{ page.permalink | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
         <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif page.date %}
@@ -160,7 +164,34 @@ sitemap:
         <priority>0.3</priority>
       {% endif %}
     </url>
-    {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% for collection in site.collections %}
+    {% if collection[1].output %}
+      {% for doc in collection[1].docs %}
+        <url>
+          <loc>{{ site.url }}{{ doc.url | remove: "index.html" }}</loc>
+          {% if doc.sitemap.lastmod %}
+            <lastmod>{{ doc.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+          {% elsif doc.date %}
+            <lastmod>{{ doc.date | date_to_xmlschema }}</lastmod>
+          {% else %}
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+          {% endif %}
+          {% if doc.sitemap.changefreq %}
+            <changefreq>{{ doc.sitemap.changefreq }}</changefreq>
+          {% else %}
+            <changefreq>monthly</changefreq>
+          {% endif %}
+          {% if doc.sitemap.priority %}
+            <priority>{{ doc.sitemap.priority }}</priority>
+          {% else %}
+            <priority>0.3</priority>
+          {% endif %}
+        </url>
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 </urlset>
 {% endraw %}
@@ -175,6 +206,16 @@ sitemap:
   priority: 0.7
   changefreq: monthly
   exclude: yes
+{% endraw %}
+{% endhighlight %}
+
+We also need to add the domain of the website to `_config.yml`:
+
+{% highlight yaml %}
+{% raw %}
+...
+url: http://mysite.com
+...
 {% endraw %}
 {% endhighlight %}
 

@@ -3,7 +3,7 @@ title: Search
 heading: Search in Jekyll
 --- 
 
-Full-text searching is possible with Jekyll. We'll try a number of techniques, each with their own pros and cons. In these examples we'll be searching blog posts but it could easily be a Collection or Data File.
+Full-text searching is possible with Jekyll. We’ll demonstrate a number of techniques, each with their own pros and cons. In these examples we'll be searching blog posts but it could easily be a Collection or Data File.
 
 ### Client Side Search
 
@@ -18,7 +18,6 @@ We need to get our data in JSON format. Create `/search_data.json` with the foll
 ---
 layout: null
 ---
-
 {
   {% for post in site.posts %}
 
@@ -61,7 +60,7 @@ We'll also create `/js/search.js` to hold our search Javascript.
 
 Download the minified version from [lunr.js](http://lunrjs.com/).
 
-Include these files and JQuery below the Front Matter in `search.html`:
+Include these files and JQuery below the form in `search.html`:
 
 {% highlight html %}
 {% raw %}
