@@ -166,7 +166,7 @@ sitemap:
     </url>
     {% endif %}
   {% endfor %}
-
+ 
   {% for collection in site.collections %}
     {% if collection[1].output %}
       {% for doc in collection[1].docs %}
