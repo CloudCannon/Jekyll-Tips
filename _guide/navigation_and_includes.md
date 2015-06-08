@@ -55,7 +55,24 @@ title: About
 {% endraw %}
 {% endhighlight %}
 
-Do this for the other pages too.
+Do this for the other pages too. Remember to add the heading HTML and Front Matter to each page. So the top of `serivces.html` will look like this:
+
+{% highlight html %}
+{% raw %}
+---
+layout: default
+title: Services
+---
+<section class="bg-dark">
+  <div class="text-center">
+    <h1>Services</h1>
+  </div>
+</section>
+...
+{% endraw %}
+{% endhighlight %}
+
+
 
 Now we need to get the navigation working. We want to link to the correct pages and highlight the current page in the navigation. This is going to get a little complex so let's put the navigation into its own file. First create an `_includes` folder in the root of your website. Inside it create a file called `nav.html`.
 
