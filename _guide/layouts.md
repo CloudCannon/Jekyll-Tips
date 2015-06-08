@@ -2,7 +2,7 @@
 title: Layouts
 order: 4
 ---
-There's a lot of duplication of HTML in the website as it stands now. Every page has a header and footer which are essentially the same. If we wanted to update the header we'd have to do it on every single page.
+At the moment this is a single page website, soon we'll be creating more pages which would add duplication HTML. Each page needs a header and footer which will essentially be the same. If we wanted to update the header we'd have to do it on every single page.
 
 To remove this duplication we're going to use a Layout. Layouts allow us to have our header and footer code in one file and have it wrap around the content on other pages.
 
@@ -12,7 +12,9 @@ Now we need to work out which sections of HTML repeat on each page.
 
 Open up `index.html`, and look for the `</nav>` end tag. Cut everything above and including this end tag and paste it into `default.html`. Go back to `index.html` and cut everything below and including the `<!-- jQuery -->` comment and paste it below the other content in `default.html`.
 
-We also need to tweak the path to assets. At the moment the paths are relative to `/index.html`, we need to make them relative to the root of the website so they work for all pages. This is easier than it sounds, just go through the assets in `default.html` and add a `/` to the beginning of the path. For example change `css/bootstrap.min.css` to `/css/bootstrap.min.css`.
+We also need to tweak the path to assets. At the moment the paths are relative to `/index.html`, if we created a page at `/my/new/page.html` the URLs would break. So we need to make them relative to the root of the website. 
+
+This is easier than it sounds, just go through the assets in `default.html` and add a `/` to the beginning of the path. For example change `css/bootstrap.min.css` to `/css/bootstrap.min.css`.
 
 Lastly, we need to insert a token into our layout to tell Jekyll where the content will go. Type in `{% raw %}{{ content }}{% endraw %}` between the header and footer in `default.html`. We'll go over what this is doing in the next section of the guide.
 

@@ -143,7 +143,7 @@ sitemap:
     {% assign split_path = page.path | split: "." %}
     {% assign extension = split_path | last %}
 
-    {% if page.sitemap.exclude != "yes" and extension == "html" %}
+    {% if page.sitemap.exclude != "yes" and extension == "html" and page.path != "/404.html" %}
     <url>
       <loc>{{ site.url }}{{ page.permalink | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
