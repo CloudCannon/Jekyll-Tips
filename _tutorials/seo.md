@@ -53,7 +53,7 @@ description: A blog with the latest trends and news in Web Design
 {% endraw %}
 {% endhighlight %}
 
-If you're using [CloudCannon](http://cloudcannon), your non-technical users can easily update the Front Matter:
+If you're using [CloudCannon](http://cloudcannon.com), your non-technical users can easily update the Front Matter:
 
 ![Front Matter on CloudCannon](/img/tutorials/seo/front_matter.png)
 
@@ -166,7 +166,7 @@ sitemap:
     </url>
     {% endif %}
   {% endfor %}
- 
+
   {% for collection in site.collections %}
     {% if collection[1].output %}
       {% for doc in collection[1].docs %}
@@ -234,4 +234,4 @@ Good content is the key to SEO. With a few simple rules you can ensure all your 
 * Search Engines don't like duplicate content
 * Images should always have an [alt attribute](http://www.w3schools.com/tags/att_img_alt.asp)
 * Use descriptive text when linking: _Bad_: [click here](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf) for the Google SEO Starter Guide. _Good_: Download the [Google SEO Starter Guide](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf).
-* If you delete a page, make it redirect somewhere else relevant. You can do this on [CloudCannon](http://cloudcannon) using [301 redirects](http://docs.cloudcannon.com/#common_tasks6_301_redirectshtml).
+* If you delete a page, make it redirect somewhere else relevant. You can do this on [CloudCannon](http://cloudcannon.com) using [301 redirects](http://docs.cloudcannon.com/#common_tasks6_301_redirectshtml).
