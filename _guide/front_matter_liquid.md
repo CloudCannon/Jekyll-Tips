@@ -65,3 +65,5 @@ Go to `default.html` and replace the `<title>` tag with this:
 Using `page` we can reference variables set in the Front Matter. Here we're checking if the title is set and printing it if it does, otherwise it falls back to a default.
 
 Refresh the page and the page title will show _Home Page_.
+
+For a more in-depth guide to Liquid check out [our tutorial](/tutorials/liquid/)
