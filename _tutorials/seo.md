@@ -228,7 +228,7 @@ This is more of a best practice. Custom 404 Pages in Jekyll can help users navig
 
 ### Tips for Content
 
-Good content is the key to SEO. With a few simple rules you can ensure all your content is working towards a high ranking in search enginges:
+Good content is the key to SEO. With a few simple rules you can ensure all your content is working towards a high ranking in search engines:
 
 * Search Engines love fresh content
 * Search Engines don't like duplicate content
