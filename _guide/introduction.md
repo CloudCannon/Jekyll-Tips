@@ -24,3 +24,5 @@ There's been huge trend towards static technologies mostly to the complexity of 
 * **Scalable** - There's no backend processing on Jekyll websites which makes them insanely scalable.
 
 * **Source Controlled** - The entire website including all the content can be source controlled. This gives you the entire history of the website and the ability to roll back to any version.
+
+* **Powerful** - Blogging, photo galleries, layouts and other features you would normally need a backend for are all possible with Jekyll.
