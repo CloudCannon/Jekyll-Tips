@@ -6,7 +6,7 @@
 			{% assign c = "" %}
 		{% endif %}
 
-		<li class="nav-item {{ c }}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+		<li class="nav-item {{ c }}"><a href="{{ item.url }}">{% if item.nav_title %}{{ item.nav_title }}{% else %}{{ item.title }}{% endif %}</a></li>
 
 	{% endfor %}
 </ul>

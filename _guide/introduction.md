@@ -1,5 +1,7 @@
 ---
-title: Introduction
+title: Getting started with Jekyll
+heading: Introduction
+nav_title: Introduction
 order: 1
 permalink: /
 ---
