@@ -104,6 +104,6 @@ title: Services
 {% endraw %}
 {% endhighlight %}
 
-That's it! Now our client can easily manage the services on the website using Collections.
+That's it! Now our client can easily manage the services on the website using Collections. To learn more about customizing the way Front Matter is updated for your users check out our [Front Matter guide](http://docs.cloudcannon.com/editing/front-matter/).
 
 ![Final](/img/guide/collections/final.png)
