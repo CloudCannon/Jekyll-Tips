@@ -55,7 +55,7 @@ title: About
 {% endraw %}
 {% endhighlight %}
 
-Do this for the other pages too. Remember to add the heading HTML and Front Matter to each page. So the top of `serivces.html` will look like this:
+Do this for the other pages too. Remember to add the heading HTML and Front Matter to each page. So the top of `services.html` will look like this:
 
 {% highlight html %}
 {% raw %}
