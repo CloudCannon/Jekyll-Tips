@@ -213,9 +213,11 @@ Jekyll has a variable which has the path to the current page you can reference u
 {% highlight html %}
 {% raw %}
 ...
-<li {% if page.url == '/about.html' %} class="active" {% endif %}>
-  <a href="/about.html">About</a>
-</li>
+{% if page.url == '/about.html' %}
+  <li class="active">
+{% else %}
+  <li>
+{% endif %}
 ...
 {% endraw %}
 {% endhighlight %}
@@ -239,18 +241,29 @@ Do this for all the links and now `nav.html` will look like this:
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li {% if page.url == '/about.html' %} class="active" {% endif %}>
-          <a href="/about.html">About</a>
-        </li>
-        <li {% if page.url == '/services.html' %} class="active" {% endif %}>
-          <a href="/services.html">Services</a>
-        </li>
-        <li {% if page.url == '/portfolio.html' %} class="active" {% endif %}>
-          <a href="/portfolio.html">Portfolio</a>
-        </li>
-        <li {% if page.url == '/contact.html' %} class="active" {% endif %}>
-          <a href="/contact.html">Contact</a>
-        </li>
+        {% if page.url == '/about.html' %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+
+        {% if page.url == '/services.html' %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+
+        {% if page.url == '/portfolio.html' %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+        
+        {% if page.url == '/contact.html' %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
       </ul>
     </div>
     <!-- /.navbar-collapse -->

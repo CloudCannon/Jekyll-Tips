@@ -52,10 +52,8 @@ Go to the **Visual Editor** view. The elements with the editable class have a ye
 
 ![Visual Editor](/img/guide/cms/visual.png)
 
-CloudCannon pushes your website live to a testing domain of `*.cloudvent.net`. On the free plan the website isn't public, we need to add a password before we can view it. Go to **Site Settings**, then **Site Password** and type in a password for your website.
+CloudCannon pushes your website live to a testing domain of `*.cloudvent.net`.
 
-![Password](/img/guide/cms/password.png)
-
-Click on the cloudvent domain at the top of the page, enter your password. Our site is now live on the internet!
+Click on the cloudvent domain at the top left of the page. The site is now live on the internet!
 
 ![Cloudvent](/img/guide/cms/cloudvent.png)

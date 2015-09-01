@@ -22,7 +22,11 @@ Now we just iterate over the CSV in the navigation and add a class of active if 
 ...
 <ul class="nav navbar-nav navbar-right">
   {% for nav_item in site.data.nav %}
-    <li {% if page.url == nav_item.link %} class="active" {% endif %}>
+    {% if page.url == nav_item.link %}
+      <li class="active">
+    {% else %}
+      <li>
+    {% end %}
       <a href="{{ nav_item.link }}">{{ nav_item.name }}</a>
     </li>
   {% endfor %}

@@ -96,9 +96,11 @@ The last step is to add a link to the blog in `nav.html`:
 {% highlight html %}
 {% raw %}
 ...
-<li {% if page.url == "/blog.html" %} class="active" {% endif %}>
-  <a href="/blog.html">Blog</a>
-</li>
+{% if page.url == "/blog.html" %}
+  <li class="active">
+{% else %}
+  <li>
+{% endif %}
 ...
 {% endraw %}
 {% endhighlight %}

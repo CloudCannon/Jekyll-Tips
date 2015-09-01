@@ -7,7 +7,9 @@ Photo galleries typically have a lot of repeating code. It a good idea to remove
 
 Through this process we'll also makes it easier for non-technical users to update content in slideshows.
 
-For this tutorial we'll be using the [Corlate](http://shapebootstrap.net/download?id=439) template from [ShapeBootstrap](http://shapebootstrap.net/).
+For this tutorial we'll be using the [Corlate](/corlate.zip) template from [ShapeBootstrap](http://shapebootstrap.net/).
+
+First, to make the site into a Jekyll site, add `_config.yml` to the root directory.
 
 Open up `index.html` in your code editor and look at the HTML for the slideshow.
 
@@ -103,7 +105,7 @@ Add the following to the top of `index.html`:
 {% highlight liquid %}
 {% raw %}
 ---
-slideshows:
+slideshow:
   - background_image_path: /images/slider/bg1.jpg
     main_heading: First Slide
     sub_heading: This is the sub heading for the first slide
@@ -118,7 +120,7 @@ slideshows:
     main_heading: Third Heading
     sub_heading: This is the sub heading for the third slide
     read_more_link: /portfolio.html
-    pop_up_image_path: /images/slider/img4.png
+    pop_up_image_path: /images/slider/img3.png
 ---
 {% endraw %}
 {% endhighlight %}
@@ -130,7 +132,11 @@ And replace `<div class="carousel-inner">` with the following:
 ...
 <div class="carousel-inner">
   {% for item in page.slideshow %}
-    <div class="item {% if forloop.index == 1 %}active{% endif %}" style="background-image: url({{ item.background_image_path }})">
+    {% if forloop.index == 1 %}
+      <div class="item active" style="background-image: url({{ item.background_image_path }})">
+    {% else %}
+      <div class="item" style="background-image: url({{ item.background_image_path }})">
+    {% endif %}
       <div class="container">
         <div class="row slide-margin">
           <div class="col-sm-6">
@@ -163,7 +169,7 @@ One tricky part is we need to set an active class on the first slide which is do
 {% highlight liquid %}
 {% raw %}
 ...
-{% if forloop.index == 1 %}active{% endif %}
+{% if forloop.index == 1 %}
 ...
 {% endraw %}
 {% endhighlight %}
@@ -181,7 +187,11 @@ Uncomment `<ol class="carousel-indicators">` and replace it with this:
 ...
 <ol class="carousel-indicators">
     {% for item in page.slideshow %}
-      <li data-target="#main-slider" data-slide-to="{{ forloop.index0 }}" {% if forloop.index == 1 %}class="active"{% endif %}></li>
+      {% if forloop.index == 1 %}
+        <li data-target="#main-slider" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+      {% else %}
+        <li data-target="#main-slider" data-slide-to="{{ forloop.index0 }}"></li>
+      {% endif %}
     {% endfor %}
 </ol>
 ...
