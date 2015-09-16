@@ -8,14 +8,13 @@
 }
 
 .set-item {
-	-webkit-flex: 1 0 0%;
-	-ms-flex: 1 0 0%;
-	flex: 1 0 0%;
+	-webkit-flex: 1 0 300px;
+	-ms-flex: 1 0 300px;
+	flex: 1 0 300px;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 	border-radius: $border-radius;
 	background-color: $content-background-color;
 	display: inline-block;
-	min-width: 300px;
 	padding: $space;
 	margin: $space / 2;
 
@@ -36,7 +35,8 @@
 }
 
 .set-item-small {
-	min-width: 140px;
+	-webkit-flex-basis: 140px;
+	flex-basis: 140px;
 	text-align: center;
 	box-shadow: none;
 	padding: $space / 2;
