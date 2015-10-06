@@ -26,7 +26,7 @@ Now we just iterate over the CSV in the navigation and add a class of active if 
       <li class="active">
     {% else %}
       <li>
-    {% end %}
+    {% endif %}
       <a href="{{ nav_item.link }}">{{ nav_item.name }}</a>
     </li>
   {% endfor %}
