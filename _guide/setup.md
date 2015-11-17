@@ -15,7 +15,7 @@ $ gem install jekyll -v 2.4.0
 #### Ubuntu
 {% highlight bash %}
 $ apt-get install ruby ruby-dev make gcc nodejs
-$ gem install jekyll
+$ gem install jekyll -v 2.4.0
 {% endhighlight %}
 
 #### Windows
