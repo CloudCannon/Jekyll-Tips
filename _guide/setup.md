@@ -9,7 +9,7 @@ Jekyll has a few dependencies including Ruby and Node.js. Follow the instruction
 
 #### OSX
 {% highlight bash %}
-$ gem install jekyll
+$ gem install jekyll -v 2.4.0
 {% endhighlight %}
 
 #### Ubuntu
