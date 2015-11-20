@@ -1,7 +1,7 @@
 ---
 title: Search
 heading: Search in Jekyll
---- 
+---
 
 Full-text searching is possible with Jekyll. We’ll demonstrate a number of techniques, each with their own pros and cons. In these examples we'll be searching blog posts but it could easily be a Collection or Data File.
 
@@ -52,7 +52,7 @@ layout: default
   <input type="submit" value="search">
 </form>
 
-<ul id="results"></ul>
+<ul id="search_results"></ul>
 {% endraw %}
 {% endhighlight %}
 
