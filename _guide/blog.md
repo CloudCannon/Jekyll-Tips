@@ -7,7 +7,7 @@ We're going to be working with [CloudCannon](http://cloudcannon.com) for the res
 
 It's time to add a blog to our website. Blog posts are [Markdown](https://help.github.com/articles/markdown-basics/) files which live in the `_posts` folder.
 
-Create a `_posts` folder in the root of the website. To create a folder in CloudCannon create a file in the root then in the context menu click "Move to a new folder". There's no way to have an empty folder in CloudCannon.
+Create a `_posts` folder in the root of the website.
 
 Jekyll expects the file name to be in a particular format for blog posts. The format is: `YEAR-MONTH-DAY-title.md`.
 

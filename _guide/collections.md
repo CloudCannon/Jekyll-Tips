@@ -15,7 +15,7 @@ collections:
   - services
 {% endhighlight %}
 
-Now create a folder in the root of the website called `_services` (Remember if you're working on CloudCannon you need to create a file first, then move it to the folder).
+Now create a folder in the root of the website called `_services`.
 
 Inside add a file called `web_design.md` with the following content:
 
