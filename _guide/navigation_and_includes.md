@@ -246,24 +246,28 @@ Do this for all the links and now `nav.html` will look like this:
         {% else %}
           <li>
         {% endif %}
+        <a href="/about.html">About</a></li>
 
         {% if page.url == '/services.html' %}
           <li class="active">
         {% else %}
           <li>
         {% endif %}
+        <a href="/services.html">Services</a></li>
 
         {% if page.url == '/portfolio.html' %}
           <li class="active">
         {% else %}
           <li>
         {% endif %}
-        
+        <a href="/portfolio.html">Portfolio</a></li>
+
         {% if page.url == '/contact.html' %}
           <li class="active">
         {% else %}
           <li>
         {% endif %}
+        <a href="/contact.html">Contact</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
