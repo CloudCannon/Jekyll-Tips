@@ -2,12 +2,12 @@
 title: SEO
 heading: SEO in Jekyll
 ---
-Users coming from Wordpress commonly ask how to do SEO in Jekyll. In Jekyll you have more control over SEO than a Wordpress plugin can give you.
+Users coming from WordPress commonly ask how to do SEO in Jekyll. In Jekyll you have more control over SEO than a WordPress plugin can give you.
 
 For the basis of this tutorial I'll be referencing topics outlined in Google's [Search Engine Optimization
 Starter Guide](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf).
 
-We'll be covering the `<title>` and `<meta>` description tags, improving the structure of URLs, adding a site map and custom 404 pages.
+We'll be covering the `<title>` and `<meta>` description tags, improving the structure of URLs, adding a sitemap and custom 404 pages.
 
 ### Title and Descriptions
 
@@ -62,7 +62,7 @@ If you're using [CloudCannon](http://cloudcannon.com), your non-technical users 
 
 Using Permalinks you can control how Jekyll builds your URLs. For SEO, Google recommends using descriptive keywords in your URL.
 
-Let's say you have an HTML page `/red.html` but you wanted the URL to be `/cups/red/`, you could see the permalink in the Front Matter like this:
+Let's say you have an HTML page `/red.html` but you wanted the URL to be `/cups/red/`, you could set the permalink in the Front Matter like this:
 
 {% highlight liquid %}
 {% raw %}
@@ -234,4 +234,4 @@ Good content is the key to SEO. With a few simple rules you can ensure all your 
 * Search Engines don't like duplicate content
 * Images should always have an [alt attribute](http://www.w3schools.com/tags/att_img_alt.asp)
 * Use descriptive text when linking: _Bad_: [click here](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf) for the Google SEO Starter Guide. _Good_: Download the [Google SEO Starter Guide](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf).
-* If you delete a page, make it redirect somewhere else relevant. You can do this on [CloudCannon](http://cloudcannon.com) using [301 redirects](http://docs.cloudcannon.com/#common_tasks6_301_redirectshtml).
+* If you delete a page, make it redirect somewhere else relevant. You can do this on [CloudCannon](http://cloudcannon.com) using [301 redirects](http://docs.cloudcannon.com/hosting/301-redirects/).
