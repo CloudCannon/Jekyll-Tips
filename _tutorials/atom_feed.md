@@ -57,6 +57,6 @@ And finally add a link to `<head>` which is probably in `_layouts/default.html` 
 
 {% highlight html %}
 ...
-<link rel="alternate" type="application/atom+xml" title="The Creative Blog" href="/atom_feed.xml" />
+<link rel="alternate" type="application/atom+xml" title="The Creative Blog" href="/atom.xml" />
 ...
 {% endhighlight %}
