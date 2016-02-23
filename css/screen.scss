@@ -300,3 +300,60 @@ p > code {
 		left: $nav-width;
 	}
 }
+
+.cast {
+	background: #333;
+	padding: 10px;
+
+	.details {
+		margin: 0 0 0 320px;
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0;
+	}
+
+	.meta {
+		font-size: .7em;
+	}
+
+
+	.description {
+		margin: 5px 0 0 0;
+		font-size: .95em;
+	}
+
+	.image {
+		width: 300px;
+		float: left;
+		margin: 0 20px 0 0;
+	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.meta {
+	padding: 0;
+	margin: 0;
+	font-size: .9em;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 59.5%;
+	padding-top: 25px;
+	height: 0;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

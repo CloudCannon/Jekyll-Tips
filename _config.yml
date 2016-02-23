@@ -15,6 +15,11 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
       type: tutorials
     values:
       layout: docs
@@ -24,3 +29,4 @@ defaults:
     values:
       layout: docs
 url: http://jekyll.tips
+permalink: "/jekyll-casts/:title/"

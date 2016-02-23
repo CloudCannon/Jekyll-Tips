@@ -1,0 +1,17 @@
+---
+layout: page
+---
+<p class="meta">Episode #{{ page.episode }} - {{ page.date | date: "%b %d, %Y" }} - {{ page.length }} minutes</p>
+
+{% include youtube.html video_id=page.video_id %}
+
+<h3>Resources</h3>
+<ul>
+	{% for resource in page.resources %}
+		<li><a target="_blank" href="{{ resource.link }}">{{ resource.name }}</a></li>
+	{% endfor %}
+</ul>
+<h3>Notes</h3>
+{{ content }}
+
+{% include disqus.html %}

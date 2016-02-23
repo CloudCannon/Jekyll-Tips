@@ -9,6 +9,10 @@
 				{% include secondary-nav-items.html items=guide_items %}
 			</li>
 
+			<li class="nav-item top-level {% if page.url contains '/jekyll-casts/' %}current{% endif %}">
+				<a href="/jekyll-casts/">Casts</a>
+			</li>
+
 			<li class="nav-item top-level {% if page.url contains '/tutorials/' %}current{% endif %}">
 				<a href="{{ site.tutorials.first.url}}">Tutorials</a>
 				{% include secondary-nav-items.html items=site.tutorials %}
