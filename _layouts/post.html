@@ -5,13 +5,13 @@ layout: page
 
 {% include youtube.html video_id=page.video_id %}
 
-<h3>Resources</h3>
+<h2>Resources</h2>
 <ul>
 	{% for resource in page.resources %}
 		<li><a target="_blank" href="{{ resource.link }}">{{ resource.name }}</a></li>
 	{% endfor %}
 </ul>
-<h3>Notes</h3>
+<h2>Notes</h2>
 {{ content }}
 
 {% include disqus.html %}

@@ -302,8 +302,9 @@ p > code {
 }
 
 .cast {
-	background: #333;
+	background: #4d4d4d;
 	padding: 10px;
+	border-radius: 5px;
 
 	.details {
 		margin: 0 0 0 320px;
@@ -339,7 +340,6 @@ p > code {
 
 .meta {
 	padding: 0;
-	margin: 0;
 	font-size: .9em;
 }
 
