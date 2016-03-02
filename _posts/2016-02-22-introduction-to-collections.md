@@ -3,7 +3,7 @@ title: Introduction to Collections
 episode: 1
 image_path: /img/casts/intro-to-collections.jpg
 length: 5
-video_id: f4aly6xblQ
+video_id: _f4aly6xblQ
 description: Learn how to use collections to manage and organize related content.
 tags:
   - collections
@@ -11,7 +11,7 @@ resources:
   - name: "Explain like I'm five: Jekyll collections"
     link: http://ben.balter.com/2015/02/20/jekyll-collections/
   - name: "Collections documentation"
-    link: http://jekyllrb.com/docs/collections/
+    link: https://jekyllrb.com/docs/collections/
   - name: "Source code"
     link: https://github.com/CloudCannon/bakery-store/tree/collections
 ---

@@ -1,0 +1,14 @@
+---
+layout: page
+title: Jekyll Plugins
+heading: Jekyll Plugins
+permalink: /jekyll-plugins/
+---
+
+{% for plugin in site.jekyll_plugins %}
+	<div class="jekyll-plugin">
+		<h2><a target="_blank" href="{{ plugin.link }}">{{ plugin.title }}</a></h2>
+		<p class="details"><a target="_blank" href="{{ plugin.author_link }}">{{ plugin.author }}</a></p>
+		<p>{{ plugin.description }}</p>
+	</div>
+{% endfor %}

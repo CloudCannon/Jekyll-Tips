@@ -305,6 +305,7 @@ p > code {
 	background: #4d4d4d;
 	padding: 10px;
 	border-radius: 5px;
+	margin: 30px 0;
 
 	.details {
 		margin: 0 0 0 320px;
@@ -362,4 +363,19 @@ p > code {
 	float: right;
 	position: relative;
 	top: 5px;
+}
+
+.jekyll-plugin {
+	background: #4d4d4d;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 30px 0;
+
+	h2 {
+		margin: 0 0 15px 0;
+	}
+
+	p {
+		margin: 0;
+	}
 }

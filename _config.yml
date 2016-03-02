@@ -12,6 +12,7 @@ collections:
     name: Get Started Guide
     output: true
     permalink: "/:collection/:title/"
+  jekyll_plugins:
 defaults:
   - scope:
       path: ""
@@ -28,5 +29,10 @@ defaults:
       type: guide
     values:
       layout: docs
+  - scope:
+      path: ""
+      type: jekyll_plugin_categories
+    values:
+      layout: plugin
 url: http://jekyll.tips
 permalink: "/jekyll-casts/:title/"
