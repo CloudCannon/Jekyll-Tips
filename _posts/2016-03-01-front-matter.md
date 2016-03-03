@@ -2,7 +2,7 @@
 title: Front matter
 episode: 2
 image_path: /img/casts/front-matter.jpg
-length: 4
+length: 6
 video_id: OmvDTiqayOs
 description: Use front matter to set variables on your page.
 tags:
@@ -22,9 +22,15 @@ resources:
 hello_text: "Hello there!"
 show_footer: false
 fruit:
-  - apple
-  - banana
-  - orange
+  - name: apple
+    cost: $1
+    color: red
+  - name: banana
+    cost: $2
+    color: yellow
+  - name: orange
+    cost: $1.50
+    color: orange
 ---
 <!doctype html>
 <html lang="en">
@@ -36,15 +42,15 @@ fruit:
     <h1>About page</h1>
     <p>{{ page.hello_text }}</p>
 
+    <ul>
+      {% for item in page.fruit %}
+        <li>{{ item.name }}, cost: {{ item.cost }}, color: {{ item.color }}</li>
+      {% endfor %}
+    </ul>
+
     {% if page.show_footer %}
       <footer>I am a footer</footer>
     {% endif %}
-
-    <ul>
-      {% for item in page.fruit %}
-        <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
   </body>
 </html>
 {% endraw %}
