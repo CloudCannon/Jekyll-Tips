@@ -3,7 +3,7 @@ title: Front matter
 episode: 2
 image_path: /img/casts/front-matter.jpg
 length: 6
-video_id: OmvDTiqayOs
+video_id: -Rf5V_2E2CA
 description: Use front matter to set variables on your page.
 tags:
   - front-matter
