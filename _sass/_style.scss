@@ -901,3 +901,31 @@ code.output {
 .center-text {
 	text-align: center;
 }
+
+.mailchimp-subscribe {
+	background: #333;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 40px 0 20px 0;
+
+	h3 {
+		margin: 0 0 1em 0;
+	}
+
+	input[type="submit"] {
+		background-color: #ffcc00;
+		color: #333;
+		font-weight: 700;
+		padding: 10px 20px;
+    border-radius: 5px;
+		margin: 20px 0 0 0;
+	}
+
+	input[type="email"] {
+		color: #333;
+		display: block;
+		padding: 10px;
+		width: 100%;
+		margin: 4px 0 0 0;
+	}
+}
