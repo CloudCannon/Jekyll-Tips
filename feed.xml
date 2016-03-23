@@ -1,7 +1,7 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Jekyll Casts</title>
     <description>Weekly video tutorials for using Jekyll</description>
@@ -13,9 +13,11 @@
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.description | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <media:content url="{{ site.url }}{{ post.image_path }}" type="image/jpg"></media:content>
         <link>
         {{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <dc:creator>Episode #{{ post.episode }} - {{ post.date | date: "%b %d, %Y" }} - {{ post.length }} minutes</dc:creator>
       </item>
       {% endunless %}
     {% endfor %}
