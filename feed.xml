@@ -13,7 +13,7 @@
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.description | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <media:content url="{{ site.url }}{{ post.image_path }}" type="image/jpg" width="300" height="150"></media:content>
+        <media:content url="{{ site.url }}{{ post.image_path }}" type="image/jpg" width="200" height="100"></media:content>
         <link>
         {{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
