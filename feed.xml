@@ -7,6 +7,7 @@
     <description>Weekly video tutorials for using Jekyll</description>
     <link>
     {{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
     {% for post in site.posts %}
       {% unless post.link %}
       <item>
@@ -21,6 +22,5 @@
       </item>
       {% endunless %}
     {% endfor %}
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
