@@ -1,7 +1,10 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jekyll Casts</title>
     <description>Weekly video tutorials for using Jekyll</description>
@@ -13,6 +16,11 @@
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.description | xml_escape }}</description>
+        <content:encoded>
+          <![CDATA[
+          {{ post.description | markdownify }}
+          ]]>
+        </content:encoded>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <media:content url="{{ site.url }}{{ post.image_path }}" type="image/jpg" width="200" height="100"></media:content>
         <link>
