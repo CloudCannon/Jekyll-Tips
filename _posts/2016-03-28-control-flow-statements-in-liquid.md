@@ -15,49 +15,49 @@ resources:
 ---
 {% highlight html %}
 {% raw %}
-  {% if cupcake.type == "Lemon" %}
-    ...
-  {% endif %}
+{% if cupcake.type == "Lemon" %}
+  ...
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight html %}
 {% raw %}
-  {% if cupcake.type != "Lemon" %}
-    ...
-  {% endif %}
+{% if cupcake.type != "Lemon" %}
+  ...
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight html %}
 {% raw %}
-  {% if cupcake.type contains "Chocolate" %}
-    ...
-  {% endif %}
+{% if cupcake.type contains "Chocolate" %}
+  ...
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight html %}
 {% raw %}
-  {% if cupcake.rating < 3 %}
-    ...
-  {% endif %}
+{% if cupcake.rating < 3 %}
+  ...
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight html %}
 {% raw %}
-  {% if cupcake.type >= "Lemon" %}
-    ...
-  {% endif %}
+{% if cupcake.type >= "Lemon" %}
+  ...
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight html %}
 {% raw %}
-  {% unless cupcake.type >= "Lemon" %}
-    ...
-  {% endunless %}
+{% unless cupcake.type >= "Lemon" %}
+  ...
+{% endunless %}
 {% endraw %}
 {% endhighlight %}
 
