@@ -16,8 +16,31 @@
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.description | xml_escape }}</description>
+        <content:encoded>
+          <![CDATA[
+          <div style="background: #4d4d4d; border-radius: 5px; padding:8px; margin: 50px auto; max-width: 400px;">
+<table>
+	<tbody>
+		<tr>
+			<td align="left" class="full" valign="top">
+			<div class="inner-pad">
+			<h2><a href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title | xml_escape }}</a></h2>
+
+			<p class="description" style="margin: 0 !important; padding:3px 0; color: #dcdcdc; font-size: .7em !important">Episode #{{ post.episode }} - {{ post.date | date: "%b %d, %Y" }} - {{ post.length }} minutes</p>
+
+			<p style="margin: 0 !important; color: #dcdcdc">{{ post.description | xml_escape }}</p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" class="full"><img style="max-width: 100%" width="100%" src="{{ site.url }}{{ post.image_path }}"/></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+          ]]>
+        </content:encoded>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <media:content url="{{ site.url }}{{ post.image_path }}" type="image/jpg" width="200" height="100"></media:content>
         <link>
         {{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
