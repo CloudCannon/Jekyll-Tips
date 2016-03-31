@@ -24,7 +24,7 @@
 		<tr>
 			<td align="left" class="full" valign="top">
 			<div class="inner-pad">
-			<h2><a href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title | xml_escape }}</a></h2>
+			<h2 style="padding: 0;"><a style="color: #ffcc00; text-decoration: none;" href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title | xml_escape }}</a></h2>
 
 			<p class="description" style="margin: 0 !important; padding:3px 0; color: #dcdcdc; font-size: .7em !important">Episode #{{ post.episode }} - {{ post.date | date: "%b %d, %Y" }} - {{ post.length }} minutes</p>
 
