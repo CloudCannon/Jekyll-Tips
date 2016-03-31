@@ -18,7 +18,7 @@
         <description>{{ post.description | xml_escape }}</description>
         <content:encoded>
           <![CDATA[
-          <div style="background: #4d4d4d; border-radius: 5px; padding:8px; margin: 50px auto; max-width: 400px;">
+          <div style="background: #4d4d4d; border-radius: 5px; padding:8px; margin: 0 auto; max-width: 400px;">
 <table>
 	<tbody>
 		<tr>
@@ -33,7 +33,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td align="center" class="full"><img style="max-width: 100%" width="100%" src="{{ site.url }}{{ post.image_path }}"/></td>
+			<td align="center" class="full"><img style="max-width: 100%; display: block;" width="100%" src="{{ site.url }}{{ post.image_path }}"/></td>
 		</tr>
 	</tbody>
 </table>
