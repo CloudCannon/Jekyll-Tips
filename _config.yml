@@ -36,3 +36,5 @@ defaults:
       layout: plugin
 url: http://jekyll.tips
 permalink: "/jekyll-casts/:title/"
+title: Jekyll Tips
+description: Free, curated resources for Jekyll users. Guides, tutorials, videos, snippets, services, themes and templates for the most popular static site generator.
