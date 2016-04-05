@@ -5,7 +5,7 @@ nav_title: Introduction
 order: 1
 permalink: /
 ---
-This guide will give you a step-by-step introduction to Jekyll. We'll download a free HTML 5 template, convert it into a Jekyll website, add a blog and make it so clients or non-technical users can update content. Let's get started!
+This guide will give you a step-by-step introduction to Jekyll. We'll download a free HTML 5 template, convert it into a Jekyll website, add a blog and make it so clients our non-technical users can update content. Let's get started!
 
 ### What is Jekyll?
 
@@ -17,7 +17,7 @@ Jekyll is a static site generator. It takes source files and generates an entire
 
 There's been huge trend towards static technologies mostly due to the complexity of current systems. Jekyll is:
 
-* **Simple** - There's far less moving parts required for a Jekyll website. This makes Jekyll websites extremely fast and simple to build.
+* **Simple** - There are far less moving parts required for a Jekyll website. This makes Jekyll websites extremely fast and simple to build.
 
 * **Fast** - Jekyll websites are among the fastest on the internet. There's no time spent generating a page, the web server simply needs to return a file.
 
