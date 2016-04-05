@@ -60,7 +60,7 @@ title: Contact
 
 **_data/locations.csv**
 
-{% highlight csv %}
+{% highlight text %}
 {% raw %}
 latitude,longitude,name
 -45.878760,170.502798,Dunedin Outlet
