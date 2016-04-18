@@ -244,6 +244,7 @@ pre, code {
 	font-family: Inconsolata, Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
 	line-height: 1.4;
 	font-weight: 400;
+	white-space: pre-wrap;
 }
 
 .highlight, p > pre, p > code, p > nobr > code, li > code, h5 > code, .note > code {
