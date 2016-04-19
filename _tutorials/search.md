@@ -111,7 +111,7 @@ Performing the search:
 {% highlight javascript %}
 {% raw %}
 // Event when the form is submitted
-$("#site_search").submit(function(){
+$("#site_search").submit(function(event){
     event.preventDefault();
     var query = $("#search_box").val(); // Get the value for the text field
     var results = window.idx.search(query); // Get lunr to perform a search
@@ -178,7 +178,7 @@ jQuery(function() {
   });
 
   // Event when the form is submitted
-  $("#site_search").submit(function(){
+  $("#site_search").submit(function(event){
       event.preventDefault();
       var query = $("#search_box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search
