@@ -3,7 +3,6 @@ title: Getting started with Jekyll
 heading: Introduction
 nav_title: Introduction
 order: 1
-permalink: /
 ---
 This guide will give you a step-by-step introduction to Jekyll. We'll download a free HTML 5 template, convert it into a Jekyll website, add a blog and make it so clients or non-technical users can update content. Let's get started!
 

@@ -3,14 +3,16 @@
 
 	<nav>
 		<ul>
-			<li class="nav-item top-level {% if page.url == '/' or page.url contains '/guide/' %}current{% endif %}">
-				<a href="/">Get Started Guide</a>
-				{% assign guide_items = site.guide | sort: 'order' %}
-				{% include secondary-nav-items.html items=guide_items %}
+			<li class="nav-item top-level {% if page.url == '/' or page.url contains '/jekyll-casts/' %}current{% endif %}">
+				<a href="/">Home</a>
 			</li>
 
-			<li class="nav-item top-level {% if page.url contains '/jekyll-casts/' %}current{% endif %}">
-				<a href="/jekyll-casts/">Casts</a>
+
+			{% assign guide_items = site.guide | sort: 'order' %}
+			<li class="nav-item top-level {% if page.url contains '/guide/' %}current{% endif %}">
+				<a href="{{ guide_items.first.url }}">Get Started Guide</a>
+
+				{% include secondary-nav-items.html items=guide_items %}
 			</li>
 
 			<li class="nav-item top-level {% if page.url contains '/tutorials/' %}current{% endif %}">

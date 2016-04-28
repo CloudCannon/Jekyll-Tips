@@ -1,7 +1,7 @@
 ---
 title: Data Files
 episode: 9
-image_path: /img/casts/data-files.jpg
+image_path: /img/casts/data-files/preview.jpg
 length: 6
 video_id: B2GrPwS9kD4
 description: Read data from CSV, JSON or YAML files into your liquid templates
@@ -12,53 +12,46 @@ resources:
     link: https://jekyllrb.com/docs/datafiles/
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/data-files
+category: basics
+order: 7.0
 ---
-**contact.html**
+Data files allow you to access information from CSV, JSON or YAML files on your Jekyll website. You can almost treat these files like a database.
 
-{% highlight html %}
+In this example, we have a `contact.html` page which has a map with all the outlets of our Bakery Store. At the moment we have one outlet in Wellington but there's other outlets so we need to add more markers.
+
+![Map one](/img/casts/data-files/map-one.png)
+
+The source code for the page is available [in the repository](https://github.com/CloudCannon/bakery-store/tree/data-files). The part we're  interested in is where the markers are added to a JavaScript array.
+
+{% highlight javascript %}
 {% raw %}
----
-layout: default
-title: Contact
----
-<div id="map-canvas" style="width:100%; height:650px"></div>
-
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-<script>
-  var markers = {{ site.data.locations | jsonify }};
-  function initializeMap() {
-    var bounds = new google.maps.LatLngBounds(),
-      mapOptions = {
-        mapTypeId: 'roadmap',
-        styles: [{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#EBF4A4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#8dab68"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#A4C67D"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#9BBF72"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#87ae79"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#7f2200"},{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":4.1}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}]
-      };
-    // Display a map on the page
-    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    map.setTilt(45);
-    for (var i = 0; i < markers.length; i++ ) {
-      var position = new google.maps.LatLng(markers[i].latitude, markers[i].longitude);
-      bounds.extend(position);
-      marker = new google.maps.Marker({
-        position: position,
-        map: map,
-        title: markers[i].title
-      });
-      // Automatically center the map fitting all markers on the screen
-      map.fitBounds(bounds);
-    }
-    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-      this.setZoom(5);
-      google.maps.event.removeListener(boundsListener);
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initializeMap);
-</script>
+var markers = [{
+  "latitude": -41.286460,
+  "longitude": 174.776236,
+  "title": "Wellington Outlet"
+}];
 {% endraw %}
 {% endhighlight %}
 
-**_data/locations.csv**
+So how would we add another marker? Well we could copy this and change the latitude, longitude and title.
+
+{% highlight javascript %}
+{% raw %}
+var markers = [{
+  "latitude": -41.286460,
+  "longitude": 174.776236,
+  "title": "Wellington Outlet"
+}, {
+  "latitude": -45.878760,
+  "longitude": 170.502798,
+  "title": "Dunedin Outlet"
+}];
+{% endraw %}
+{% endhighlight %}
+
+This works but it's hard to manage as the markers array is in the middle of other JavaScript. We can do better with Jekyll data files.
+
+We'll start by creating a new folder, `_data`. Inside this we'll create a file called `locations.csv`. A CSV file has the first row specifying the titles for the columns then the data is in the subsequent rows. We'll add the data for all the outlets to our CSV file. If you're not comfortable editing CSV files using a code editor you can always use a spreadsheet program like Microsoft Excel.
 
 {% highlight text %}
 {% raw %}
@@ -67,12 +60,20 @@ latitude,longitude,name
 -41.286460,174.776236,Wellington Outlet
 -46.098799,168.945819,Gore Outlet
 -46.413187,168.353773,Invercargill Outlet
--35.117330,173.267559,Kaitaia Outlet
+-35.117330,173.267559,Kaitai Outlet
 -45.067944,168.662109,Queenstown Outlet
 {% endraw %}
 {% endhighlight %}
 
-**_data/authors.csv**
+Let's use this data on `contact.html`. The data file is available in Jekyll at `site.data.locations` and we can run this through the `jsonify` filter to output an array our JavaScript can understand. Now all the outlets are displayed on the map.
+
+![Map two](/img/casts/data-files/map-two.png)
+
+In the next example we'll let's have a look an image of the post author and a link to their twitter page to `blog.html`.
+
+![No author](/img/casts/data-files/no-author.png)
+
+We can use data files to store this author metadata. We'll create `authors.json` which has a JSON object where the keys are the author's short name and values are the author's full name, image path and twitter handle.
 
 {% highlight javascript %}
 {% raw %}
@@ -91,9 +92,10 @@ latitude,longitude,name
 {% endraw %}
 {% endhighlight %}
 
-**_posts/2016-01-01-what-is-sour-dough.md**
 
-{% highlight html %}
+Now we'll add the author's short name to the front matter in our posts. So the author of `_posts/2016-01-01-what-is-sour-dough.md` is george.
+
+{% highlight text %}
 {% raw %}
 ---
 layout: post
@@ -104,9 +106,10 @@ author: george
 {% endraw %}
 {% endhighlight %}
 
-**_posts/2016-01-02-where-did-the-cookie-come-from.md**
 
-{% highlight html %}
+And the author of `_posts/2016-01-02-where-did-the-cookie-come-from.md` is mike.
+
+{% highlight text %}
 {% raw %}
 ---
 layout: post
@@ -117,36 +120,30 @@ author: mike
 {% endraw %}
 {% endhighlight %}
 
-**blog.html**
+Let's add the author data to our list of posts on `blog.html`. We have a for loop which gives us a reference to each post {% raw %}`{% for post in site.posts %}` {% endraw %}, from  `post` we can now get the author's short name from the front matter using `post.author`. We can access the authors data file at `site.data.authors` and combining all of this we can get the current author's metadata using `site.data.authors[post.author]`.
 
 {% highlight html %}
 {% raw %}
----
-layout: default
-title: Blog
----
-<div class="container">
-  <h2 class="spacing">Blog</h2>
-
-  <div class="blog-posts">
-    {% for post in site.posts %}
-      <div class="blog-post spacing">
-        <h3>
-          <a href="http://twitter.com/{{ site.data.authors[post.author].twitter_handle }}">
-            <img src="{{ site.data.authors[post.author].image_path }}" alt="{{ site.data.authors[post.author].full_name }}" class="profile" />
-          </a>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p class="summary">
-          {{ post.category }}
-          <span class="date">
-            {{ post.date | date: '%B %d, %Y' }}
-          </span>
-        </p>
-        {{ post.excerpt }}
-      </div>
-    {% endfor %}
+...
+{% for post in site.posts %}
+  <div class="blog-post spacing">
+    <h3>
+      <a href="http://twitter.com/{{ site.data.authors[post.author].twitter_handle }}">
+        <img src="{{ site.data.authors[post.author].image_path }}" alt="{{ site.data.authors[post.author].full_name }}" class="profile" />
+      </a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <p class="summary">
+      {{ post.category }}
+      <span class="date">
+        {{ post.date | date: '%B %d, %Y' }}
+      </span>
+    </p>
+    {{ post.excerpt }}
   </div>
-</div>
+{% endfor %}
+...
 {% endraw %}
 {% endhighlight %}
+
+![Authors](/img/casts/data-files/authors.png)

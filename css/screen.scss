@@ -108,8 +108,6 @@ header {
 	background: $body-background-color url(/img/background-repeat.png);
 
 	h1 {
-		color: $body-color-secondary;
-		text-transform: uppercase;
 		text-align: center;
 		text-shadow: none;
 		margin: $space $space ($space * 1.5) $space;
@@ -379,4 +377,80 @@ p > code {
 	p {
 		margin: 0;
 	}
+}
+
+.cast-list {
+	h2 {
+		text-transform: capitalize;
+		clear: both;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		clear: both;
+		margin: 10px 0;
+	}
+
+	li, a {
+		line-height: 0;
+	}
+
+	a {
+		display: block;
+		background: #4d4d4d;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		border-radius: 5px;
+
+		p {
+			color: white;
+		}
+	}
+
+	a:hover {
+		background: #333;
+
+		img {
+			-webkit-filter: grayscale(0%);
+	    filter: grayscale(0%);
+		}
+	}
+
+	img {
+		display: inline-block;
+		width: 250px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		-webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+	}
+
+	.cast-content {
+		position: absolute;
+		top: 0;
+		width: 100%;
+  	padding: 0 0 0 270px;
+		height: 125px;
+
+		h3 {
+			margin: 30px 0 15px 0;
+		}
+	}
+}
+
+.columns:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	width: 50%;
+	float: left;
 }

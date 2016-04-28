@@ -1,0 +1,31 @@
+---
+layout: page
+title: Jekyll Casts
+---
+<p>Step by step tutorials and screencasts covering everything you need to know about Jekyll. </p>
+
+
+<div class="cast-list">
+	{% for cast_category in site.cast_categories %}
+		{% for category in site.categories %}
+			{% if category[0] == cast_category %}
+				<h2>{{ category[0] }}</h2>
+
+				<ul>
+					{% assign casts = category[1] | sort: 'order' %}
+					{% for cast in casts %}
+						<li>
+							<a href="{{ cast.url }}">
+								<img src="{{ cast.image_path }}" alt="{{ cast.title }}" height="125px" width="250px" />
+								<div class="cast-content">
+									<h3>{{ cast.title }}</h3>
+									<p>{{ cast.description }}</p>
+								</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+</div>

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if page.url == '/' or page.url contains '/guide/' %}
+{% if page.url contains '/guide/' %}
 	{% assign section = 'Guide' %}
 	{% assign items = site.guide | sort: 'order' %}
 {% elsif page.url contains '/tutorials/' %}
