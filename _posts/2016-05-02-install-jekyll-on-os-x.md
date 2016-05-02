@@ -14,6 +14,7 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/permalinks
 category: setup
 order: 2
+published: false
 ---
 In this installation guide we'll be using Mac OS X 10.11 El Capitan. These instructions will probably work for older versions of OS X but they have not but tested.
 

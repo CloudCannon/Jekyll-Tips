@@ -14,6 +14,7 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/permalinks
 category: setup
 order: 3
+published: false
 ---
 In this installation guide we'll be using Ubuntu 16.04. If you're using a different Linux distribution, change the `apt-get` commands to the package manager on your operation system.
 
