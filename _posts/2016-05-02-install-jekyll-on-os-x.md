@@ -18,6 +18,14 @@ published: false
 ---
 In this installation guide we'll be using Mac OS X 10.11 El Capitan. These instructions will probably work for older versions of OS X but they have not but tested.
 
+Install xcode.
+
+{% highlight bash %}
+{% raw %}
+xcode-select --install
+{% endraw %}
+{% endhighlight %}
+
 To begin with, we'll open up the Terminal which can be found at `Applications/Utilities/Terminal`. In the Terminal we can run our installation commands.
 
 ![Terminal](/img/casts/linux-install/terminal.png)
