@@ -11,3 +11,4 @@
 /snippets/related-posts/ /tutorials/snippets/
 /snippets/rss-feed/ /tutorials/rss-feed/
 /snippets/site-navigation/ /tutorials/navigation/
+/casts/ /
