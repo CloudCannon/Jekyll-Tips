@@ -1,24 +1,27 @@
 ---
 title: Install Jekyll on Mac OS X
 episode: 14
-image_path: /img/casts/permalinks/preview.jpg
-length: 6
-video_id: GEJfymFDBqY
-description: A flexible way to build your site urls
-tags:
-  - permalinks
+image_path: /img/casts/mac-install/preview.jpg
+length: 5
+video_id: 3QG4WRrXHCA
+description: Set up Jekyll on a OS X environment
 resources:
-  - name: Permalink documentation
-    link: https://jekyllrb.com/docs/permalinks/
-  - name: Source code
-    link: https://github.com/CloudCannon/bakery-store/tree/permalinks
+  - name: Homebrew
+    link: http://brew.sh/
 category: setup
 order: 2
-published: false
 ---
-In this installation guide we'll be using Mac OS X 10.11 El Capitan. These instructions will probably work for older versions of OS X but they have not but tested.
+In this installation guide we'll be using Mac OS X 10.11 El Capitan. These instructions should work for older versions of OS X but they have not but tested.
 
-Install xcode.
+Install Xcode from the AppStore, this around a 4GB download.
+
+![Xcode](/img/casts/mac-install/xcode.png)
+
+We'll open up the Terminal which can be found at `Applications/Utilities/Terminal`. In the Terminal we can run the rest of our installation commands.
+
+![Terminal](/img/casts/mac-install/terminal.png)
+
+We need to install "Command Line Tools" which gives us access to commonly used tools, utilities, and compilers such as make and GCC.
 
 {% highlight bash %}
 {% raw %}
@@ -26,27 +29,35 @@ xcode-select --install
 {% endraw %}
 {% endhighlight %}
 
-To begin with, we'll open up the Terminal which can be found at `Applications/Utilities/Terminal`. In the Terminal we can run our installation commands.
+![Command Line Tools](/img/casts/mac-install/xcode-select.png)
 
-![Terminal](/img/casts/linux-install/terminal.png)
-
-First we'll make sure Ubuntu is up to date.
+After that we need to agree to Xcode's license. Either run the command below or open up Xcode which will prompt you to agree to the license.
 
 {% highlight bash %}
 {% raw %}
-sudo apt-get update
+sudo xcodebuild -license
 {% endraw %}
 {% endhighlight %}
 
-Then we'll install ruby.
+OS X already has Ruby already installed but it has some quirks that makes installing Jekyll tricky. Instead of using this version, we'll install our own version of Ruby.
+
+First we'll install [Homebrew](http://brew.sh/). Homebrew helps you install packages and is a must-have for anyone programming on OS X.
 
 {% highlight bash %}
 {% raw %}
-sudo apt-get install ruby-full
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endraw %}
 {% endhighlight %}
 
-And finally we'll install Jekyll.
+Now we can install Ruby.
+
+{% highlight bash %}
+{% raw %}
+brew install ruby
+{% endraw %}
+{% endhighlight %}
+
+And now we can install Jekyll.
 
 {% highlight bash %}
 {% raw %}
@@ -61,4 +72,4 @@ jekyll -v
 {% endraw %}
 {% endhighlight %}
 
-![Version](/img/casts/linux-install/version.png)
+![Version](/img/casts/mac-install/version.png)

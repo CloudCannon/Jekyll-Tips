@@ -23,7 +23,9 @@ Clicking on a post takes us to a nicely formatted post.
 
 ![Post](/img/casts/advanced-blogging/date.png)
 
-In this video we'll go over some more advanced features in Jekyll blogging and other tips and tricks. On `_posts/2016-04-03-chocolate-chip-cookies.md` let's say we don't want to use the title from the file name which is chocolate chip cookies. We can specify a title in front matter to override it.
+In this tutorial we'll go over some more advanced features in Jekyll blogging and other tips and tricks.
+
+On `_posts/2016-04-03-chocolate-chip-cookies.md` let's say we don't want to use the title from the file name which is chocolate chip cookies. We can specify a title in front matter to override it.
 
 {% highlight html %}
 {% raw %}

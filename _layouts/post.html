@@ -9,12 +9,14 @@ layout: page
 
 <div class="columns mailchimp-subscribe">
 	<div class="column">
-		<h3>Resources</h3>
-		<ul>
-			{% for resource in page.resources %}
-				<li><a target="_blank" href="{{ resource.link }}">{{ resource.name }}</a></li>
-			{% endfor %}
-		</ul>
+		{% if page.resources %}
+			<h3>Resources</h3>
+			<ul>
+				{% for resource in page.resources %}
+					<li><a target="_blank" href="{{ resource.link }}">{{ resource.name }}</a></li>
+				{% endfor %}
+			</ul>
+		{% endif %}
 	</div>
 	<div class="column">
 		{% include mailchimp-subscribe.html %}

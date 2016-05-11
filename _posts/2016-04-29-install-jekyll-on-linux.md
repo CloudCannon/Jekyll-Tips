@@ -1,20 +1,13 @@
 ---
 title: Install Jekyll on Linux
 episode: 13
-image_path: /img/casts/permalinks/preview.jpg
-length: 6
-video_id: GEJfymFDBqY
-description: A flexible way to build your site urls
-tags:
-  - permalinks
+image_path: /img/casts/linux-install/preview.jpg
+length: 2
+video_id: C6rHvOWzS2I
+description: Set up Jekyll on a Linux environment
 resources:
-  - name: Permalink documentation
-    link: https://jekyllrb.com/docs/permalinks/
-  - name: Source code
-    link: https://github.com/CloudCannon/bakery-store/tree/permalinks
 category: setup
 order: 3
-published: false
 ---
 In this installation guide we'll be using Ubuntu 16.04. If you're using a different Linux distribution, change the `apt-get` commands to the package manager on your operation system.
 
