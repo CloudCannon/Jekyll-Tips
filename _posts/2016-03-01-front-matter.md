@@ -122,7 +122,7 @@ Arrays are also possible in front matter. We'll create a new array called fruit,
 {% raw %}
 ---
 hello_text: "Hello there!"
-show_footer: true
+show_footer: false
 fruit:
   - apple
   - banana
@@ -152,14 +152,16 @@ fruit:
 {% endraw %}
 {% endhighlight %}
 
+![Object about page](/img/casts/front-matter/array.png)
+
 
 In this last example we'll use objects in front matter. Objects allow for more complex data structures, we're going to use it in our fruits array so we're not only setting the name of the fruit, but also the cost and color. Instead of array items being strings we want them to be keys and values. When we're outputting the fruit, item is now an entire object so we need to reference the keys inside the object.
 
-{% highlight liquid %}
+{% highlight html %}
 {% raw %}
 ---
 hello_text: "Hello there!"
-show_footer: true
+show_footer: false
 fruit:
   - name: apple
     cost: $1

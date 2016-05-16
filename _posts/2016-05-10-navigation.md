@@ -4,16 +4,12 @@ episode: 16
 image_path: /img/casts/navigation/preview.jpg
 length: 6
 video_id: GEJfymFDBqY
-description: A flexible way to build your site urls
-tags:
-  - permalinks
+description: An easy way to manage navigation menus in Jekyll
 resources:
-  - name: Permalink documentation
-    link: https://jekyllrb.com/docs/permalinks/
   - name: Source code
-    link: https://github.com/CloudCannon/bakery-store/tree/permalinks
-category: basics
-order: 12
+    link: https://github.com/CloudCannon/bakery-store/tree/navigation
+category: intermediate
+order: 1
 published: false
 ---
 Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`.
