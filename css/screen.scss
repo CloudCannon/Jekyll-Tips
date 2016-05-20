@@ -412,6 +412,10 @@ p > code {
 		p {
 			color: white;
 		}
+
+		img {
+			transition: 0.25s -webkit-filter, 0.25s filter;
+		}
 	}
 
 	a:hover {

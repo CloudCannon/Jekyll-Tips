@@ -2,15 +2,15 @@
 title: Running Jekyll
 episode: 17
 image_path: /img/casts/running-jekyll/preview.jpg
-length: 6
-video_id: GEJfymFDBqY
+length: 4
+video_id: VRFJXPiefH4
 description: How to have Jekyll build your site.
 resources:
   - name: Configuration documentation
     link: https://jekyllrb.com/docs/configuration/
 category: basics
 order: 0
-published: false
+published: true
 ---
 To run jekyll on a site, we'll navigate to the site's directory in the command line, then run one of these commands.
 

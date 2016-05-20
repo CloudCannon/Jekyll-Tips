@@ -2,15 +2,15 @@
 title: Navigation
 episode: 16
 image_path: /img/casts/navigation/preview.jpg
-length: 6
-video_id: GEJfymFDBqY
+length: 7
+video_id: 3I1pg4Z9WrU
 description: An easy way to manage navigation menus in Jekyll
 resources:
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/navigation
 category: intermediate
 order: 1
-published: false
+published: true
 ---
 Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`.
 
@@ -93,7 +93,7 @@ Then instead of having static links in `_layouts/default.html`, we can sort our 
     {% for p in navigation_pages %}
       {% if p.navigation_weight %}
         <li>
-          <a href="/" {% if p.url == page.url %}class="active"{% endif %}>
+          <a href="{{ page.url }}" {% if p.url == page.url %}class="active"{% endif %}>
             {{ p.title }}
           </a>
         </li>
