@@ -937,3 +937,15 @@ code.output {
 		padding: 20px;
 	}
 }
+
+@media (max-width: 950px) {
+	.cast-list a {
+		.cast-content {
+			padding-bottom: 15px;
+		}
+		
+		img {
+			display: none;
+		}
+	}
+}
