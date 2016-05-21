@@ -29,6 +29,7 @@ body, html {
 	background: #000 url(/img/background-repeat.png);
 	padding: 0;
 	border-top: 0;
+	overflow: hidden;
 }
 
 header {
@@ -413,6 +414,7 @@ p > code {
 			height: 125px;
 			min-width: 250px;
 			min-height: 125px;
+			float:left;
 		}
 	}
 
