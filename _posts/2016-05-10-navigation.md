@@ -10,7 +10,6 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/navigation
 category: intermediate
 order: 1
-published: true
 ---
 Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`.
 

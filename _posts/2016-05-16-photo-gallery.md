@@ -10,7 +10,6 @@ resources:
     link: https://github.com/CloudCannon/bakery-store/tree/photo-gallery
 category: intermediate
 order: 4
-published: true
 ---
 We need a photo gallery on our Bakery Store site to show off all the amazing cakes they offer. We'll cover two ways of implementing a photo gallery on a Jekyll site: using Front Matter and using Collections.
 

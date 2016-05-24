@@ -12,7 +12,6 @@ resources:
     link: http://katydecorah.com/code/jekyllconf/
 category: advanced
 order: 2
-published: true
 ---
 Sometimes it's useful to output Front Matter or Collection data as JSON so we can reference it in Javascript.
 
