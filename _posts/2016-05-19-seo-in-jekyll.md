@@ -21,7 +21,7 @@ In this tutorial we'll go over techniques to improve the SEO on our demo Bakery 
 
 ### Jekyll SEO Tag Plugin
 
-The [jekyll-seo-tag plugin](https://github.com/jekyll/jekyll-seo-tag) is the best way to set all the meta tags we need for SEO. We add a {% raw %}`{% seo %}`{% endraw %} Liquid tag in our `<head>`. Then in the page front matter we can set `title`, `description` `image` and many other options which output as `<title>`, `<meta name="description">`,[Open Graph tags](http://ogp.me/) and [JSON-LD](http://json-ld.org/). Open Graph allows us to control how content is displayed when it's shared on Facebook, Twitter, Pinterest and other social networks. JSON-LD helps Google and other search engines display your content in search results.
+The [jekyll-seo-tag plugin](https://github.com/jekyll/jekyll-seo-tag) is the best way to set all the meta tags we need for SEO. We add a {% raw %}`{% seo %}`{% endraw %} Liquid tag in our `<head>`. Then in the page front matter we can set `title`, `description`, `image` and many other options which output as `<title>`, `<meta name="description">`, [Open Graph tags](http://ogp.me/) and [JSON-LD](http://json-ld.org/). Open Graph allows us to control how content is displayed when it's shared on Facebook, Twitter, Pinterest and other social networks. JSON-LD helps Google and other search engines display your content in search results.
 
 Facebook's [Sharing Debugger](https://developers.facebook.com/tools/debug/sharing/) is a useful tool for previewing what content will look like when it's shared.
 

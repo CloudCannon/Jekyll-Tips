@@ -12,7 +12,7 @@ resources:
 category: basics
 order: 0
 ---
-A basic Jekyll site has a file structure something like this.
+A basic Jekyll site has a file structure something like this:
 
 ![Jekyll File Structure](/img/casts/file-structure/overview.png)
 
