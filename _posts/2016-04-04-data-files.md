@@ -1,5 +1,6 @@
 ---
 title: Data Files
+heading: Jekyll Data Files
 episode: 9
 image_path: /img/casts/data-files/preview.jpg
 length: 6

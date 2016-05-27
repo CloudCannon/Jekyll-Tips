@@ -1,5 +1,6 @@
 ---
 title: Permalinks
+heading: Jekyll Permalinks
 episode: 12
 image_path: /img/casts/permalinks/preview.jpg
 length: 6

@@ -2,14 +2,16 @@
 title: Jekyll Search using lunr.js
 episode: 20
 image_path: /img/casts/lunr-js/preview.jpg
-length: 4
-video_id: XTAFSDqQMko
+length: 5
+video_id: Nebae_YEok4
 description: Add search to your Jekyll site using lunr.js
 resources:
   - name: Source code
-    link: https://github.com/CloudCannon/bakery-store/tree/json
-  - name: Katy Decorah's "Unconventional use cases for Jekyll"
-    link: http://katydecorah.com/code/jekyllconf/
+    link: https://github.com/CloudCannon/bakery-store/tree/lunrjs
+  - name: lunr.js
+    link: http://lunrjs.com/
+  - name: Outputting JSON in Jekyll
+    link: /jekyll-casts/output-json/
 category: advanced
 order: 3
 ---
@@ -17,7 +19,7 @@ We're adding search to our demo Bakery Store site so users can easily find relev
 
 To build the search we'll use [lunr.js](http://lunrjs.com/), a client side full-text search engine. The search will work in the following steps:
 
-1. Send the search term as a [GET parameter](http://www.w3schools.com/tags/ref_httpmethods.asp) to `search.html`.
+1. Send the search term as a GET parameter to `search.html`.
 2. `search.html` reads the GET parameter and searches through JSON containing the searchable content.
 3. `search.html` displays a list of search results.
 
@@ -65,7 +67,7 @@ Next we need to write the JavaScript for `/js/search.js` to perform three tasks:
 
 We'll go over the sections of code then at the end, we'll see the whole file.
 
-***Get the search term***
+### Get the search term
 
 JavaScript doesn't have an easy way to read GET parameters so we'll add a `getParameterByName` function to do this. Don't worry if you don't understand how it works. Now we can use `getParameterByName` to get our search term.
 
@@ -74,13 +76,13 @@ JavaScript doesn't have an easy way to read GET parameters so we'll add a `getPa
 ...
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1);
-  var vars = query.split("&");
+  var vars = query.split('&');
 
   for (var i = 0; i < vars.length; i++) {
-    var pair = vars[i].split("=");
+    var pair = vars[i].split('=');
 
     if (pair[0] === variable) {
-      return decodeURIComponent(pair[1].replace(/\+/g, "%20"));
+      return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
     }
   }
 }
@@ -90,7 +92,7 @@ var searchTerm = getQueryVariable('query');
 {% endraw %}
 {% endhighlight %}
 
-***Perform the search***
+### Perform the search
 
 If there's a search term we need to set up and configure lunr.js. This involves telling lunr about the fields we're interested and adding the search data from the JSON. Once this is set up we can perform the search.
 
@@ -127,7 +129,7 @@ if (searchTerm) {
 {% endraw %}
 {% endhighlight %}
 
-***Display the results***
+### Display the results
 
 Now we have the results we can display them in our list.
 
@@ -142,8 +144,8 @@ function displaySearchResults(results, store) {
 
     for (var i = 0; i < results.length; i++) {  // Iterate over the results
       var item = store[results[i].ref];
-      appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>' +
-      '<p>' + item.content.substring(0,150) + '...</p></li>';
+      appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
+      appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
     }
 
     searchResults.innerHTML = appendString;
@@ -168,8 +170,8 @@ When we put it all together we have working search.
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>' +
-        '<p>' + item.content.substring(0,150) + '...</p></li>';
+        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
+        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
       }
 
       searchResults.innerHTML = appendString;
@@ -180,13 +182,13 @@ When we put it all together we have working search.
 
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
-    var vars = query.split("&");
+    var vars = query.split('&');
 
     for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split("=");
+      var pair = vars[i].split('=');
 
       if (pair[0] === variable) {
-        return decodeURIComponent(pair[1].replace(/\+/g, "%20"));
+        return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
       }
     }
   }

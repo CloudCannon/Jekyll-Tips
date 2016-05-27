@@ -1,5 +1,6 @@
 ---
 title: Photo Gallery
+heading: Jekyll Photo Gallery
 episode: 20
 image_path: /img/casts/photo-gallery/preview.jpg
 length: 6
@@ -9,11 +10,11 @@ resources:
   - name: Source code
     link: https://github.com/CloudCannon/bakery-store/tree/photo-gallery
 category: intermediate
-order: 4
+order: 2
 ---
-We need a photo gallery on our Bakery Store site to show off all the amazing cakes they offer. We'll cover two ways of implementing a photo gallery on a Jekyll site: using Front Matter and using Collections.
+We need a photo gallery on our Bakery Store site to show off all the amazing cakes they offer. We'll cover two ways of implementing a photo gallery on a Jekyll site: using front matter and using Collections.
 
-We'll start with Front Matter, this is a good way to add a photo gallery if it's only going to be on one page. First we'll create `photo-gallery.html` and add the default layout and an array with all the image data to the front matter.
+We'll start with front matter, this is a good way to add a photo gallery if it's only going to be on one page. First we'll create `photo-gallery.html` and add the default layout and an array with all the image data to the front matter.
 
 {% highlight yaml %}
 {% raw %}
@@ -57,7 +58,7 @@ We can loop over this array to output the images in a grid. There's already CSS 
 
 ![Cakes](/img/casts/photo-gallery/cakes.jpg)
 
-Having the photo gallery in this format gives us flexibility. If we want to reorder the items we can just reorder the array in Front Matter. If we wanted to make the images link somewhere we'd just add the location to the front matter.
+Having the photo gallery in this format gives us flexibility. If we want to reorder the items we can just reorder the array in front matter. If we wanted to make the images link somewhere we'd just add the location to the front matter.
 
 {% highlight yaml %}
 {% raw %}
@@ -86,7 +87,7 @@ Then output the link in an `a` when we output the images.
 {% endraw %}
 {% endhighlight %}
 
-Now let's change this to use a Collection for the data instead of Front Matter on the page. If we were displaying the photo gallery on multiple pages or had a lot of metadata for each image using a Collection would be a good choice.
+Now let's change this to use a Collection for the data instead of front matter on the page. If we were displaying the photo gallery on multiple pages or had a lot of metadata for each image using a Collection would be a good choice.
 
 We'll create a `photo_gallery` collection, if you're not sure how to do this check out our [Introduction to Collections tutorial](/jekyll-casts/introduction-to-collections/). Each document in the collection will have the metadata for a single image. For example `_photo_gallery/lemon-cake.md` will look like this.
 
@@ -112,7 +113,7 @@ We can tweak our loop from before to output from the `photo_gallery` collection.
 {% endraw %}
 {% endhighlight %}
 
-If we wanted to control the order of photos we could add a `weight` variable to the Front Matter of the documents in `photo_gallery`. `weight` is a number which indicates the photo's position.
+If we wanted to control the order of photos we could add a `weight` variable to the front matter of the documents in `photo_gallery`. `weight` is a number which indicates the photo's position.
 
 {% highlight yaml %}
 {% raw %}

@@ -1,5 +1,6 @@
 ---
 title: Front matter
+heading: Jekyll Front matter
 episode: 2
 image_path: /img/casts/front-matter/preview.jpg
 length: 6

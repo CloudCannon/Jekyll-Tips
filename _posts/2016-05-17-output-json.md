@@ -13,7 +13,7 @@ resources:
 category: advanced
 order: 2
 ---
-Sometimes it's useful to output Front Matter or Collection data as JSON so we can reference it in Javascript.
+Sometimes it's useful to output front matter or Collection data as JSON so we can reference it in Javascript.
 
 If the data is an array or hash you can use the `jsonify` filter.
 

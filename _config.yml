@@ -4,14 +4,9 @@ collections:
     name: Jekyll Themes
   services:
     name: Services for Static Sites
-  tutorials:
-    name: Jekyll Tutorials
-    output: true
-    permalink: "/:collection/:title/"
   guide:
     name: Get Started Guide
     output: true
-    permalink: "/:collection/:title/"
   jekyll_plugins:
 defaults:
   - scope:
@@ -19,11 +14,6 @@ defaults:
       type: posts
     values:
       layout: post
-  - scope:
-      path: ""
-      type: tutorials
-    values:
-      layout: docs
   - scope:
       path: ""
       type: guide

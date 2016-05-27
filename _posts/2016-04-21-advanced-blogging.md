@@ -1,5 +1,6 @@
 ---
 title: Advanced Blogging
+heading: Advanced Bloggin in Jekyll
 episode: 11
 image_path: /img/casts/advanced-blogging/preview.jpg
 length: 8

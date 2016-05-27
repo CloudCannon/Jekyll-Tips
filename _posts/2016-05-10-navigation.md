@@ -1,5 +1,6 @@
 ---
 title: Navigation
+heading: Navigation in Jekyll
 episode: 16
 image_path: /img/casts/navigation/preview.jpg
 length: 7

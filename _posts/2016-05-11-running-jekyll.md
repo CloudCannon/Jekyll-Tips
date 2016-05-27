@@ -9,7 +9,7 @@ resources:
   - name: Configuration documentation
     link: https://jekyllrb.com/docs/configuration/
 category: basics
-order: 0
+order: 0.1
 ---
 To run jekyll on a site, we'll navigate to the site's directory in the command line, then run one of these commands.
 
