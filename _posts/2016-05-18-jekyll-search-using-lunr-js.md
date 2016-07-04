@@ -233,8 +233,8 @@ Now we can add a search box anywhere on our site by adding a form which submits 
 {% raw %}
 ...
 <form action="/search.html" method="get">
-  <label for="search_box">Search</label>
-  <input type="text" id="search_box" name="query">
+  <label for="search-box">Search</label>
+  <input type="text" id="search-box" name="query">
   <input type="submit" value="search">
 </form>
 ...

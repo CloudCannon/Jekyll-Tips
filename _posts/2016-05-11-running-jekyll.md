@@ -4,7 +4,7 @@ episode: 17
 image_path: /img/casts/running-jekyll/preview.jpg
 length: 4
 video_id: VRFJXPiefH4
-description: How to have Jekyll build your site.
+description: How to have Jekyll build your site
 resources:
   - name: Configuration documentation
     link: https://jekyllrb.com/docs/configuration/

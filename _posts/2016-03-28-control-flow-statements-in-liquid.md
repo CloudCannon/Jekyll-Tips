@@ -5,7 +5,7 @@ episode: 6
 image_path: /img/casts/control-flow-statements/preview.jpg
 length: 6
 video_id: hZdO5loactU
-description: Use liquid to control which content is displayed on the page
+description: Use Liquid to control which content is displayed on the page
 tags:
   - liquid
 resources:
@@ -16,7 +16,7 @@ resources:
 category: basics
 order: 4.1
 ---
-In this example we have a list of cupcakes on our bakery store and we're going to liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.
+In this example we have a list of cupcakes on our bakery store and we're going to Liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.
 
 {% highlight html %}
 {% raw %}

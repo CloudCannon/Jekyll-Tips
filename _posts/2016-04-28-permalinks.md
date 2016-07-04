@@ -5,7 +5,7 @@ episode: 12
 image_path: /img/casts/permalinks/preview.jpg
 length: 6
 video_id: GEJfymFDBqY
-description: A flexible way to build your site urls
+description: A flexible way to build your site URLs
 tags:
   - permalinks
 resources:
