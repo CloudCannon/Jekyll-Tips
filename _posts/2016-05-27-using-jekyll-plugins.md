@@ -2,8 +2,8 @@
 title: Using Jekyll plugins
 episode: 28
 image_path: /img/casts/plugins/preview.jpg
-length: 2
-video_id: ikbYpAHkurs
+length: 6
+video_id: pKoZNhC2SQA
 description: How to add Jekyll plugins to your site
 resources:
   - name: Source code
