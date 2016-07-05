@@ -21,7 +21,7 @@ category_descriptions:
 <!-- <p><strong>I can't do x without a backend</strong> is often not true with the huge number of apps and services you can use with static websites.</p> -->
 {% assign categories = site.services | group_by:"category" %}
 
-<p class="center-text">Third-party services for static/jekyll websites.</p>
+<p class="center-text">Third-party services for Jekyll websites.</p>
 
 {% for current_category in categories %}
 	{% assign category_name = current_category.name | downcase | replace:' ','_' %}

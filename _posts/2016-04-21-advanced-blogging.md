@@ -1,5 +1,5 @@
 ---
-title: Advanced Blogging
+title: Advanced blogging
 heading: Advanced Bloggin in Jekyll
 episode: 11
 image_path: /img/casts/advanced-blogging/preview.jpg

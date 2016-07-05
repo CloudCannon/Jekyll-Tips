@@ -1,5 +1,5 @@
 ---
-title: Data Files
+title: Data files
 heading: Jekyll Data Files
 episode: 9
 image_path: /img/casts/data-files/preview.jpg

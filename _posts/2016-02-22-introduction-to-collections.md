@@ -1,5 +1,5 @@
 ---
-title: Introduction to Collections
+title: Introduction to collections
 episode: 1
 image_path: /img/casts/intro-to-collections/preview.jpg
 length: 5

@@ -1,5 +1,5 @@
 ---
-title: Gems, Gemfiles and the bundler
+title: Gems, Gemfiles and the Bundler
 episode: 27
 image_path: /img/casts/gems/preview.jpg
 length: 6

@@ -1,6 +1,6 @@
 ---
-title: Reading Time
-heading: Jekyll Reading Time
+title: Reading time
+heading: Jekyll reading time
 episode: 25
 image_path: /img/casts/reading-time/preview.jpg
 length: 2

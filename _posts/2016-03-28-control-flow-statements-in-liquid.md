@@ -1,5 +1,5 @@
 ---
-title: Control Flow Statements in Liquid
+title: Control flow statements in Liquid
 date: 2016-03-28 13:00:00
 episode: 6
 image_path: /img/casts/control-flow-statements/preview.jpg

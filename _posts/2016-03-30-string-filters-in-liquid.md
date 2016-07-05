@@ -1,5 +1,5 @@
 ---
-title: String Filters in Liquid
+title: String filters in Liquid
 episode: 8
 image_path: /img/casts/string-filters/preview.jpg
 length: 6

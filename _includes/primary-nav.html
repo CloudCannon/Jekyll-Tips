@@ -7,14 +7,6 @@
 				<a href="/">Jekyll Casts</a>
 			</li>
 
-
-			{% assign guide_items = site.guide | sort: 'order' %}
-			<li class="nav-item top-level {% if page.url contains '/guide/' %}current{% endif %}">
-				<a href="{{ guide_items.first.url }}">Get Started Guide</a>
-
-				{% include secondary-nav-items.html items=guide_items %}
-			</li>
-
 			<li class="nav-item top-level {% if page.url contains '/templates/' %}current{% endif %}">
 				<a href="/templates/">Templates</a>
 			</li>
@@ -27,8 +19,8 @@
 				<a href="/services/">Services</a>
 			</li>
 
-			<li class="nav-item top-level">
-				<a href="http://cheat.jekyll.tips">Cheat Sheet</a>
+			<li class="nav-item top-level {% if page.url contains '/jekyll-cheat-sheet/' %}current{% endif %}"">
+				<a href="/jekyll-cheat-sheet/">Cheat Sheet</a>
 			</li>
 		</ul>
 

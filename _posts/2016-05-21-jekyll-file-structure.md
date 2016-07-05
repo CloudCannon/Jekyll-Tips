@@ -1,5 +1,5 @@
 ---
-title: File Structure
+title: File structure
 heading: Jekyll File Structure
 episode: 23
 image_path: /img/casts/file-structure/preview.jpg

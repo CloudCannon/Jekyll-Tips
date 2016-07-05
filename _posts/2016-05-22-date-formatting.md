@@ -1,5 +1,5 @@
 ---
-title: Date Formatting
+title: Date formatting
 heading: Jekyll Date Formatting
 episode: 24
 image_path: /img/casts/date-formatting/preview.jpg

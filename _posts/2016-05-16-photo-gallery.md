@@ -1,5 +1,5 @@
 ---
-title: Photo Gallery
+title: Photo gallery
 heading: Jekyll Photo Gallery
 episode: 20
 image_path: /img/casts/photo-gallery/preview.jpg

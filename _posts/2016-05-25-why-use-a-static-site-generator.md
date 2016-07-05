@@ -8,7 +8,7 @@ description: Introduction to the world of static site generators
 category: introduction
 order: 1
 ---
-We're looking at what a static site generator is and how they're different dynamic content management systems like WordPress.  
+We're looking at what ​static site generators are and how they're different dynamic content management systems like WordPress.  
 
 ### What is a static site generator?
 
@@ -28,7 +28,7 @@ To understand how static site generators are different, let's have a look at how
 
 In this article we're using WordPress as the dynamic CMS but we could easily swap this out for Drupal or the majority of other CMSs out there.
 
-When a user goes to a page on a Wordpress site, the request is sent to our web server ([Nginx](https://www.nginx.com/)) then forwarded to WordPress. WordPress builds the page from a number of templates, gets the content and other site data from the database and sends the complete HTML page back to the user.
+When a user goes to a page on a WordPress site, the request is sent to our web server ([Nginx](https://www.nginx.com/)) then forwarded to WordPress. WordPress builds the page from a number of templates, gets the content and other site data from the database and sends the complete HTML page back to the user.
 
 ![How does a dynamic CMS work?](/img/casts/what-is-a-static-site-generator/dynamic-cms-overview.png)
 
@@ -77,7 +77,7 @@ This is made worse if we're using WordPress plugins. Each plugin will most likel
 
 A lot of this processing can be eliminated by using a cache which means when a page is processed, it will save a copy for future requests. However this adds extra complexity and another point of failure.
 
-We can also perform some optimizations like minification to speed up the site but they have to be done on-the-fly.
+We can also perform some optimizations like minification to speed up the site but are usually done on-the-fly.
 
 #### Security
 

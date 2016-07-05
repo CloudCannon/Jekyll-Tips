@@ -1,5 +1,5 @@
 ---
-title: Jekyll Search using lunr.js
+title: Jekyll search using lunr.js
 episode: 20
 image_path: /img/casts/lunr-js/preview.jpg
 length: 5

@@ -26,3 +26,16 @@
 /tutorials/rss_feed/ /jekyll-casts/rss-feed/
 /tutorials/output_as_json/ /jekyll-casts/output-json/
 /tutorials/photo_gallery/ /jekyll-casts/photo-gallery/
+/guide/getting-started-with-jekyll/ /jekyll-casts/why-use-a-static-site-generator/
+/guide/setup/ /jekyll-casts/install-jekyll-on-windows/
+/guide/running-jekyll/ /jekyll-casts/running-jekyll/
+/guide/layouts/ /jekyll-casts/layouts/
+/guide/front-matter-and-liquid/ /jekyll-casts/front-matter/
+/guide/navigation-and-includes/ /jekyll-casts/navigation/
+/guide/github/ /
+/guide/cms-and-hosting/ /
+/guide/blogging/ /jekyll-casts/blogging/
+/guide/collections/ /jekyll-casts/introduction-to-collections/
+/guide/photo-gallery/ /jekyll-casts/photo-gallery/
+/guide/data-files/ /jekyll-casts/data-files/
+/guide/advanced-topics/ /jekyll-casts/navigation/

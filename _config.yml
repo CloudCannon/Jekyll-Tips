@@ -8,6 +8,62 @@ collections:
     name: Get Started Guide
     output: true
   jekyll_plugins:
+    liquid_tags:
+    output: true
+    name: Liquid Tags
+    documentation: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+  cheat_document_variables:
+    output: true
+    name: Document Variables
+    documentation: http://jekyllrb.com/docs/collections/
+  cheat_collection_variables:
+    output: true
+    name: Collection Variables
+    documentation: http://jekyllrb.com/docs/collections/
+  cheat_global_variables:
+    output: true
+    name: Global Variables
+    documentation: http://jekyllrb.com/docs/variables/
+  cheat_liquid_filters:
+    output: true
+    name: Liquid Filters
+    documentation: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+  cheat_liquid_for_loops:
+    output: true
+    name: Liquid For Loops
+    documentation: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+  cheat_liquid_tags:
+    output: true
+    name: Liquid Tags
+    documentation: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+  cheat_markdown:
+    output: true
+    name: Markdown
+    documentation: http://kramdown.gettalong.org/syntax.html
+  cheat_page_variables:
+    output: true
+    name: Page Variables
+    documentation: http://jekyllrb.com/docs/variables/
+  cheat_paginator_variables:
+    output: true
+    name: Paginator Variables
+    documentation: http://jekyllrb.com/docs/pagination/
+  cheat_post_variables:
+    output: true
+    name: Post Variables
+    documentation: http://jekyllrb.com/docs/variables/
+  cheat_site_variables:
+    output: true
+    name: Site Variables
+    documentation: http://jekyllrb.com/docs/variables/
+  cheat_static_file_variables:
+    output: true
+    name: Static File Variables
+    documentation: http://jekyllrb.com/docs/static-files/
+  cheat_yaml:
+    output: true
+    name: Yaml
+    documentation: http://lzone.de/cheat-sheet/YAML
 defaults:
   - scope:
       path: ""
