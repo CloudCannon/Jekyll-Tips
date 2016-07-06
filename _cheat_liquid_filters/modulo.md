@@ -4,14 +4,14 @@ description: "Remainder."
 category: Integer
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 3 | modulo:2 }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 1
-{% endhighlight %}
+~~~

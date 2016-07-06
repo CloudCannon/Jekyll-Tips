@@ -4,14 +4,14 @@ description: "Subtraction."
 category: Integer
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 4 | minus:1 }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 3
-{% endhighlight %}
+~~~

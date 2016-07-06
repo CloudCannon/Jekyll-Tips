@@ -4,14 +4,14 @@ description: "Removes any occurrence of a substring from a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 'I really really like Jekyll' | remove: 'really' }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 I like Jekyll
-{% endhighlight %}
+~~~

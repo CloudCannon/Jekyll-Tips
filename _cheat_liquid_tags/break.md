@@ -4,8 +4,8 @@ description: "Causes the loop to stop iterating."
 category: Iteration
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for i in (1..5) %}
   {% if i == 3 %}
     {% break %}
@@ -13,11 +13,11 @@ category: Iteration
     {{ i }}
   {% endif %}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight liquid %}
+~~~liquid
 1 2
-{% endhighlight %}
+~~~

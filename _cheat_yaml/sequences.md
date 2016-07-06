@@ -2,7 +2,7 @@
 title: "sequences"
 ---
 ##### Input
-{% highlight yaml %}
+~~~yaml
 # sequence
 array:
   - 132
@@ -13,4 +13,4 @@ array:
 my_array:
 - [1, 2, 3]
 - [4, 5, 6]
-{% endhighlight %}
+~~~

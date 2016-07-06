@@ -4,14 +4,14 @@ description: "Removes only the first occurrence of a substring from a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 'I really really like Jekyll' | remove_first: 'really' }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 I really like Jekyll
-{% endhighlight %}
+~~~

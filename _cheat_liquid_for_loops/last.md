@@ -4,8 +4,8 @@ description: "Returns whether it's the last iteration."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.my_array is [1, 2, 3] -->
 {% for item in page.my_array %}
   {% if forloop.last %}
@@ -14,11 +14,11 @@ description: "Returns whether it's the last iteration."
     Not last
   {% endif %}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Not last Not last Last!
-{% endhighlight %}
+~~~

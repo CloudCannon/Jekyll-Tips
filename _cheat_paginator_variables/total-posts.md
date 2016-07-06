@@ -4,14 +4,14 @@ description: "Total number of posts in the site."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ paginator.total_posts }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 37
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "Integer division."
 category: Integer
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 10 | divided_by:3 }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 3
-{% endhighlight %}
+~~~

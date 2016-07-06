@@ -4,20 +4,20 @@ description: "Creates a new variable and every time it's called the value decrea
 category: Iteration
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% decrement my_variable %}
 {% decrement my_variable %}
 {% decrement my_variable %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight liquid %}
+~~~liquid
 -1
 -2
 -3
-{% endhighlight %}
+~~~
 
 Like `increment`, variables declared inside decrement are independent from variables created through assign or capture.

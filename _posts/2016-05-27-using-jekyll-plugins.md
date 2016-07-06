@@ -56,7 +56,7 @@ This is the easiest method. We simply download a plugin to the `_plugins` direct
 
 In this example we'll add a plugin for calculating an estimated read time of a piece of content. First let's create `_plugins/reading_time.rb` and adding the following source code (credit [zachleat](https://gist.github.com/zachleat/5792681)):
 
-{% highlight ruby %}
+~~~ruby
 {% raw %}
 # Outputs the reading time
 
@@ -77,11 +77,11 @@ end
 
 Liquid::Template.register_filter(ReadingTimeFilter)
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now we can use this filter using {% raw %}`{{ page.content | reading_time }}`{% endraw %}. On our Bakery Store site I've added the filter to `_layouts/post.html`:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: default
@@ -95,7 +95,7 @@ layout: default
   </div>
 </div>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Reading Time](/img/casts/plugins/reading-time.png)
 
@@ -107,7 +107,7 @@ In this example we'll add the [jekyll-feed](https://github.com/jekyll/jekyll-fee
 
 First we'll create `Gemfile` with jekyll and jekyll-feed gems:
 
-{% highlight ruby %}
+~~~ruby
 {% raw %}
 source 'https://rubygems.org'
 
@@ -117,19 +117,19 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
 end
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Next let's install the gems using the bundler:
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 bundle install
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now we can add a link to the feed in our `<head>` using {% raw %}`{% feed_meta %}`{% endraw %}:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <head>
@@ -141,15 +141,15 @@ Now we can add a link to the feed in our `<head>` using {% raw %}`{% feed_meta %
 </head>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 And finally we need to run Jekyll using `bundle exec`:
 
-{% highlight ruby %}
+~~~ruby
 {% raw %}
 bundle exec jekyll serve
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now our live site has a `/feed.xml` file with a list of our blog posts.
 

@@ -4,17 +4,17 @@ description: "A list of all static files (i.e. files not processed by Jekyll's c
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for file in site.static_files %}
   {{ file.path }}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /css/style.css
 /js/my-script.js
-{% endhighlight %}
+~~~

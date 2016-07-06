@@ -4,18 +4,18 @@ description: "If the page being processed is a Post, this contains a list of up 
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- run on /_posts/2016-01-01-hello-world.md -->
 {% for p in site.related_posts %}
   {{ p.title }}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Goodbye World
 Im Fleeting
-{% endhighlight %}
+~~~

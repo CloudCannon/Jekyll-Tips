@@ -4,14 +4,14 @@ description: "The name of your collection."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.label }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 my_collection
-{% endhighlight %}
+~~~

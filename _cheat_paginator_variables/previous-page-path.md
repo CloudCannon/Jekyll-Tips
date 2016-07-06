@@ -4,14 +4,14 @@ description: "path of previous pagination page, or nil if no previous page exist
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ paginator.previous_page_path }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /blog/2
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "The content of the post, rendered or un-rendered depending upon wh
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.content }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hello World!
-{% endhighlight %}
+~~~

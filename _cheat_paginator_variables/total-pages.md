@@ -4,14 +4,14 @@ description: "Number of pagination pages."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ paginator.total_pages }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 6
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "The extension name for the file."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.static_files.first.extname }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 .css
-{% endhighlight %}
+~~~

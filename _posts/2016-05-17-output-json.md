@@ -17,7 +17,7 @@ Sometimes it's useful to output front matter or Collection data as JSON so we ca
 
 If the data is an array or hash you can use the `jsonify` filter.
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 ---
 colors:
@@ -29,21 +29,21 @@ colors:
   var colors = {{ page.colors | jsonify }};
 </script>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Which generates a JSON array of colors.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 ...
 var colors = ["red","blue","green"];
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 If we need more control over the output we can always build a JSON object ourselves.
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 var posts = [
   {% for post in site.posts %}
@@ -56,11 +56,11 @@ var posts = [
   {% endfor %}
 ];
 {% endraw %}
-{% endhighlight %}
+~~~
 
 This gives us complete control over the JSON and allows us to run variables through filters.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 [
   {
@@ -75,7 +75,7 @@ This gives us complete control over the JSON and allows us to run variables thro
   }
 ]
 {% endraw %}
-{% endhighlight %}
+~~~
 
 
 
@@ -87,7 +87,7 @@ Katy creates a [map](http://katydecorah.com/unconventional/jekyllconf/) which sh
 
 It's all controlled by a Jekyll data file which is output to JSON.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 - speaker: Ire Aderinkokun
   twitter: ireaderinokun
@@ -110,6 +110,6 @@ It's all controlled by a Jekyll data file which is output to JSON.
   talk: Real World Content Strategy With Jekyll
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 The code for the site is available [here](https://github.com/katydecorah/unconventional/).

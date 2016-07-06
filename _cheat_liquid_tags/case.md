@@ -5,8 +5,8 @@ category: Control Flow
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.name is set to "home" -->
 {% case page.name %}
   {% when 'home' %}
@@ -16,11 +16,11 @@ category: Control Flow
   {% else %}
     Contact Page
 {% endcase %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Home Page
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "The title of the post."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.title }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hello World
-{% endhighlight %}
+~~~

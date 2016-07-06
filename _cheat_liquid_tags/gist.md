@@ -6,15 +6,15 @@ category: Other
 
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% gist parkr/931c1c8d465a04042403 %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <noscript><pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
@@ -33,4 +33,4 @@ category: Other
   &lt;/body&gt;
 &lt;/html&gt;
 </pre></noscript><script src="https://gist.github.com/parkr/931c1c8d465a04042403.js"> </script>
-{% endhighlight %}
+~~~

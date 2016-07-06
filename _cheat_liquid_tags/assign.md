@@ -5,17 +5,17 @@ category: Variable
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% assign my_variable = false %}
 {% if my_variable != true %}
   Hi there!
 {% endif %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hi there!
-{% endhighlight %}
+~~~

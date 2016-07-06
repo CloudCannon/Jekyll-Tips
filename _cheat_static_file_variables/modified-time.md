@@ -4,14 +4,14 @@ description: "The time the file was last modified."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.static_files.first.modified_time }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 1454000258
-{% endhighlight %}
+~~~

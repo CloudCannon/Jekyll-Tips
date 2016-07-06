@@ -4,14 +4,14 @@ description: "URI escape a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "foo, bar \baz?" | uri_escape }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 foo,%20bar%20%5Cbaz?
-{% endhighlight %}
+~~~

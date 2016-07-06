@@ -2,7 +2,7 @@
 title: "variables"
 ---
 ##### Input
-{% highlight yaml %}
+~~~yaml
 a: 1
 b: 1.234
 c: 'abc'
@@ -13,4 +13,4 @@ g: 2015-04-05 # date type
 
 # Enforcing strings
 h: !str 2015-04-05
-{% endhighlight %}
+~~~

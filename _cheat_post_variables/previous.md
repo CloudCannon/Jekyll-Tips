@@ -4,14 +4,14 @@ description: "The previous post relative to the position of the current post in 
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.previous.title }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /2016/01/02/im-fleeting.html
-{% endhighlight %}
+~~~

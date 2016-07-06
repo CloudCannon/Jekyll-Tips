@@ -4,14 +4,14 @@ description: "Convert a Textile-formatted string into HTML."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "h1. Hello Jekyll" | textilize }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <h1>Hello Jekyll</h1>
-{% endhighlight %}
+~~~

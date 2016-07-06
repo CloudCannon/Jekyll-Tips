@@ -4,14 +4,14 @@ description: "page number of the next pagination page, or `nil` if no next page 
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ paginator.next_page }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 4
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "An array of static files in the collection."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.files | size }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 0
-{% endhighlight %}
+~~~

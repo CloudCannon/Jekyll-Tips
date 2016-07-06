@@ -4,17 +4,17 @@ description: "Convert a string into a lowercase URL slug."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "The _config.yml file" | slugify }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 the-config-yml-file
-{% endhighlight %}
+~~~
 
 The slugify filter accepts an option, each specifying what to filter. The default is default. They are as follows (with what they filter):
 

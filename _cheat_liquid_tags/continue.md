@@ -4,8 +4,8 @@ description: "Causes the loop to skip the current iteration."
 category: Iteration
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for i in (1..5) %}
   {% if i == 3 %}
     {% continue %}
@@ -13,10 +13,10 @@ category: Iteration
     {{ i }}
   {% endif %}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
-{% highlight liquid %}
+~~~liquid
 1 2 4 5
-{% endhighlight %}
+~~~

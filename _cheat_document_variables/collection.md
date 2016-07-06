@@ -4,14 +4,14 @@ description: "Label of the containing collection."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.first.collection }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 my_collection
-{% endhighlight %}
+~~~

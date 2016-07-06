@@ -4,15 +4,15 @@ description: "Sorts an array."
 category: Array
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.my_array is ['c', 'a', 'b'] -->
 {{ page.my_array | sort }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 ['a','b','c']
-{% endhighlight %}
+~~~

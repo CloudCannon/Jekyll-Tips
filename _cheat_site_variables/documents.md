@@ -4,14 +4,14 @@ description: "A list of all the documents in every collection."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.documents | size }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 19
-{% endhighlight %}
+~~~

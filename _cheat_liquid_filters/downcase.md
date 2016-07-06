@@ -4,14 +4,14 @@ description: "Converts a string to lowercase."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "STATIC Site generator" | downcase }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 static site generator
-{% endhighlight %}
+~~~

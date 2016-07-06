@@ -4,14 +4,14 @@ description: "The path to the document's source file relative to the site source
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.first.relative_path }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 _my_collection/item.md
-{% endhighlight %}
+~~~

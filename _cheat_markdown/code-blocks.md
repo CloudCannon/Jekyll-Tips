@@ -3,18 +3,18 @@ title: "code blocks"
 ---
 ##### Input
 
-{% highlight text %}
+~~~text
 ```
 def what?
   42
 end
 ```
 {: .language-ruby}
-{% endhighlight %}
+~~~
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <pre>
   <code class="language-ruby">
     def what?
@@ -22,4 +22,4 @@ end
     end
   </code>
 </pre>
-{% endhighlight %}
+~~~

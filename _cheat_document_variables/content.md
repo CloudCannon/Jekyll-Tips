@@ -4,14 +4,14 @@ description: "The content of the collection item, rendered or un-rendered depend
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.first.content }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hello from my_collection.
-{% endhighlight %}
+~~~

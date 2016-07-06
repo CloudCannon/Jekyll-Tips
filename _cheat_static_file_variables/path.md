@@ -4,14 +4,14 @@ description: "The relative path to the file."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.static_files.first.path }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /css/style.css
-{% endhighlight %}
+~~~

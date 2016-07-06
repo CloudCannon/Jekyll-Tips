@@ -4,17 +4,17 @@ description: "Converts a date into another format."
 category: Date
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.time | date: "%a, %b %d, %y" }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Wed, Jan 27, 16
-{% endhighlight %}
+~~~
 
 * **%a** - Abbreviated weekday (Sun)
 * **%A** - Full weekday name (Sunday)

@@ -4,14 +4,14 @@ description: "Whether the collection's documents will be output as individual fi
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.output }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 true
-{% endhighlight %}
+~~~

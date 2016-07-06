@@ -18,7 +18,7 @@ order: 11
 ---
 Permalinks are a flexible way to build your site urls. We might want to have a particular file structure for managing our Jekyll site and then completely change the file structure for the live site. Permalinks allow us to do this. We have a `/blog.html` page and let's say we want the URL for this on the live site to be `/blog/`. One way we could do this is create a new folder called blog, move `blog.html` in that folder and then rename it to `index.html`. The problem with this is we're creating folders just to have the URLs we want. Let's move `/blog/index.html` back to `/blog.html` and solve this with permalinks. We can add a permalink in front matter, then we just need to specify the URL we want.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: default
@@ -27,7 +27,7 @@ permalink: /blog/
 ---
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Going to `blog.html` in the browser 404s and going to `/blog/` outputs the blog page. So that's an example of setting the permalink on individual pages but what if we wanted to set a permalink for all our blog posts. We could add this permalink to every blog post or a better way is to set it once for all blog posts in  `_config.yml`. The variables available to us when setting permalinks for posts are as follows.
 
@@ -159,13 +159,13 @@ Going to `blog.html` in the browser 404s and going to `/blog/` outputs the blog 
 
 Let's make the permalink the day, then the month, then the year followed by the title of the post.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ...
 permalink: /:day/:month/:year/:title/
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 In this final example we'll do the same thing for our cookies collection. The permalink variables available to collections are as follows.
 
@@ -223,7 +223,7 @@ In this final example we'll do the same thing for our cookies collection. The pe
 
 We can add a permalink to metadata of the collection in `_config.yml`.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 collections:
   cookies:
@@ -231,6 +231,6 @@ collections:
     permalink: /baked-goods/:path/
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Instead of linking to `/cookies/afghan/` we're linking to `/baked-goods/afghan/`

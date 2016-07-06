@@ -3,7 +3,7 @@ title: "text markup"
 ---
 ##### Input
 
-{% highlight text %}
+~~~text
 **strong** text
 
 _emphasis_ text
@@ -14,11 +14,11 @@ _emphasis_ text
 
 ![Alt tag](/path/to/image.jpg)
 
-{% endhighlight %}
+~~~
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <p><strong>strong</strong> text</p>
 
 <p><em>emphasis</em> text</p>
@@ -28,4 +28,4 @@ _emphasis_ text
 <p><a href="http://jekyllrb.com">link</a> text</p>
 
 <p><img src="/path/to/image.jpg" alt="Alt tag" /></p>
-{% endhighlight %}
+~~~

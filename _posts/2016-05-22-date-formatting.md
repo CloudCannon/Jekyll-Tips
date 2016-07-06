@@ -16,7 +16,7 @@ In this tutorial we're going to output a date on a Jekyll site in different form
 
 To start with we'll add some basic Front Matter to `/date-formatting.html` including a date in [ISO 8601 format](http://www.iso.org/iso/home/standards/iso8601.htm).
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 ---
 layout: default
@@ -24,84 +24,84 @@ title: Date Formatting
 date: 2016-03-23T10:20:00Z
 ---
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now we can run the date through a filter to get the desired format.
 
 ### date_to_long_string
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date_to_long_string }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 23 March 2016
-{% endhighlight %}
+~~~
 
 ### date_to_rfc822
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date_to_rfc822 }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 Wed, 23 Mar 2016 23:20:00 +1300
-{% endhighlight %}
+~~~
 
 ### date_to_string
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date_to_string }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 23 Mar 2016
-{% endhighlight %}
+~~~
 
 ### date_to_xmlschema
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date_to_xmlschema }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 2016-03-23T23:20:00+13:00
-{% endhighlight %}
+~~~
 
 
 ### date
 
 `date` gives us complete control of the format. We can specify a template of the format we want. For example.
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date: "%m/%d/%Y" }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 03/23/2016
-{% endhighlight %}
+~~~
 
 or
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {{ page.date | date: "%-d %B %Y"}}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 23 March 2016
-{% endhighlight %}
+~~~
 
 There's many placeholders we can use for date formatting.
 <table>
@@ -284,7 +284,7 @@ One notable exclusion from this list getting the ordinal date. For example we co
 
 A workaround for this is to use Liquid to calculate and output the ordinal.
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {% assign day = page.date | date: "%-d"  %}
 {% case day %}
@@ -295,8 +295,8 @@ A workaround for this is to use Liquid to calculate and output the ordinal.
 {% endcase %}
 {{ page.date | date: "of %B, %Y" }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
-{% highlight html %}
+~~~html
 23rd of March, 2016
-{% endhighlight %}
+~~~

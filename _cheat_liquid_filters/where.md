@@ -4,8 +4,8 @@ description: "Select all the objects in an array where the key has the given val
 category: Array
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.people is
   - name: "John"
     school: "Stanford"
@@ -15,11 +15,11 @@ category: Array
     school: "Harvard"
 -->
 {{ page.people | where: "school", "Stanford" }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 {"name"=>"John", "school"=>"Stanford"}{"name"=>"Jane", "school"=>"Stanford"}
-{% endhighlight %}
+~~~

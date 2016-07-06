@@ -4,14 +4,14 @@ description: "The date assigned to the Post."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.date }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 2016-02-02 00:00:00 -0800
-{% endhighlight %}
+~~~

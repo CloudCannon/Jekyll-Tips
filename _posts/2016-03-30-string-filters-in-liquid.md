@@ -19,7 +19,7 @@ order: 4.2
 ---
 Liquid string filters allow us to modify string variables. In this example we having a `heading` variable in front matter we're outputting as an `h2`.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: default
@@ -34,7 +34,7 @@ heading: Fresh, homemade baked goods
 </section>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Starting](/img/casts/string-filters/starting.png)
 
@@ -42,25 +42,25 @@ Let's say we're outputting `heading` string in multiple places across this page 
 
 To use a filter we'll add a "\|" after the variable then pass it a filter, `replace` in this case.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <h2>{{ page.heading | replace: "goods", "bread" }}</h2>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Replace](/img/casts/string-filters/replace.png)
 
 We can also chain filters together, so let's make the heading uppercase as well.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <h2>{{ page.heading | replace: "goods", "bread" | upcase }}</h2>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Upcase](/img/casts/string-filters/upcase.png)
 

@@ -3,7 +3,7 @@ title: "headings"
 ---
 ##### Input
 
-{% highlight text %}
+~~~text
 # H1
 
 ## H2
@@ -15,11 +15,11 @@ title: "headings"
 ##### H5
 
 ###### H6
-{% endhighlight %}
+~~~
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <h1 id="h1">H1</h1>
 
 <h2 id="h2">H2</h2>
@@ -31,4 +31,4 @@ title: "headings"
 <h5 id="h5">H5</h5>
 
 <h6 id="h6">H6</h6>
-{% endhighlight %}
+~~~

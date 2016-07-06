@@ -4,14 +4,15 @@ description: "Convert a date to long format."
 category: Date
 ---
 ##### Input
-{% highlight liquid %}
+
 {% raw %}
+~~~liquid
 {{ site.time | date_to_long_string }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 01 January 2016
-{% endhighlight %}
+~~~

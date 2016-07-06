@@ -4,19 +4,19 @@ description: "A list of all Pages."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for p in site.pages %}
   {{ p.path }}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 about.html
 contact.html
 index.html
 site-map.xml
-{% endhighlight %}
+~~~

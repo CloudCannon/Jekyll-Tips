@@ -4,14 +4,14 @@ description: "Prepend characters to a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 'Jekyll' | prepend: 'I love ' }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 I love Jekyll
-{% endhighlight %}
+~~~

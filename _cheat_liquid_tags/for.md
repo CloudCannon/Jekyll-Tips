@@ -5,18 +5,18 @@ category: Iteration
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for page in site.pages %}
   {{ page.title }}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 index
 about
 contact
-{% endhighlight %}
+~~~

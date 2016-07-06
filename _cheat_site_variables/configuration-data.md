@@ -4,15 +4,15 @@ description: "All the variables set via the command line and your `_config.yml` 
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- url is set to http://mysite.com in the configuration file -->
 {{ site.url }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 http://mysite.com
-{% endhighlight %}
+~~~

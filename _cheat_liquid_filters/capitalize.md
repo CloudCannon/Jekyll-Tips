@@ -4,14 +4,14 @@ description: "Capitalizes the first character."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "static site generator" | capitalize }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Static site generator
-{% endhighlight %}
+~~~

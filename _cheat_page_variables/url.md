@@ -4,14 +4,14 @@ description: "The URL of the Post without the domain, but with a leading slash."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.url }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /index.html
-{% endhighlight %}
+~~~

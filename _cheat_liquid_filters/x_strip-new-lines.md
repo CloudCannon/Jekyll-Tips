@@ -2,14 +2,14 @@
 description: "Removes all newlines from the input"
 ---
 ##### Input
-{% highlight liquid %}
-	{% raw %}
-		{{ "Jekyll \n be" | strip_new_lines }}
-	{% endraw %}
-{% endhighlight %}
+{% raw %}
+~~~liquid
+{{ "Jekyll \n be" | strip_new_lines }}
+~~~
+{% endraw %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 	Jekyll is cool
-{% endhighlight %}
+~~~

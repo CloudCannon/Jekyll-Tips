@@ -5,17 +5,17 @@ category: Control Flow
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.name is set to "about" -->
 {% if page.name == 'about' %}
   About Page
 {% endif %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
   About Page
-{% endhighlight %}
+~~~

@@ -4,14 +4,14 @@ description: "The path to the raw post or page."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.path }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 index.html
-{% endhighlight %}
+~~~

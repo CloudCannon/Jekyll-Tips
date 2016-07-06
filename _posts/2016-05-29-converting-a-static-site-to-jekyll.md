@@ -20,10 +20,10 @@ The theme we're using is called Creative, you can download a copy [here](https:/
 
 First let's unzip the theme, then navigate to the directory in the terminal and run `jekyll serve`:
 
-{% highlight bash %}
+~~~bash
 $ cd ~/Downloads/creative # or wherever you've unzipped the template
 $ jekyll serve
-{% endhighlight %}
+~~~
 
 If we open our browser and navigate to [http://localhost:4000](http://localhost:4000), we can see the site.
 
@@ -35,7 +35,7 @@ At this stage it's a four page static site, now it's time to add some Jekyll mag
 
 Create `/_layouts/default.html` and copy the contents of `index.html` into it. Now we'll delete the content in our layout which changes between pages and replace it with a placeholder variable. We'll also replace the contents of `<title>` with {% raw %}`{{ page.title }}`{% endraw %} so we can change it on each page.
 
-{% highlight html %}
+~~~html
 {% raw %}
 <!DOCTYPE html>
 <html lang="en">
@@ -118,11 +118,11 @@ Create `/_layouts/default.html` and copy the contents of `index.html` into it. N
   </body>
 </html>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 On `index.html` we can load the default layout and set a title in the front matter then remove the HTML content which is already in the layout:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: default
@@ -147,11 +147,11 @@ title: A Bootstrap theme
   </div>
 </aside>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Let's fix up the other pages. `about.html`, `services.html` and `portfolio.html` all have a block of HTML for the heading.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <section class="bg-dark">
@@ -161,7 +161,7 @@ Let's fix up the other pages. `about.html`, `services.html` and `portfolio.html`
 </section>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![About](/img/casts/convert-static-site/about.png)
 
@@ -169,7 +169,7 @@ We don't want to repeat this in the source code of every page so let's create an
 
 Create `_layouts/page.html` with the following content:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: default
@@ -182,11 +182,11 @@ layout: default
 
 {{ content }}
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now we can use this layout in `about.html`, `services.html` and `portfolio.html`. `about.html` looks like this:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -205,13 +205,13 @@ title: About
   </div>
 </section>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ### Collections
 
 If we look at a portfolio items in `portfolio.html`, each item has an image, category and project name and the rest of the code is the same between them:
 
-{% highlight html %}
+~~~html
 {% raw %}
 <div class="col-lg-4 col-sm-6">
   <a href="#" class="portfolio-box">
@@ -229,22 +229,22 @@ If we look at a portfolio items in `portfolio.html`, each item has an image, cat
   </a>
 </div>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Let's use a [collection](/jekyll-casts/introduction-to-collections/) to remove this repetition. Create `_config.yml` and set up a collection for services:
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 collections:
   portfolio:
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Remember when we update `_config.yml` we need to restart Jekyll for the changes to take effect.
 
 Now we can create a `_portfolio` directory and add six portfolio items with `image_path`, `category`, `link` and `project_name` set in the front matter. For example, here's a portfolio item for work we did for Google - `_portfolio/google.md`:
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 image_path: /img/portfolio/1.jpg
@@ -253,11 +253,11 @@ project_name: Google
 link: https://google.com
 ---
 {% endraw %}
-{% endhighlight %}
+~~~
 
 In `/portfolio.html` we can loop over our collection documents and output the item details:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -287,7 +287,7 @@ title: Portfolio
   </div>
 </section>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Portfolio](/img/casts/convert-static-site/portfolio.jpg)
 
@@ -295,7 +295,7 @@ title: Portfolio
 
 In this final section we'll add a [blog](/jekyll-casts/blogging/) to our site. First we need a layout for the posts, create `/_layouts/post.html` and add some basic HTML to format the content:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -308,11 +308,11 @@ layout: page
   </div>
 </section>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Next we'll create our first post `/_posts/2016-06-01-first-post.md`:
 
-{% highlight markdown %}
+~~~markdown
 {% raw %}
 ---
 layout: post
@@ -327,11 +327,11 @@ To add new posts, simply add a file in the `_posts` directory that follows the
 convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter.
 Take a look at the source for this post to get an idea about how it works.
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Then create `blog.html` to list all our posts:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -354,11 +354,11 @@ title: Blog
   </div>
 </section>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 And finally add link to `/blog.html` in the navigation on `/_layouts/default.html`:
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <li>
@@ -366,7 +366,7 @@ And finally add link to `/blog.html` in the navigation on `/_layouts/default.htm
 </li>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 On the live site we have our blog page with a list of our posts (there's only one at the moment).
 

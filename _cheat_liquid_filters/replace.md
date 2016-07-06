@@ -4,14 +4,14 @@ description: "Replaces any occurrence of a substring from a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 'I really really like Jekyll' | replace: 'really', 'truly' }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 I truly truly like Jekyll
-{% endhighlight %}
+~~~

@@ -4,15 +4,15 @@ description: "Append characters to a string."
 category: Array
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.my_array is ['a', 'b', 'c'] -->
 {{ page.my_array | array_to_sentence_string }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 a, b, and c
-{% endhighlight %}
+~~~

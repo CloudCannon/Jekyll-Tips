@@ -4,14 +4,14 @@ description: "Count the number of words in a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "Hi Jekyll!" | number_of_words }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 2
-{% endhighlight %}
+~~~

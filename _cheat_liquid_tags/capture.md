@@ -5,18 +5,18 @@ category: Variable
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% capture my_variable %}
   Captured text.
 {% endcapture %}
 
 {{ my_variable }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Captured text.
-{% endhighlight %}
+~~~

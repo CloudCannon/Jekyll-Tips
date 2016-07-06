@@ -5,27 +5,27 @@ category: Control Flow
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.name is set to "about" -->
 {% unless page.name == "contact" %}
   It's not the contact page
 {% endunless %}
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ##### Output
 
-{% highlight html %}
+~~~html
 It's not the contact page
-{% endhighlight %}
+~~~
 
 Which is the same as doing:
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% if page.name != "contact" %}
   It's not the contact page
 {% endif %}
+~~~
 {% endraw %}
-{% endhighlight %}

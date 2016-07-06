@@ -4,14 +4,14 @@ description: "Converts a string to uppercase."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "static site generator" | upcase }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 STATIC SITE GENERATOR
-{% endhighlight %}
+~~~

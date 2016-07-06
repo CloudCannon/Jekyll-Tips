@@ -2,14 +2,14 @@
 description: "Count the number of words in a string."
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "Cat" | pluralize }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 2
-{% endhighlight %}
+~~~

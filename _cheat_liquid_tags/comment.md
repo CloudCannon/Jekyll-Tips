@@ -5,14 +5,14 @@ category: Other
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 My name is {% comment %}Mr{% endcomment %} Jekyll
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 My name is Jekyll
-{% endhighlight %}
+~~~

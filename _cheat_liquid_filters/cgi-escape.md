@@ -4,14 +4,14 @@ description: "Escape a string for use in a URL."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "foo,bar;baz?" | cgi_escape }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 foo%2Cbar%3Bbaz%3F
-{% endhighlight %}
+~~~

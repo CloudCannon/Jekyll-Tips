@@ -4,14 +4,14 @@ description: "Convert a Markdown-formatted string into HTML."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "Hello **Jekyll**" | markdownify }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hello <strong>Jekyll</strong>
-{% endhighlight %}
+~~~

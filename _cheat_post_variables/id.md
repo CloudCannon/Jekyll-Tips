@@ -4,14 +4,14 @@ description: "An identifier unique to the Post."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.id }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /2015/10/11/hello-world
-{% endhighlight %}
+~~~

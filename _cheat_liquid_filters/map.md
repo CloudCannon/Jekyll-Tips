@@ -4,8 +4,8 @@ description: "Accepts an array element's attribute as a parameter and creates a 
 category: Array
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.people is
   - name: "John"
     school: "Stanford"
@@ -15,11 +15,11 @@ category: Array
     school: "Harvard"
 -->
 {{ page.people | map: "name" }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 JohnJaneJoe
-{% endhighlight %}
+~~~

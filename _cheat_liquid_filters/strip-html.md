@@ -4,14 +4,14 @@ description: "Strip all html tags from the input string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "<p>Jekyll is cool</p>" | strip_html }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Jekyll is cool
-{% endhighlight %}
+~~~

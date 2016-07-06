@@ -14,7 +14,7 @@ order: 1
 ---
 Basic navigation is easy in Jekyll as we can hardcode links like we do on the Bakery Store navigation in `_layouts/default.html`.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <nav class="main-nav">
@@ -25,11 +25,11 @@ Basic navigation is easy in Jekyll as we can hardcode links like we do on the Ba
 </nav>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 It gets trickier if we want to highlight the current page. One way to do this is add an `active` class if the current page's url matches the link.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <nav class="main-nav">
@@ -40,11 +40,11 @@ It gets trickier if we want to highlight the current page. One way to do this is
 </nav>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Then we can add CSS to `style.css` to make the active link yellow.
 
-{% highlight css %}
+~~~css
 {% raw %}
 ...
 a.active {
@@ -52,13 +52,13 @@ a.active {
 }
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Highlighted Link](/img/casts/navigation/highlighted-link.png)
 
 This works but there's a lot of repetition. A better way is to highlight the navigation using front matter. For the pages we want in the navigation, we'll add a `navigation_weight` to the front matter. The value of `navigation_weight` is a number which dictates the position it's shown. For `index.html` we'll add a `navigation_weight` of 1.
 
-{% highlight css %}
+~~~css
 {% raw %}
 ---
 layout: default
@@ -67,11 +67,11 @@ navigation_weight: 1
 ---
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 And for blog.html we'll add a `navigation_weight` of 2.
 
-{% highlight css %}
+~~~css
 {% raw %}
 ---
 layout: default
@@ -80,11 +80,11 @@ navigation_weight: 2
 ---
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Then instead of having static links in `_layouts/default.html`, we can sort our html pages by their navigation_weight, loop over the pages that have a `navigation_weight` and output the `url`, `title` and an `active` class if it's the current page.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <nav class="main-nav">
@@ -103,6 +103,6 @@ Then instead of having static links in `_layouts/default.html`, we can sort our 
 </nav>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now when we add a new page, we can add it to the navigation by setting `navigation_weight` in front matter.

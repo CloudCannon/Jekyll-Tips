@@ -19,37 +19,37 @@ Open Command Prompt which can be found in `All Apps -> Windows System -> Command
 
 Next we'll install [Chocolatey](https://chocolatey.org/) which is a package manager for Windows.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Close Command Prompt and open it again to make Chocolatey available, remember to run it as administrator.
 
 First we'll install ruby.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 choco install ruby -y
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Close Command Prompt and open it once again to make Ruby available, remember to run it as administrator.
 
 And now we can install Jekyll.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 gem install jekyll
 {% endraw %}
-{% endhighlight %}
+~~~
 
 We can test Jekyll is working by checking the version installed.
-{% highlight bash %}
+~~~bash
 {% raw %}
 jekyll -v
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Version](/img/casts/windows-install/version.png)

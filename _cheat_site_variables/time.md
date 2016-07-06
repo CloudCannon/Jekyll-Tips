@@ -4,14 +4,14 @@ description: "The current time (when you run the jekyll command)."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.time }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 2016-01-28 08:32:19 -0800
-{% endhighlight %}
+~~~

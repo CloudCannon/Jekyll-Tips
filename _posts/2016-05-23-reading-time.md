@@ -24,7 +24,7 @@ First we need to calculate how many word are on the page using the `number_of_wo
 
 We also need to handle the case where the estimated read time is less than 2 minutes (360 words). In this case we'll show "1 min".
 
-{% highlight liquid %}
+~~~liquid
 {% raw %}
 {% assign words = content | number_of_words %}
 {% if words < 360 %}
@@ -33,6 +33,6 @@ We also need to handle the case where the estimated read time is less than 2 min
   {{ words | divided_by:180 }} mins
 {% endif %}
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Finished read time](/img/casts/reading-time/finished.png)

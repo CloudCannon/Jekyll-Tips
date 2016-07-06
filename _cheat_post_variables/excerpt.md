@@ -4,14 +4,14 @@ description: "The un-rendered excerpt of the Post."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.excerpt }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Hello World!
-{% endhighlight %}
+~~~

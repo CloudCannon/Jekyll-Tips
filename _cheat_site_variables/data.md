@@ -4,14 +4,14 @@ description: "A list containing the data loaded from the YAML, JSON and CSV file
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.data.nba_players.first.name }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 Michael Jordan
-{% endhighlight %}
+~~~

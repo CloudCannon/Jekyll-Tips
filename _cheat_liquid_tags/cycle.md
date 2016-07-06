@@ -8,16 +8,16 @@ category: Iteration
 
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for i in (1..5) %}
   {% cycle 'red', 'blue', 'yellow' %}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight liquid %}
+~~~liquid
 red blue yellow red blue
-{% endhighlight %}
+~~~

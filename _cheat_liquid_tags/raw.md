@@ -5,18 +5,17 @@ category: Other
 ---
 ##### Input
 
-{% highlight liquid %}
 {% assign l_bracket = "{" %}
 {% assign r_bracket = "}" %}
-{% raw %}
-{% raw %}
+~~~liquid
+{% raw %}{% raw %}
   {{ page.title }}{% endraw %}
 {{ l_bracket}}% endraw %{{ r_bracket }}
-{% endhighlight %}
+~~~
 
 ##### Output
-{% highlight html %}
 {% raw %}
+~~~html
 {{ page.title }}
+~~~
 {% endraw %}
-{% endhighlight %}

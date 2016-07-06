@@ -4,17 +4,17 @@ description: "The list of all Posts with a particular tag."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% for p in site.tags.sad %}
   {{ p.url }}
 {% endfor %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /2016/01/03/goodbye-world.html
 /2016/01/02/im-fleeting.html
-{% endhighlight %}
+~~~

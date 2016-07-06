@@ -4,14 +4,14 @@ description: "Current page number."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ paginator.page }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 1
-{% endhighlight %}
+~~~

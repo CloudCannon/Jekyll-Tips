@@ -4,14 +4,14 @@ description: "The next post relative to the position of the current post in `sit
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ page.next.title }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /2016/01/02/hello-world.html
-{% endhighlight %}
+~~~

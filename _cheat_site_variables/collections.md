@@ -4,14 +4,14 @@ description: "A list of all the collections."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.collections | size }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 1
-{% endhighlight %}
+~~~

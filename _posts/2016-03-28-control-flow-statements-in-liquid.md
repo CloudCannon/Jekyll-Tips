@@ -18,7 +18,7 @@ order: 4.1
 ---
 In this example we have a list of cupcakes on our bakery store and we're going to Liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 type: Chocolate Banana
@@ -27,12 +27,12 @@ image_path: /images/cupcakes/chocolate_banana.jpg
 description: Our delicious chocolate and banana cupcake.
 ---
 {% endraw %}
-{% endhighlight %}
+~~~
 
 
 On `cupcakes.html` we iterate over the collection and output each cupcake's image, type and description.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -50,13 +50,13 @@ title: Muffins
 {% endfor %}
 </div>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Cupcakes](/img/casts/control-flow-statements/cupcakes.png)
 
 Now we'll add an if statement inside the for loop which surrounds the output of a cupcake and try out different ways of filtering the cupcakes. First let's only show the lemon cupcake.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: page
@@ -76,67 +76,67 @@ title: Muffins
 {% endfor %}
 </div>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/lemon.png)
 
 How about everything *except* the Lemon cupcake.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 {% if cupcake.type != "Lemon" %}
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/not-lemon.png)
 
 What if we want to show all the chocolate cupcakes? There's multiple chocolate cupcakes so we can use contains to check if the word "chocolate" exists in the string.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 {% if cupcake.type contains "Chocolate" %}
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/chocolate.png)
 
 Let's get the lowest rated cupcakes, we'll check if the rating is less than three.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 {% if cupcake.rating < 3 %}
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/less-than.png)
 
 What about the highest rated? Let's check if the rating is greater or equal to three.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 {% if cupcake.rating >= 3 %}
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/greater-than.png)
 
 We can also use an `unless` which is the exact opposite of an if statement. If we change the previous if statement to an `unless` we'll be back to getting the lowest rated cupcakes.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 {% unless cupcake.rating >= 3 %}
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/less-than.png)
 
@@ -144,7 +144,7 @@ In this final example, we'll output an icon indicating the cupcake's rating. The
 
 One way to do this would be with if statements which would look something like this.
 
-{% highlight html %}
+~~~html
 {% raw %}
 <p class="rating">
   {% if cupcake.rating == 1 %}
@@ -160,12 +160,12 @@ One way to do this would be with if statements which would look something like t
   {% endif %}
 </p>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 
 This is ok but we can do even better with a case statement. With a case statement we set the variable we're looking at, then we have different cases depending on the value of that variable.
 
-{% highlight html %}
+~~~html
 {% raw %}
 <p class="rating">
   {% case cupcake.rating %}
@@ -182,6 +182,6 @@ This is ok but we can do even better with a case statement. With a case statemen
   {% endcase %}
 </p>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Rating](/img/casts/control-flow-statements/rating.png)

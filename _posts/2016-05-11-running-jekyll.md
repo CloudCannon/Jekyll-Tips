@@ -13,29 +13,29 @@ order: 0.1
 ---
 To run jekyll on a site, we'll navigate to the site's directory in the command line, then run one of these commands.
 
-{% highlight html %}
+~~~html
 {% raw %}
 jekyll serve
 {% endraw %}
-{% endhighlight %}
+~~~
 
 This builds the site to `_site` and runs a local development server at [http://localhost:4000](http://localhost:4000) by default. Any changes we make to a site (except edits to `_config.yml`) trigger the site to rebuild and the development server to refresh. This command is typically used while you're developing a site as it automatically builds and serves your site locally after a change.
 
-{% highlight html %}
+~~~html
 {% raw %}
 jekyll build
 {% endraw %}
-{% endhighlight %}
+~~~
 
 This builds the site to `_site`. From here we would typically copy the contents of `_site` to a hosting provider.
 
 There's also a number of runtime flags we can run with these commands to adjust how the site is built. For example if we wanted the build to include all of our draft blog posts we could run jekyll like this.
 
-{% highlight html %}
+~~~html
 {% raw %}
 jekyll build --drafts
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Below is a full list of the run time parameters available. Many of these can be added to your `_config.yml` if you want them to run every time, check the [configuration documentation](https://jekyllrb.com/docs/configuration/) for more information.
 

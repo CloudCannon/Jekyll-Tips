@@ -4,14 +4,14 @@ description: "The full path to the collections's source directory."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.directory }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /Users/mike/jekyll-project/_my_collection
-{% endhighlight %}
+~~~

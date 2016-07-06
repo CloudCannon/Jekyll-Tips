@@ -3,12 +3,12 @@ title: "horizontal rules"
 ---
 ##### Input
 
-{% highlight text %}
+~~~text
 ---
-{% endhighlight %}
+~~~
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <hr />
-{% endhighlight %}
+~~~

@@ -2,17 +2,17 @@
 description: "Convert quotes into smart quotes."
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "That's funny" | smartify }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 the-config-yml-file
-{% endhighlight %}
+~~~
 
 The slugify filter accepts an option, each specifying what to filter. The default is default. They are as follows (with what they filter):
 

@@ -27,7 +27,7 @@ First we'll create `/js/search.js` to hold our search JavaScript and download [l
 
 Now we need to create `/search.html` which has a search box, a placeholder for displaying results, a JSON output of all the content we want to search on and includes our JavaScript libraries.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ---
 layout: search
@@ -57,7 +57,7 @@ layout: search
 <script src="/js/lunr.min.js"></script>
 <script src="/js/search.js"></script>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Next we need to write the JavaScript for `/js/search.js` to perform three tasks:
 
@@ -71,7 +71,7 @@ We'll go over the sections of code then at the end, we'll see the whole file.
 
 JavaScript doesn't have an easy way to read GET parameters so we'll add a `getParameterByName` function to do this. Don't worry if you don't understand how it works. Now we can use `getParameterByName` to get our search term.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 ...
 function getQueryVariable(variable) {
@@ -90,13 +90,13 @@ function getQueryVariable(variable) {
 var searchTerm = getQueryVariable('query');
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ### Perform the search
 
 If there's a search term we need to set up and configure lunr.js. This involves telling lunr about the fields we're interested and adding the search data from the JSON. Once this is set up we can perform the search.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 ...
 if (searchTerm) {
@@ -127,13 +127,13 @@ if (searchTerm) {
 }
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ### Display the results
 
 Now we have the results we can display them in our list.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 ...
 function displaySearchResults(results, store) {
@@ -155,11 +155,11 @@ function displaySearchResults(results, store) {
 }
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 When we put it all together we have working search.
 
-{% highlight javascript %}
+~~~javascript
 {% raw %}
 (function() {
   function displaySearchResults(results, store) {
@@ -223,13 +223,13 @@ When we put it all together we have working search.
   }
 })();
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Search Results](/img/casts/lunr-js/results.png)
 
 Now we can add a search box anywhere on our site by adding a form which submits to `/search.html`.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <form action="/search.html" method="get">
@@ -239,6 +239,6 @@ Now we can add a search box anywhere on our site by adding a form which submits 
 </form>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 This technique isn't limited to blog posts, we could do the same thing for collections, data files or even static files.

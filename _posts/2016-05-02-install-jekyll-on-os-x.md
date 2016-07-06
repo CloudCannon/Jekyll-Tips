@@ -23,53 +23,53 @@ We'll open up the Terminal which can be found at `Applications/Utilities/Termina
 
 We need to install "Command Line Tools" which gives us access to commonly used tools, utilities, and compilers such as make and GCC.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 xcode-select --install
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Command Line Tools](/img/casts/mac-install/xcode-select.png)
 
 After that we need to agree to Xcode's license. Either run the command below or open up Xcode which will prompt you to agree to the license.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 sudo xcodebuild -license
 {% endraw %}
-{% endhighlight %}
+~~~
 
 OS X already has Ruby already installed but it has some quirks that makes installing Jekyll tricky. Instead of using this version, we'll install our own version of Ruby.
 
 First we'll install [Homebrew](http://brew.sh/). Homebrew helps you install packages and is a must-have for anyone programming on OS X.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Now we can install Ruby.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 brew install ruby
 {% endraw %}
-{% endhighlight %}
+~~~
 
 And now we can install Jekyll.
 
-{% highlight bash %}
+~~~bash
 {% raw %}
 sudo gem install jekyll
 {% endraw %}
-{% endhighlight %}
+~~~
 
 We can test Jekyll is working by checking the version installed.
-{% highlight bash %}
+~~~bash
 {% raw %}
 jekyll -v
 {% endraw %}
-{% endhighlight %}
+~~~
 
 ![Version](/img/casts/mac-install/version.png)

@@ -4,14 +4,14 @@ description: "Truncate a string down to x characters."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "I love Jekyll" | truncate: 12 }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 I love Je...
-{% endhighlight %}
+~~~

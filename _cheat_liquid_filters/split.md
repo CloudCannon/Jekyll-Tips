@@ -4,14 +4,14 @@ description: "Divide a string into an array."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "a~b" | split:"~" }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 ['a', 'b']
-{% endhighlight %}
+~~~

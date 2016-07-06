@@ -1,5 +1,5 @@
 <h4>{{ include.item.title | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
-<div class="content">
+<div class="inner-content">
 	{% if include.item.description %}
 		<p class="description">{{ include.item.description | markdownify | remove: '<p>' | remove: '</p>'  }}</p>
 	{% endif %}

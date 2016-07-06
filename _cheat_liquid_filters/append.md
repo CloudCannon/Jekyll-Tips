@@ -4,14 +4,14 @@ description: "Append characters to a string."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ 'jekyll' | append: '.jpg' }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 jekyll.jpg
-{% endhighlight %}
+~~~

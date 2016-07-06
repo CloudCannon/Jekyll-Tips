@@ -5,16 +5,16 @@ category: Other
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <h1>My site</h1>
 {% include_relative about.html %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 <h1>My Site</h1>
 <h1>About</h1>
-{% endhighlight %}
+~~~

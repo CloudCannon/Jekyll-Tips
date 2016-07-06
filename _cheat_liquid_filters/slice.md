@@ -4,18 +4,18 @@ description: "returns a substring, starting at the specified index."
 category: String
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ "hello" | slice: 0 }}
 {{ "hello" | slice: 1 }}
 {{ "hello" | slice: 1, 3 }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 h
 e
 ell
-{% endhighlight %}
+~~~

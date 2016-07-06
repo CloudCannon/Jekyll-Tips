@@ -5,14 +5,14 @@ category: Other
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {% post_url 2010-07-21-name-of-post %}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /news/2010/07/21/name-of-post/
-{% endhighlight %}
+~~~

@@ -2,7 +2,7 @@
 title: "hashes"
 ---
 ##### Input
-{% highlight yaml %}
+~~~yaml
 # Nest hash
 my_hash:
   subkey:
@@ -13,4 +13,4 @@ my_hash:
 
 # Hash of hashes
 my_hash: {nr1: 5, nr2: 6}
-{% endhighlight %}
+~~~

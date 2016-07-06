@@ -4,14 +4,14 @@ description: "An array of the collection's documents."
 ---
 ##### Input
 
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 {{ site.my_collection.docs.first.url }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 /my_collection/item.html
-{% endhighlight %}
+~~~

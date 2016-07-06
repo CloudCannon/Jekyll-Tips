@@ -4,8 +4,8 @@ description: "Group an array's items by a given property."
 category: Array
 ---
 ##### Input
-{% highlight liquid %}
 {% raw %}
+~~~liquid
 <!-- page.people is
 - name: "John"
   school: "Stanford"
@@ -15,12 +15,12 @@ category: Array
   school: "Harvard"
 -->
 {{ page.people | group_by: "school" }}
+~~~
 {% endraw %}
-{% endhighlight %}
 
 ##### Output
 
-{% highlight html %}
+~~~html
 {
   "name"=>"Stanford",
   "items"=>[{
@@ -38,4 +38,4 @@ category: Array
     "school"=>"Harvard"
   }]
 }
-{% endhighlight %}
+~~~

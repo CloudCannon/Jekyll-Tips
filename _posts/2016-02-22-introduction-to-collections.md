@@ -20,7 +20,7 @@ order: 6.0
 
 Jekyll collections are a powerful way to organize content on your site. So when you should use collections? Ben Balter has a great overview on his blog called [Explain Like I'm Five - Jekyll Collections](http://ben.balter.com/2015/02/20/jekyll-collections/). In the post Ben includes the following diagram of when you should use a post, page or collection in Jekyll.
 
-{% highlight text %}
+~~~text
 {% raw %}
 +-------------------------------------+         +----------------+
 | Can the things be logically grouped?|---No--->|    Use pages   |
@@ -40,7 +40,7 @@ Jekyll collections are a powerful way to organize content on your site. So when 
 |            Use posts                |
 +-------------------------------------+
 {% endraw %}
-{% endhighlight %}
+~~~
 
 In this tutorial we're looking at a page on our BakeryStore site which lists all the cookies we have.
 
@@ -48,7 +48,7 @@ In this tutorial we're looking at a page on our BakeryStore site which lists all
 
 Each cookie has an image, heading and content.
 
-{% highlight html %}
+~~~html
 {% raw %}
 ...
 <div class="cookie">
@@ -63,24 +63,24 @@ Each cookie has an image, heading and content.
 </div>
 ...
 {% endraw %}
-{% endhighlight %}
+~~~
 
 If we wanted to add another cookie we would copy and paste an existing cookies and update the content. The problem with doing this is if we wanted to update the structure of the cookies page, for example adding a rating to each cookie, we would have to copy and paste code and it's highly likely we would make a mistake. Collections eliminate this repetition and make the page much easier to maintain.
 
 Defining collections happens in `_config.yml`. First we add a collections object, then under collections we define the different collections we want on this site. In this case we're going to have one collections called cookies.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 collections:
   cookies:
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Documents (the items in a collection) live in a folder in the root of your site named _*collection_name*, in this case it's `_cookies`. Documents can either be Markdown or HTML. Markdown is more common as it's easier to work with unless you're doing something complicated.
 
 Now we'll create a document for each cookie. The image and title will be specified in front matter and the description in the content. For the Afghan cookie we'll create `_cookies/afghan.md` and copy the content across so it'll look like this:
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 title: Afghan
@@ -90,13 +90,13 @@ An Afghan biscuit is a traditional New Zealand biscuit made from flour, butter, 
 
 Source [Wikipedia](https://en.wikipedia.org/wiki/Afghan_biscuit)
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Repeat this for the other cookies.
 
 Next we need to print we'll replace the hardcoded cookie data `cookies.html` with data from our cookie collection. Jekyll makes collection documents available to us at site.*collection_name*, in this case it's `site.cookies`. So let's iterate over our documents and output the data.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 layout: page
@@ -109,7 +109,7 @@ title: Cookies
   </div>
 {% endfor %}
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Remember when you change `_config.yml` you need to restart your Jekyll server for the changes to take affect.
 
@@ -119,17 +119,17 @@ Now we have the cookies printed out on this page using collections, let's try so
 
 We can add an `output: true` flag to our collection configuration in `_config.yml` which means Jekyll will generate a page for each document.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 collections:
   cookies:
     output: true
 {% endraw %}
-{% endhighlight %}
+~~~
 
 In `cookies.html` we'll remove the content and image. We'll also add an a tag to link to the generated document page. The url is available to us at *document*.url.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 layout: page
@@ -141,13 +141,13 @@ title: Cookies
 	</div>
 {% endfor %}
 {% endraw %}
-{% endhighlight %}
+~~~
 
 So how do we specify the look of the generated document pages? Well we can use a layout for that.
 
 We'll create `_layouts/cookie.html` with a basic layout:
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 layout: page
@@ -160,11 +160,11 @@ layout: page
   </div>
 </div>
 {% endraw %}
-{% endhighlight %}
+~~~
 
 Then in each document we can specify that layout.
 
-{% highlight yaml %}
+~~~yaml
 {% raw %}
 ---
 layout: cookie
@@ -175,7 +175,7 @@ An Afghan biscuit is a traditional New Zealand biscuit made from flour, butter, 
 
 Source [Wikipedia](https://en.wikipedia.org/wiki/Afghan_biscuit)
 {% endraw %}
-{% endhighlight %}
+~~~
 
 The cookies page now has a list of links to cookies:
 
