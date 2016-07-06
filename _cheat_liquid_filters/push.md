@@ -14,7 +14,6 @@ category: Array
 {% endraw %}
 
 ##### Output
-
 ~~~html
 a, b, c, and d
 ~~~
