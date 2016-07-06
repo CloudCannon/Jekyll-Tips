@@ -39,3 +39,13 @@
 /guide/photo-gallery/ /jekyll-casts/photo-gallery/
 /guide/data-files/ /jekyll-casts/data-files/
 /guide/advanced-topics/ /jekyll-casts/navigation/
+/guide/ /
+/guide/cms/ /
+/guide/front_matter_liquid/ /jekyll-casts/front-matter/
+/guide/advanced_topics/ /jekyll-casts/navigation/
+/guide/blog/ /jekyll-casts/blogging/
+/guide/running_jekyll/ /jekyll-casts/running-jekyll/
+/guide/data_files/ /jekyll-casts/data-files/
+/guide/navigation_and_includes/ /jekyll-casts/navigation/
+/guide/introduction/ /jekyll-casts/install-jekyll-on-windows/
+/guide/gallery/ /jekyll-casts/photo-gallery/
