@@ -27,8 +27,8 @@ First we'll create `/js/search.js` to hold our search JavaScript and download [l
 
 Now we need to create `/search.html` which has a search box, a placeholder for displaying results, a JSON output of all the content we want to search on and includes our JavaScript libraries.
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: search
 ---
@@ -56,8 +56,8 @@ layout: search
 </script>
 <script src="/js/lunr.min.js"></script>
 <script src="/js/search.js"></script>
-{% endraw %}
 ~~~
+{% endraw %}
 
 Next we need to write the JavaScript for `/js/search.js` to perform three tasks:
 
@@ -71,8 +71,8 @@ We'll go over the sections of code then at the end, we'll see the whole file.
 
 JavaScript doesn't have an easy way to read GET parameters so we'll add a `getParameterByName` function to do this. Don't worry if you don't understand how it works. Now we can use `getParameterByName` to get our search term.
 
-~~~javascript
 {% raw %}
+~~~javascript
 ...
 function getQueryVariable(variable) {
   var query = window.location.search.substring(1);
@@ -89,15 +89,15 @@ function getQueryVariable(variable) {
 
 var searchTerm = getQueryVariable('query');
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ### Perform the search
 
 If there's a search term we need to set up and configure lunr.js. This involves telling lunr about the fields we're interested and adding the search data from the JSON. Once this is set up we can perform the search.
 
-~~~javascript
 {% raw %}
+~~~javascript
 ...
 if (searchTerm) {
   document.getElementById('search-box').setAttribute("value", searchTerm);
@@ -126,15 +126,15 @@ if (searchTerm) {
   }
 }
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ### Display the results
 
 Now we have the results we can display them in our list.
 
-~~~javascript
 {% raw %}
+~~~javascript
 ...
 function displaySearchResults(results, store) {
   var searchResults = document.getElementById('search-results');
@@ -154,13 +154,13 @@ function displaySearchResults(results, store) {
   }
 }
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 When we put it all together we have working search.
 
-~~~javascript
 {% raw %}
+~~~javascript
 (function() {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
@@ -222,15 +222,15 @@ When we put it all together we have working search.
     }
   }
 })();
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Search Results](/img/casts/lunr-js/results.png)
 
 Now we can add a search box anywhere on our site by adding a form which submits to `/search.html`.
 
-~~~html
 {% raw %}
+~~~html
 ...
 <form action="/search.html" method="get">
   <label for="search-box">Search</label>
@@ -238,7 +238,7 @@ Now we can add a search box anywhere on our site by adding a form which submits 
   <input type="submit" value="search">
 </form>
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 This technique isn't limited to blog posts, we could do the same thing for collections, data files or even static files.

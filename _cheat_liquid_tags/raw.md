@@ -7,8 +7,8 @@ category: Other
 
 {% assign l_bracket = "{" %}
 {% assign r_bracket = "}" %}
-~~~liquid
-{% raw %}{% raw %}
+{% raw %}
+~~~liquid{% raw %}
   {{ page.title }}{% endraw %}
 {{ l_bracket}}% endraw %{{ r_bracket }}
 ~~~

@@ -18,22 +18,22 @@ order: 4.1
 ---
 In this example we have a list of cupcakes on our bakery store and we're going to Liquid to only show a subset of these cupcakes. The cupcakes are a collection, here's one of the cupcakes to show you the structure.
 
-~~~html
 {% raw %}
+~~~html
 ---
 type: Chocolate Banana
 rating: 1
 image_path: /images/cupcakes/chocolate_banana.jpg
 description: Our delicious chocolate and banana cupcake.
 ---
-{% endraw %}
 ~~~
+{% endraw %}
 
 
 On `cupcakes.html` we iterate over the collection and output each cupcake's image, type and description.
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 title: Muffins
@@ -49,15 +49,15 @@ title: Muffins
   </div>
 {% endfor %}
 </div>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Cupcakes](/img/casts/control-flow-statements/cupcakes.png)
 
 Now we'll add an if statement inside the for loop which surrounds the output of a cupcake and try out different ways of filtering the cupcakes. First let's only show the lemon cupcake.
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 title: Muffins
@@ -75,68 +75,68 @@ title: Muffins
   {% endif %}
 {% endfor %}
 </div>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/lemon.png)
 
 How about everything *except* the Lemon cupcake.
 
-~~~html
 {% raw %}
+~~~html
 ...
 {% if cupcake.type != "Lemon" %}
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/not-lemon.png)
 
 What if we want to show all the chocolate cupcakes? There's multiple chocolate cupcakes so we can use contains to check if the word "chocolate" exists in the string.
 
-~~~html
 {% raw %}
+~~~html
 ...
 {% if cupcake.type contains "Chocolate" %}
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/chocolate.png)
 
 Let's get the lowest rated cupcakes, we'll check if the rating is less than three.
 
-~~~html
 {% raw %}
+~~~html
 ...
 {% if cupcake.rating < 3 %}
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/less-than.png)
 
 What about the highest rated? Let's check if the rating is greater or equal to three.
 
-~~~html
 {% raw %}
+~~~html
 ...
 {% if cupcake.rating >= 3 %}
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/greater-than.png)
 
 We can also use an `unless` which is the exact opposite of an if statement. If we change the previous if statement to an `unless` we'll be back to getting the lowest rated cupcakes.
 
-~~~html
 {% raw %}
+~~~html
 ...
 {% unless cupcake.rating >= 3 %}
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Lemon Cupcake](/img/casts/control-flow-statements/less-than.png)
 
@@ -144,8 +144,8 @@ In this final example, we'll output an icon indicating the cupcake's rating. The
 
 One way to do this would be with if statements which would look something like this.
 
-~~~html
 {% raw %}
+~~~html
 <p class="rating">
   {% if cupcake.rating == 1 %}
     <img src="/images/rating/sick.png"/>
@@ -159,14 +159,14 @@ One way to do this would be with if statements which would look something like t
     <img src="/images/rating/super_happy.png"/>
   {% endif %}
 </p>
-{% endraw %}
 ~~~
+{% endraw %}
 
 
 This is ok but we can do even better with a case statement. With a case statement we set the variable we're looking at, then we have different cases depending on the value of that variable.
 
-~~~html
 {% raw %}
+~~~html
 <p class="rating">
   {% case cupcake.rating %}
     {% when 1 %}
@@ -181,7 +181,7 @@ This is ok but we can do even better with a case statement. With a case statemen
       <img src="/images/rating/super_happy.png"/>
   {% endcase %}
 </p>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Rating](/img/casts/control-flow-statements/rating.png)

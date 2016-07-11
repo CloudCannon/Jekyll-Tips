@@ -4,11 +4,11 @@ description: "Convert a Date into ISO 8601 format."
 category: Date
 ---
 ##### Input
-~~~liquid
 {% raw %}
+~~~liquid
 {{ site.time | date_to_xmlschema }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ##### Output
 

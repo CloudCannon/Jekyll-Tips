@@ -35,8 +35,8 @@ At this stage it's a four page static site, now it's time to add some Jekyll mag
 
 Create `/_layouts/default.html` and copy the contents of `index.html` into it. Now we'll delete the content in our layout which changes between pages and replace it with a placeholder variable. We'll also replace the contents of `<title>` with {% raw %}`{{ page.title }}`{% endraw %} so we can change it on each page.
 
-~~~html
 {% raw %}
+~~~html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -117,13 +117,13 @@ Create `/_layouts/default.html` and copy the contents of `index.html` into it. N
     <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 On `index.html` we can load the default layout and set a title in the front matter then remove the HTML content which is already in the layout:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: default
 title: A Bootstrap theme
@@ -146,13 +146,13 @@ title: A Bootstrap theme
     </div>
   </div>
 </aside>
-{% endraw %}
 ~~~
+{% endraw %}
 
 Let's fix up the other pages. `about.html`, `services.html` and `portfolio.html` all have a block of HTML for the heading.
 
-~~~html
 {% raw %}
+~~~html
 ...
 <section class="bg-dark">
   <div class="text-center">
@@ -160,8 +160,8 @@ Let's fix up the other pages. `about.html`, `services.html` and `portfolio.html`
   </div>
 </section>
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![About](/img/casts/convert-static-site/about.png)
 
@@ -169,8 +169,8 @@ We don't want to repeat this in the source code of every page so let's create an
 
 Create `_layouts/page.html` with the following content:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: default
 ---
@@ -181,13 +181,13 @@ layout: default
 </section>
 
 {{ content }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 Now we can use this layout in `about.html`, `services.html` and `portfolio.html`. `about.html` looks like this:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 title: About
@@ -204,15 +204,15 @@ title: About
     </div>
   </div>
 </section>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ### Collections
 
 If we look at a portfolio items in `portfolio.html`, each item has an image, category and project name and the rest of the code is the same between them:
 
-~~~html
 {% raw %}
+~~~html
 <div class="col-lg-4 col-sm-6">
   <a href="#" class="portfolio-box">
     <img src="/img/portfolio/1.jpg" class="img-responsive" alt="">
@@ -228,37 +228,37 @@ If we look at a portfolio items in `portfolio.html`, each item has an image, cat
     </div>
   </a>
 </div>
-{% endraw %}
 ~~~
+{% endraw %}
 
 Let's use a [collection](/jekyll-casts/introduction-to-collections/) to remove this repetition. Create `_config.yml` and set up a collection for services:
 
-~~~yaml
 {% raw %}
+~~~yaml
 collections:
   portfolio:
-{% endraw %}
 ~~~
+{% endraw %}
 
 Remember when we update `_config.yml` we need to restart Jekyll for the changes to take effect.
 
 Now we can create a `_portfolio` directory and add six portfolio items with `image_path`, `category`, `link` and `project_name` set in the front matter. For example, here's a portfolio item for work we did for Google - `_portfolio/google.md`:
 
-~~~yaml
 {% raw %}
+~~~yaml
 ---
 image_path: /img/portfolio/1.jpg
 category: Web Design
 project_name: Google
 link: https://google.com
 ---
-{% endraw %}
 ~~~
+{% endraw %}
 
 In `/portfolio.html` we can loop over our collection documents and output the item details:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 title: Portfolio
@@ -286,8 +286,8 @@ title: Portfolio
     </div>
   </div>
 </section>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Portfolio](/img/casts/convert-static-site/portfolio.jpg)
 
@@ -295,8 +295,8 @@ title: Portfolio
 
 In this final section we'll add a [blog](/jekyll-casts/blogging/) to our site. First we need a layout for the posts, create `/_layouts/post.html` and add some basic HTML to format the content:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 ---
@@ -307,13 +307,13 @@ layout: page
     </div>
   </div>
 </section>
-{% endraw %}
 ~~~
+{% endraw %}
 
 Next we'll create our first post `/_posts/2016-06-01-first-post.md`:
 
-~~~markdown
 {% raw %}
+~~~markdown
 ---
 layout: post
 title: My First Blog Post
@@ -326,13 +326,13 @@ auto-regenerates your site when a file is updated.
 To add new posts, simply add a file in the `_posts` directory that follows the
 convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter.
 Take a look at the source for this post to get an idea about how it works.
-{% endraw %}
 ~~~
+{% endraw %}
 
 Then create `blog.html` to list all our posts:
 
-~~~html
 {% raw %}
+~~~html
 ---
 layout: page
 title: Blog
@@ -353,20 +353,20 @@ title: Blog
     </div>
   </div>
 </section>
-{% endraw %}
 ~~~
+{% endraw %}
 
 And finally add link to `/blog.html` in the navigation on `/_layouts/default.html`:
 
-~~~html
 {% raw %}
+~~~html
 ...
 <li>
   <a href="/blog.html">Blog</a>
 </li>
 ...
-{% endraw %}
 ~~~
+{% endraw %}
 
 On the live site we have our blog page with a list of our posts (there's only one at the moment).
 

@@ -16,25 +16,25 @@ In this tutorial we're going to output a date on a Jekyll site in different form
 
 To start with we'll add some basic Front Matter to `/date-formatting.html` including a date in [ISO 8601 format](http://www.iso.org/iso/home/standards/iso8601.htm).
 
-~~~liquid
 {% raw %}
+~~~liquid
 ---
 layout: default
 title: Date Formatting
 date: 2016-03-23T10:20:00Z
 ---
-{% endraw %}
 ~~~
+{% endraw %}
 
 Now we can run the date through a filter to get the desired format.
 
 ### date_to_long_string
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date_to_long_string }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 23 March 2016
@@ -42,11 +42,11 @@ Now we can run the date through a filter to get the desired format.
 
 ### date_to_rfc822
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date_to_rfc822 }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 Wed, 23 Mar 2016 23:20:00 +1300
@@ -54,11 +54,11 @@ Wed, 23 Mar 2016 23:20:00 +1300
 
 ### date_to_string
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date_to_string }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 23 Mar 2016
@@ -66,11 +66,11 @@ Wed, 23 Mar 2016 23:20:00 +1300
 
 ### date_to_xmlschema
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date_to_xmlschema }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 2016-03-23T23:20:00+13:00
@@ -81,11 +81,11 @@ Wed, 23 Mar 2016 23:20:00 +1300
 
 `date` gives us complete control of the format. We can specify a template of the format we want. For example.
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date: "%m/%d/%Y" }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 03/23/2016
@@ -93,11 +93,11 @@ Wed, 23 Mar 2016 23:20:00 +1300
 
 or
 
-~~~liquid
 {% raw %}
+~~~liquid
 {{ page.date | date: "%-d %B %Y"}}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 23 March 2016
@@ -284,8 +284,8 @@ One notable exclusion from this list getting the ordinal date. For example we co
 
 A workaround for this is to use Liquid to calculate and output the ordinal.
 
-~~~liquid
 {% raw %}
+~~~liquid
 {% assign day = page.date | date: "%-d"  %}
 {% case day %}
   {% when '1' or '21' or '31' %}{{ day }}st
@@ -294,8 +294,8 @@ A workaround for this is to use Liquid to calculate and output the ordinal.
   {% else %}{{ day }}th
 {% endcase %}
 {{ page.date | date: "of %B, %Y" }}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ~~~html
 23rd of March, 2016

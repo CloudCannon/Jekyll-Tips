@@ -11,8 +11,8 @@ category: Control Flow
 {% unless page.name == "contact" %}
   It's not the contact page
 {% endunless %}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ##### Output
 

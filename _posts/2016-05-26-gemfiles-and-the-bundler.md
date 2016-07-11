@@ -37,8 +37,8 @@ Next we specify the gems we're using. We can include a version number if want a 
 
 Usually we'd have to also specify our plugin gems in `_config.yml` so Jekyll knows about them. We can avoid this by putting our plugin gems in a "jekyll_plugins" group which Jekyll includes automatically.
 
-~~~ruby
 {% raw %}
+~~~ruby
 source 'https://rubygems.org'
 
 gem 'jekyll', '3.1.6'
@@ -47,18 +47,18 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
 end
-{% endraw %}
 ~~~
+{% endraw %}
 
 ### What is the bundler and how do we use it?
 
 The bundler is the program which reads the Gemfile and downloads the Gems. We can install the bundler by running:
 
-~~~bash
 {% raw %}
+~~~bash
 gem install bundler
-{% endraw %}
 ~~~
+{% endraw %}
 
 When we create or change a Gemfile, we need to run `bundle install` which performs two tasks:
 
@@ -67,18 +67,18 @@ When we create or change a Gemfile, we need to run `bundle install` which perfor
 
 Usually when we run jekyll we'd do something like this:
 
-~~~bash
 {% raw %}
+~~~bash
 jekyll serve
-{% endraw %}
 ~~~
+{% endraw %}
 
 When we're using a Gemfile we need to run Jekyll slightly differently. We might have multiple versions of the jekyll-feed plugin on our machine and if we run `jekyll serve`, it might use the wrong version. We can solve this using `bundle exec` which makes only the gems in the Gemfile available. For example if we want to run `jekyll serve` we'd run:
 
-~~~bash
 {% raw %}
+~~~bash
 bundle exec jekyll serve
-{% endraw %}
 ~~~
+{% endraw %}
 
 Using Gemfiles and the bundler makes dealing with different versions of plugins much easier and ensures we can have a consistent environment for our site across multiple machines.

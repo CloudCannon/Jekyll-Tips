@@ -17,33 +17,33 @@ To begin with, we'll open up the Terminal. In the Terminal we can run our instal
 
 First we'll make sure Ubuntu is up to date.
 
-~~~bash
 {% raw %}
+~~~bash
 sudo apt-get update
-{% endraw %}
 ~~~
+{% endraw %}
 
 Then we'll install ruby.
 
-~~~bash
 {% raw %}
+~~~bash
 sudo apt-get install ruby-full
-{% endraw %}
 ~~~
+{% endraw %}
 
 And finally we'll install Jekyll.
 
-~~~bash
 {% raw %}
+~~~bash
 sudo gem install jekyll
-{% endraw %}
 ~~~
+{% endraw %}
 
 We can test Jekyll is working by checking the version installed.
-~~~bash
 {% raw %}
+~~~bash
 jekyll -v
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Version](/img/casts/linux-install/version.png)

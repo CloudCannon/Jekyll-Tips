@@ -20,8 +20,8 @@ Front matter is used to set variables and metadata on pages in your Jekyll site.
 
 We'll start with some basic HTML structure in `about.html`:
 
-~~~html
 {% raw %}
+~~~html
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,8 +32,8 @@ We'll start with some basic HTML structure in `about.html`:
     <h1>About page</h1>
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Starting about page](/img/casts/front-matter/starting-about.png)
 
@@ -41,8 +41,8 @@ Now we'll set a variable in front matter, then output it on our page. Front matt
 
 Let's set a variable called `hello_text` and give it a value of "Hello there!". `about.html` now looks like this:
 
-~~~html
 {% raw %}
+~~~html
 ---
 hello_text: "Hello there!"
 ---
@@ -56,8 +56,8 @@ hello_text: "Hello there!"
     <h1>About page</h1>
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 To output front matter variables, Jekyll uses a language called [Liquid](https://shopify.github.io/liquid/). We'll cover Liquid in later videos, for now you need to know two basic tags:
 
@@ -66,8 +66,8 @@ To output front matter variables, Jekyll uses a language called [Liquid](https:/
 
 We can access variables set in front matter using `page.name_of_variable`. So let's add `p` straight after the `h1` and output `hello_text`.
 
-~~~html
 {% raw %}
+~~~html
 ---
 hello_text: "Hello there!"
 ---
@@ -82,15 +82,15 @@ hello_text: "Hello there!"
     <p>{{ page.hello_text }}</p>
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Output about page](/img/casts/front-matter/output-about.png)
 
 We can use front matter to show/hide sections of a page. In this example we'll add a `show_footer` variable to the front matter which when set to true, will add a footer to the page.
 
-~~~html
 {% raw %}
+~~~html
 ---
 hello_text: "Hello there!"
 show_footer: true
@@ -110,8 +110,8 @@ show_footer: true
     {% endif %}
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Footer about page](/img/casts/front-matter/footer-about.png)
 
@@ -119,8 +119,8 @@ Changing `show_footer` to false will remove the footer.
 
 Arrays are also possible in front matter. We'll create a new array called fruit, each item is indented with two spaces then starts with a hyphen. Then we'll iterate over the items on our page and output them as an unordered list.
 
-~~~html
 {% raw %}
+~~~html
 ---
 hello_text: "Hello there!"
 show_footer: false
@@ -150,16 +150,16 @@ fruit:
     {% endif %}
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Object about page](/img/casts/front-matter/array.png)
 
 
 In this last example we'll use objects in front matter. Objects allow for more complex data structures, we're going to use it in our fruits array so we're not only setting the name of the fruit, but also the cost and color. Instead of array items being strings we want them to be keys and values. When we're outputting the fruit, item is now an entire object so we need to reference the keys inside the object.
 
-~~~html
 {% raw %}
+~~~html
 ---
 hello_text: "Hello there!"
 show_footer: false
@@ -195,8 +195,8 @@ fruit:
     {% endif %}
   </body>
 </html>
-{% endraw %}
 ~~~
+{% endraw %}
 
 ![Object about page](/img/casts/front-matter/object-about.png)
 

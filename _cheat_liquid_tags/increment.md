@@ -9,8 +9,8 @@ category: Iteration
 {% increment my_variable %}
 {% increment my_variable %}
 {% increment my_variable %}
-{% endraw %}
 ~~~
+{% endraw %}
 
 ##### Output
 
@@ -25,8 +25,8 @@ Variables created through the `increment` tag are independent from variables cre
 In the example below, `my_var` is created through `assign`. The `increment` tag is then used several times on a variable with the same name. However, note that the `increment` tag does not affect the value of `my_var` that was created through `assign`.
 
 ##### Input
-~~~liquid
 {% raw %}
+~~~liquid
 {% assign my_var = 15 %}
 {% increment var %}
 {% increment var %}
