@@ -1131,3 +1131,19 @@ code.output {
 		padding: 0 10px;
 	}
 }
+
+.prev-next {
+	text-align: center;
+	margin: 40px 0;
+	a {
+		background: #fc0;
+		padding: 8px 20px;
+		color: #333;
+		margin: 0 5px;
+		text-shadow: none;
+	}
+
+	a:hover {
+		background-color: #F5AF2E;
+	}
+}
