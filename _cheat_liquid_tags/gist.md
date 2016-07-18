@@ -2,6 +2,7 @@
 title: "gist"
 description: "Embed a GitHub Gist."
 category: Other
+version: 2
 ---
 
 ##### Input

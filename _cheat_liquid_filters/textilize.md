@@ -2,6 +2,7 @@
 title: "textilize"
 description: "Convert a Textile-formatted string into HTML."
 category: String
+version: 2
 ---
 ##### Input
 {% raw %}

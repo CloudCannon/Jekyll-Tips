@@ -93,7 +93,7 @@ Then instead of having static links in `_layouts/default.html`, we can sort our 
     {% for p in navigation_pages %}
       {% if p.navigation_weight %}
         <li>
-          <a href="{{ page.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+          <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
             {{ p.title }}
           </a>
         </li>

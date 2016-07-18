@@ -5,13 +5,12 @@ heading: Jekyll Cheat Sheet
 permalink: /jekyll-cheat-sheet/
 no_max_width: true
 ---
-<p style="text-align: center">Currently for Jekyll 2.4.0, Jekyll 3 coming soon.</p>
-<!-- <div style="text-align: center">
+<div style="text-align: center">
 	<select id="jekyll-version">
-		<option selected="selected" value="jekyll-3">Jekyll 3</option>
-		<option value="jekyll-2">Jekyll 2</option>
+		<option selected="selected" value="3">Jekyll 3</option>
+		<option value="2">Jekyll 2</option>
 	</select>
-</div> -->
+</div>
 <div id="grid" data-columns>
 {% for collection in site.collections %}
 	<ul>
@@ -64,6 +63,8 @@ no_max_width: true
 			$(this).parent().toggleClass('show');
 			$(this).parent().find('.inner-content').slideToggle(200);
 		});
+
+		$(".list-items li[data-version][data-version!='" + $("#jekyll-version").val() + "']").hide();
 
 		$("#jekyll-version").change(function() {
 			$(".list-items li[data-version]").toggle();

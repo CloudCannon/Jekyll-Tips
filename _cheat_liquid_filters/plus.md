@@ -1,5 +1,5 @@
 ---
-title: "minus"
+title: "plus"
 description: "Addition."
 category: Integer
 ---
