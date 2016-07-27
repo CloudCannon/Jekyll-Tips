@@ -17,7 +17,7 @@ Many people don't use Jekyll for client projects because typically a non-develop
 
 ### What is CloudCannon?
 
-CloudCannon is cloud content management system and hosting provider for Jekyll websites. A develop uploads a Jekyll site in the browser or by syncing with GitHub, Bitbucket or Dropbox. CloudCannon then builds the site, hosts it and provides an interface for a non-technical user to make updates.
+CloudCannon is cloud content management system and hosting provider for Jekyll websites. A developer uploads a Jekyll site in the browser or by syncing with GitHub, Bitbucket or Dropbox. CloudCannon then builds the site, hosts it and provides an interface for non-technical users to update content.
 
 ### Setup
 
@@ -25,7 +25,7 @@ To begin, we need to create a CloudCannon account and create our first site. Hea
 
 ![CloudCannon homepage](/img/casts/client-editing/cloudcannon-homepage.png)
 
-Enter our details into the sign up form.
+Enter your details into the sign up form.
 
 ![CloudCannon sign up form](/img/casts/client-editing/sign-up.png)
 
@@ -72,12 +72,12 @@ Open `index.html` in CloudCannon and add a class of `editable` to the `h1` and `
 
 ### Client Access
 
-Now the site is ready for our non-developer to update. We'll set up _Client Sharing_ which allows our client to update their site without having to create an account. Go to the Site Settings -> Client Sharing and set a password for your client.
+Now the site is ready for our non-developer to update. We'll set up [Client Sharing](https://docs.cloudcannon.com/sharing/client-sharing/) which allows our client to update their site without having to create an account. Go to the Site Settings -> Client Sharing and set a password for your client.
 
-Our non-developer can view their live site at _something_.cloudvent.net (or you can set up a custom domain). To update their site they just add `/update` to the URL and enter the password we set.
+Our non-developer can view their live site at your-site.cloudvent.net (or you can set up a custom domain). To update their site they just add `/update` to the URL and enter the password we set earlier.
 
 ### The Client Workflow
-Once the client logs in they see their site with coloured boxes highlighting the editable regions. The client can update content directly inline by clicking on the yellow box.
+Once the client logs in they see their site with coloured boxes highlighting the editable regions. The client can update content directly inline by clicking on text.
 
 ![CloudCannon update inline](/img/casts/client-editing/update-inline.png)
 
@@ -89,7 +89,7 @@ Editing posts happens in the [Content Editor](https://docs.cloudcannon.com/editi
 
 ![CloudCannon content editor](/img/casts/client-editing/content-editor.png)
 
-Or we can also use the [Visual Editor](https://docs.cloudcannon.com/editing/visual-editor/) to update posts.
+Or we can use the [Visual Editor](https://docs.cloudcannon.com/editing/visual-editor/) to update posts.
 
 ![CloudCannon post Visual Editor](/img/casts/client-editing/blog-visual-editor.png)
 
@@ -97,6 +97,6 @@ The client can also update collection documents using the same editor. In this e
 
 ![CloudCannon collection](/img/casts/client-editing/collection.png)
 
-If we have GitHub, Bitbucket or Dropbox connected to the site all changes the client makes would also push back to the storage provider.
+If we have GitHub, Bitbucket or Dropbox connected to the site, all changes the client makes are pushed back to the storage provider.
 
 Now the client can update all the content and hasn't had to learn HTML, Liquid or Markdown. This gives a small taste of what you can achieve on CloudCannon. [Sign up free](https://app.cloudcannon.com/users/sign_up) and make your Jekyll site client editable.
