@@ -13,7 +13,7 @@ resources:
 category: intermediate
 order: 1.2
 ---
-Many people can't use Jekyll for client projects because it's too difficult for non-developers to update content. In this tutorial we're using [CloudCannon](https://cloudcannon.com) to give a non-technical client access to update their Jekyll site.
+Many people don't use Jekyll for client projects because typically a non-developer will have to learn HTML, Markdown and Liquid to update content. In this tutorial we're using [CloudCannon](https://cloudcannon.com) which gives non-developers an easy way to update Jekyll sites.
 
 ### What is CloudCannon?
 
