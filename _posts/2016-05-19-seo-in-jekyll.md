@@ -11,7 +11,7 @@ resources:
   - name: Beginners guide to SEO
     link: https://moz.com/beginners-guide-to-seo
   - name: Search Engine Optimization Starter Guide
-    link: http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pd
+    link: http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf
   - name: SEO scanner
     link: http://seositecheckup.com/
 category: intermediate
