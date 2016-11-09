@@ -18,7 +18,7 @@
 <div class="prev-next">
 	{% for cast in items %}
 		{% unless found %}
-			{% if cast.category == page.category and cast.order == page.order %}
+			{% if cast.category == page.category and cast.order == page.order and cast.title == page.title %}
 				{% assign found = true %}
 				{% if previous %}
 					<a href="{{ previous.url }}">Previous Cast</a>
