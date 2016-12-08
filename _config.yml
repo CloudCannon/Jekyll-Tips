@@ -1,7 +1,9 @@
 google_analytics_id: UA-37472773-14
 collections:
   templates:
-    name: Jekyll Themes
+    name: Jekyll Templates
+  recommended_templates:
+    name: Recommended Jekyll Templates
   services:
     name: Services for Static Sites
   guide:

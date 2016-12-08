@@ -5,10 +5,38 @@ title: Jekyll Themes and Templates
 heading: Templates
 permalink: /templates/
 ---
-	<p class="center-text"> Free Jekyll themes and templates to get you started on your next project </p>
+<p class="center-text">Free Jekyll themes and templates to get you started on your next project</p>
+
+<h3>Recommended Templates</h3>
 
 <div class="set">
+	{% for template in site.recommended_templates %}
+		<div class="set-item">
+			<div class="image-container">
+				<img src="/img/recommended_templates/{{ template.name | downcase | replace:' ','_' }}.png" alt="{{ template.name }}">
+			</div>
 
+			<div class="set-item-details">
+				<a data-theme-name="{{ template.name }}" class="download-link" href="{{ template.github_url }}/archive/{% if template.branch %}{{ template.branch }}{% else %}master{% endif %}.zip"></a>
+				<h3><a data-theme-name="{{ template.name }}" target="_blank" class="github-link" href="{{ template.github_url }}">{{ template.name }}</a></h3>
+			</div>
+		</div>
+	{% endfor %}
+
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+	<div class="set-item set-item-filler"></div>
+</div>
+
+<h3>Other Templates</h3>
+
+<div class="set">
 	{% for template in site.templates %}
 
 		<div class="set-item">
