@@ -8,7 +8,7 @@ description: Introduction to the world of static site generators
 category: introduction
 order: 1
 ---
-We're looking at what ​static site generators are and how they're different dynamic content management systems like WordPress.  
+We're looking at what ​static site generators are and how they're different from dynamic content management systems like WordPress.  
 
 ### What is a static site generator?
 
@@ -77,7 +77,7 @@ This is made worse if we're using WordPress plugins. Each plugin will most likel
 
 A lot of this processing can be eliminated by using a cache which means when a page is processed, it will save a copy for future requests. However this adds extra complexity and another point of failure.
 
-We can also perform some optimizations like minification to speed up the site but are usually done on-the-fly.
+We can also perform some optimizations like minification to speed up the site but these are usually done on-the-fly.
 
 #### Security
 
