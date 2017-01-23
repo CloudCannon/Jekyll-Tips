@@ -32,7 +32,7 @@ All our unpublished blog posts. This allows us to work on blog posts without pub
 
 ### _includes
 
-Partial parts of a page which can be included throughout our site. Includes are often used for page sections which are duplicated across the site like a newsletter subscribe form.
+Code snippets which can be included throughout our site. Includes are often used for page sections which are duplicated across the site like a newsletter subscribe form.
 
 ### _layouts
 
