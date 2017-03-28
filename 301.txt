@@ -11,7 +11,6 @@
 /snippets/related-posts/ /tutorials/snippets/
 /snippets/rss-feed/ /tutorials/rss-feed/
 /snippets/site-navigation/ /tutorials/navigation/
-/jekyll-casts/ /
 /tutorials/atom-feed/ /jekyll-casts/rss-feed/
 /tutorials/liquid/ /jekyll-casts/introduction-to-liquid/
 /tutorials/navigation/ /jekyll-casts/navigation/
