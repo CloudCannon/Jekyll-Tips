@@ -48,6 +48,7 @@
 /guide/navigation_and_includes/ /jekyll-casts/navigation/
 /guide/introduction/ /jekyll-casts/install-jekyll-on-windows/
 /guide/gallery/ /jekyll-casts/photo-gallery/
+/jekyll-casts https://learn.cloudcannon.com/
 /jekyll-casts/client-editable-jekyll-sites/ https://learn.cloudcannon.com/jekyll/client-editable-jekyll-sites/
 /jekyll-casts/converting-a-static-site-to-jekyll/ https://learn.cloudcannon.com/jekyll/converting-a-static-site-to-jekyll/
 /jekyll-casts/using-jekyll-plugins/ https://learn.cloudcannon.com/jekyll/using-jekyll-plugins/
